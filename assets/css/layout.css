@@ -1,16 +1,27 @@
 @charset "utf-8";
 /** header s **/
-.header {height: var(--header-height); position: fixed; left: 0; top: 0; right: 0;}
+.header {height: var(--header-height); position: fixed; left: 0; top: 0; right: 0; z-index: 15;}
 /* inner-header s */
 .inner-header {display: flex; justify-content: space-between; align-items: center; padding: 10px;}
 .logo {color: var(--point-color); font-family: var(--tamburins); font-size: 20px; font-weight: bold;}
 /* inner-header e */
 /* gnb s */
-.gnb-wrap {position: fixed; top: 0; right: -100%; width: 100%; height: 100%;}
+.gnb-wrap {position: fixed; top: 0; left: -100%; width: 100%; height: 100%; transition: left 0.4s; background-color: #fff;}
+.gnb-wrap.open {left: 0;}
+.gnb-top {height: var(--header-height); display: flex; justify-content: flex-end; align-items: center; padding: 10px;}
+.gnb {height: calc(100% - var(--header-height) - var(--gnb-link-height));}
+.gnb-inner {display: flex; flex-direction: column; height: 100%;}
+.gnb-list>li>a {display: flex; padding: 20px 15px;}
+.gnb .dep2 {max-height: 0; overflow: hidden; display: flex; flex-wrap: wrap; gap: 10px; padding: 0 15px; font-size: 15px; transition: max-height .3s;}
+.gnb .dep2.on {max-height: 125rem;}
+.gnb .dep2>li {width: calc(50% - 5px);}
+.gnb .dep2-img {width: 100%; max-width: 200px;}
+.gnb-link {height: var(--gnb-link-height); padding: 10px;}
+.link-list>li:not(:last-child) {padding-bottom: 10px;}
 /* gnb e */
 /* util s */
-.util {justify-self: flex-end;}
-.header button {width: 20px; height: 20px; border: 1px solid var(--header-btn-color)}
+.header button {width: 20px; height: 20px; border: 1px solid var(--header-btn-color);}
+.gnb-link button {width: fit-content}
 /* util e */
 /* search s */
 .search-wrap {display: none;}
@@ -19,3 +30,9 @@
 
 /* 임시 비디오영역 css */
 .video-wrap video {width: 100%; height: 100%;}
+
+/** footer s **/
+.footer {padding: 0 15px;}
+.footer-top {display: flex; justify-content: space-between;}
+.footer-logo {font-family: var(--tamburins); font-weight: bold; font-size: 16vw; letter-spacing: -2px; text-align: center; line-height: 1;}
+/** footer e **/
