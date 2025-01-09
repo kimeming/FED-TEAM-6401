@@ -1,0 +1,21 @@
+@charset "utf-8";
+/** header s **/
+.header {height: var(--header-height); position: fixed; left: 0; top: 0; right: 0;}
+/* inner-header s */
+.inner-header {display: flex; justify-content: space-between; align-items: center; padding: 10px;}
+.logo {color: var(--point-color); font-family: var(--tamburins); font-size: 20px; font-weight: bold;}
+/* inner-header e */
+/* gnb s */
+.gnb-wrap {position: fixed; top: 0; right: -100%; width: 100%; height: 100%;}
+/* gnb e */
+/* util s */
+.util {justify-self: flex-end;}
+.header button {width: 20px; height: 20px; border: 1px solid var(--header-btn-color)}
+/* util e */
+/* search s */
+.search-wrap {display: none;}
+/* search e */
+/** header e **/
+
+/* 임시 비디오영역 css */
+.video-wrap video {width: 100%; height: 100%;}
