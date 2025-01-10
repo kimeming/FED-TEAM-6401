@@ -649,3 +649,6 @@ const productList = {
     },
   ],
 };
+
+// 데이터 export
+export default productList
