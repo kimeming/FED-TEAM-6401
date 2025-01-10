@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* section - main visual */
+.video-wrap {width: 100%;}
+.video-wrap video {display: none; width: 100%; max-width: 100%;}
+.video-wrap video.mob {display: block;}
+
+@media screen and (min-width: 768px) {
+    .video-wrap video.mob {display: none;}
+    .video-wrap video.web {display: block;}
+}

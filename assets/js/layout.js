@@ -1,35 +1,99 @@
+// layout.js (header, footer)
 $(() => {
-  // 임시 gnb js - 수정예정
-  $(".menu-btn").click(function () {
+  // 메뉴 버튼 열고 닫기
+  // gnb dep1 누르면 dep2가 있을 때만 슬라이드다운
+  // 검색창 열고 닫기
+  // 메뉴 버튼 누르면 dimm on
+  const $body = $('body'),
+        $dimm = $('.dimm'),
+        $header = $('.header'),
+        $menuBtn = $(".menu-btn"),
+        $gnbWrap = $('.gnb-wrap'),
+        $gnbA = $('.gnb-list>li>a'),
+        $dep2 = $('.gnb-list .dep2'),
+        $dep2A = $('.gnb-list .dep2>li>a'),
+        $searchWrap = $('.search-wrap'),
+        $searchOpen = $('.search-open-btn'),
+        $searchClose = $('.search-close-btn');
+
+  // menu open
+  $menuBtn.on('click', function(){
     if(!$(this).hasClass('on')){
-      $(this).addClass('on');
-      $(".gnb-wrap").addClass("open");
+      gnbOpen();
     } else {
-      $(this).removeClass('on')
-      $(".gnb-wrap").removeClass("open");
+      gnbClose();
     }
   });
 
+  // gnb
+  $gnbA.on('click', function (e) {
+      let $currentDep2 = $(this).siblings('.dep2');
+      $dep2.stop().slideUp();
+      $dep2A.removeClass('on');
+      if($currentDep2.length > 0){
+          e.preventDefault();
+      }
+      if(!$(this).parent().hasClass('active')){
+          $(this).parent().addClass('active').siblings().removeClass('active');
+          $currentDep2.stop().slideDown();
+      } else {
+          $(this).parent().removeClass('active');
+          $currentDep2.stop().slideUp();
+      }
+  });
 
-
-  $(".gnb-list>li>a").click(function () {
-    if (!$(this).hasClass("on")) {
-      $(this).addClass("on");
-      $(".gnb-list .dep2").removeClass("on");
-      $(this).next(".dep2").addClass("on");
+  $dep2A.on('click', function () {
+    if(!$(this).hasClass('on')){
+      $(this).addClass('on').parent().siblings().children().removeClass('on');
     } else {
-      $(this).removeClass("on");
-      $(this).next(".dep2").removeClass("on");
+        $(this).removeClass('on');
     }
   });
 
-  $('.search-open-btn').click(function() {
-    $(this).addClass('open')
-    $('.search-wrap').addClass('open');
+  function gnbClose(){
+    $gnbWrap.removeClass('open');
+    $menuBtn.removeClass('on');
+    $dep2.removeAttr('style');
+    $body.removeClass('on')
+  }
+
+  function gnbOpen(){
+    $gnbWrap.addClass('open');
+    $menuBtn.addClass('on');
+    $body.addClass('on')
+  }
+
+  // search open
+  $searchOpen.on('click', () => {
+    $searchWrap.addClass('open');
+    $body.addClass('on');
+    $dimm.addClass('on');
   });
 
-  $('.search-close-btn').click(function() {
-    $('.search-open-btn').removeClass('open')
-    $('.search-wrap').removeClass('open');
+  $searchClose.on('click', () => {
+    $searchWrap.removeClass('open');
+    $body.removeClass('on');
+    $dimm.removeClass('on');
   });
+
+  $dimm.on('click', () => {
+    $dimm.removeClass('on');
+    $body.removeClass('on');
+    $searchWrap.removeClass('open');
+  });
+
+  // header sticky
+  sticky();
+  $(window).on('scroll', function() {
+      sticky();
+  });
+  function sticky() {
+    let headerFix = $(window).scrollTop();
+    if (headerFix > 0 && !$gnbWrap.hasClass('open')) {
+        $header.addClass('sticky');
+    } else if (headerFix <= 0 && !$gnbWrap.hasClass('open')) {
+        $header.removeClass('sticky');
+    }
+  }
+
 });
