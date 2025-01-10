@@ -34,15 +34,11 @@
 .gnb .dep2-img {width: 100%; max-width: 200px;}
 .gnb-link {height: var(--gnb-link-height); padding: 10px;}
 .link-list>li:not(:last-child) {padding-bottom: 10px;}
-
-@media screen and (min-width: 1024px) {
-    .gnb-wrap {right: 0; top: -100%; transition: top 0.4s;}
-    .gnb-wrap.open {top: 0;}
-}
-
 /* gnb e */
 /* util s */
-.header button {width: 20px; height: 20px; border: 1px solid var(--header-btn-color);}
+.search-open-btn {width: 20px; height: 20px; background: url('../img/main/ion_mag_w.svg') no-repeat center/100%;}
+.menu-btn {width: 20px; height: 20px; display: flex; flex-direction: column;}
+.menu-btn .line {position: relative; width: 100%; height: 2px;}
 .gnb-link button {width: fit-content;}
 /* util e */
 /* search s */
@@ -58,5 +54,5 @@
 .footer {margin-top: auto; padding: 40px 15px;}
 .footer-top {display: flex; justify-content: space-between;}
 .footer-logo {font-family: var(--tamburins); font-weight: bold; font-size: 15vw; letter-spacing: -2px; text-align: center; line-height: 1;}
-.footer-btm {margin-top: 20px;}
+.footer-btm {margin-top: 60px;}
 /** footer e **/
