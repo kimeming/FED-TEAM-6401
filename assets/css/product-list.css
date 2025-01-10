@@ -2,6 +2,35 @@
 
 /* 제품리스트 CSS - product-list.css */
 
+/* ==============서브페이지 상단 gnb================ */
+.sub-inner-header{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 로고 */
+.logo{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* gnb */
+.sub-gnb-list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.sub-gnb-list li{
+    font-size: 20px;
+}
+
+
+
+/* ============================== */
+
+
 
 /* 리스트 영역 */
 .product-list-area {
@@ -21,27 +50,18 @@
   width: 100%;
 }
 
-
-
-
-
-
-
-
 /* =========================================
 ===============미디어쿼리 영역 시작==============*/
 
 /******************* 1024px *******************/
 @media (max-width: 1024px) {
-    /* 리스트 박스 컬럼개수 */
-    .product-list-wrap {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  /* 리스트 박스 컬럼개수 */
+  .product-list-wrap {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
+/******************* 모바일 *******************/
 
-  /******************* 모바일 *******************/
-  
-  /* ========================================
+/* ========================================
   ===============미디어쿼리 영역 끝==============*/
-  
