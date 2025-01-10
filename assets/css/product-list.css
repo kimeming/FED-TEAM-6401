@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+/* 제품리스트 CSS - product-list.css */
+
+
+/* 리스트 영역 */
+.product-list-area {
+  width: 100vw;
+}
+
+/* 리스트 박스 */
+.product-list-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  width: 100%;
+}
+.product-select-box {
+  position: relative;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+/* =========================================
+===============미디어쿼리 영역 시작==============*/
+
+/******************* 1024px *******************/
+@media (max-width: 1024px) {
+    /* 리스트 박스 컬럼개수 */
+    .product-list-wrap {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+  /******************* 모바일 *******************/
+  
+  /* ========================================
+  ===============미디어쿼리 영역 끝==============*/
+  
