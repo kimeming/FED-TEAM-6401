@@ -3,11 +3,11 @@
 .header {height: var(--header-height); position: fixed; left: 0; top: 0; right: 0; z-index: 20;}
 .header.sticky {backdrop-filter: blur(15px); -webkit-backdrop-filter: blur(15px);}
 @media screen and (min-width: 768px) {
-    .header {--header-height: 60px;}
+    :root {--header-height: 60px;}
 }
 
 @media screen and (min-width: 1024px) {
-    .header {--header-height: 70px;}
+    :root {--header-height: 70px;}
 }
 /* inner-header s */
 .inner-header {display: flex; justify-content: space-between; align-items: center; padding: 10px; height: 100%;}
@@ -64,6 +64,11 @@
 
 .cart-btn {width: var(--header-btn-size); height: var(--header-btn-size); background: url('../img/main/icon_bag_w.svg') no-repeat center/100%;}
 
+.header.black .search-open-btn {background-image: url('../img/main/icon_search_b.svg');}
+.header.black .menu-btn {--menu-btn-color: #000;}
+.header.black .cart-btn {background-image: url('../img/main/icon_bag_b.svg');}
+
+
 @media screen and (min-width: 768px) {
     .util {gap: 20px;}
     .header {--header-btn-size: 25px;}
@@ -101,7 +106,7 @@
 .result-list .item-name {color: #777;}
 .result-list .result {color: #000;}
 
-.search-wrap .more-btn {width: 100%; padding: 7px 20px; border: 1px solid #eee; border-radius: 5px;}
+.search-wrap .more-btn {width: 100%; padding: 7px 20px; border: 1px solid var(--border-color); border-radius: 5px;}
 
 @media screen and (min-width: 768px) {
     .result-list .item>a {gap: 20px;}

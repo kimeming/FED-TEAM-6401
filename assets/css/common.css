@@ -30,6 +30,7 @@
     --point-color: #FF0000;
     --header-btn-color: #000;
     --menu-btn-color: #fff;
+    --border-color: #eee;
 
     /* 단위 (높이, 마진 패딩 값 등) */
     --header-height: 45px;

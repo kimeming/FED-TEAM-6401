@@ -96,4 +96,9 @@ $(() => {
     }
   }
 
+  // sub-page header
+  if($('#main').hasClass('sub-container')){
+    $header.addClass('black');
+  }
+
 });
