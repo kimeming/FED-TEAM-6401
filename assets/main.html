@@ -25,7 +25,7 @@
         <header class="header">
             <div class="inner-header">
                 <div class="header-left">
-                    <button type="button" class="menu-btn"><span class="blind">메뉴 버튼</span></button>
+                    <button type="button" class="search-open-btn"><span class="blind">검색 버튼</span></button>
                 </div>
                 <h1 class="logo">
                     <a href="#">TAMBURINS</a>
@@ -131,20 +131,57 @@
                 <!-- gnb-wrap e -->
                 <!-- util s -->
                 <div class="util">
-                    <button type="button" class="search-open-btn"><span class="blind">검색 버튼</span></button>
                     <button type="button" class="cart-btn"><span class="blind">장바구니 버튼</span></button>
+                    <button type="button" class="menu-btn"><span class="blind">메뉴 버튼</span></button>
                 </div>
                 <!-- util e -->
             </div>
             <div class="search-wrap">
+                <div class="search-top">
+                    <button type="button" class="search-close-btn"><span>검색창 닫힘</span></button>
+                </div>
                 <div class="search-form">
                     <form id="searchFrm" name="searchFrm" action="abc.php">
                         <fieldset>
                             <legend class="blind">검색창</legend>
                             <input type="text" id="searchForm" name="query" placeholder="어떤 상품을 찾으시나요?" title="검색어" tabindex="0">
+                            <button type="button" class="erase-btn"><span class="blind">검색결과 지우기</span></button>
+                            <button type="button" class="search-btn"><span class="blind">검색</span></button>
+                            <div class="recommend">
+                                <em class="box-tit">제안</em>
+                                <ul class="recommend-list">
+                                    <li>핸드크림</li>
+                                    <li>퍼퓸 이브닝글로우 11mL</li>
+                                </ul>
+                            </div>
+                            <div class="result">
+                                <em class="box-tit">검색 결과</em>
+                                <ul class="result-list">
+                                    <li class="item">
+                                        <a href="#">
+                                            <img src="./img/img-test01.jpg" alt="이미지">
+                                            <p class="item-name">이브닝 글로우 핸드크림</p>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <img src="./img/img-test01.jpg" alt="이미지">
+                                            <p class="item-name">이브닝 글로우 핸드크림</p>
+                                        </a>
+                                    </li>
+                                    <li class="item">
+                                        <a href="#">
+                                            <img src="./img/img-test01.jpg" alt="이미지">
+                                            <p class="item-name">이브닝 글로우 핸드크림</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="btn-wrap">
+                                <button type="button" class="more-btn">검색결과 더보기</button>
+                            </div>
                         </fieldset>
                     </form>
-                    <button type="button" class="search-btn"><span class="blind">통합검색</span></button>
                 </div>
             </div>
         </header>
