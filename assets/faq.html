@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TAMBURINS</title>
+    <!-- css 링크 모음 -->
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/faq.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- skip s -->
+      <div class="skip">
+        <a href="#main">본문 바로가기</a>
+      </div>
+      <!-- skip e -->
+      <!-- header s -->
+      <header class="header">
+        <div class="inner-header">
+          <h1 class="logo">
+            <!-- 이미지 혹은 svg 추가 -->
+          </h1>
+          <!-- gnb-wrap s -->
+          <div class="gnb-wrap">
+            <!-- gnb s -->
+            <nav class="gnb">
+              <ul class="gnb-list">
+                <li>
+                  <a href="#">EVENING GLOW</a>
+                  <ul class="dep2">
+                    <li>
+                      <a href="#">
+                        <img src="" alt="" class="dep2-img" />
+                        <p class="dep2-tit">EVENING GLOW</p>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <!-- gnb e -->
+            <!-- gnb-link s -->
+            <div class="gnb-link">
+              <button type="button" class="login-btn">로그인</button>
+              <ul class="link-list">
+                <li><a href="#">고객서비스</a></li>
+                <li><a href="#">SHOP IN KOREAN</a></li>
+              </ul>
+            </div>
+            <!-- gnb-link e -->
+          </div>
+          <!-- gnb-wrap e -->
+          <!-- util s -->
+          <div class="util">
+            <button type="button" class="search-open-btn">
+              <span class="screen-out">검색 버튼</span>
+            </button>
+            <button type="button" class="cart-btn">
+              <span class="screen-out">장바구니 버튼</span>
+            </button>
+            <button type="button" class="menu-btn">
+              <span class="screen-out">메뉴 버튼</span>
+            </button>
+          </div>
+          <!-- util e -->
+        </div>
+        <div class="search-wrap">
+          <div class="search-form">
+            <form id="searchFrm" name="searchFrm" action="abc.php">
+              <fieldset>
+                <legend class="blind">검색창</legend>
+                <input
+                  type="text"
+                  id="searchForm"
+                  name="query"
+                  placeholder="어떤 상품을 찾으시나요?"
+                  title="검색어"
+                  tabindex="0"
+                />
+              </fieldset>
+            </form>
+            <button type="button" class="search-btn">
+              <span class="screen-out">통합검색</span>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- header e -->
+      <!-- sub-container s -->
+      <div class="sub-container" id="main">
+        <!-- sub-top s -->
+        <div class="sub-top">
+          <h3 class="sub-title">서브 타이틀</h3>
+          <ul class="category-tab">
+            <li>서브 카테고리 1</li>
+            <li>서브 카테고리 2</li>
+            <li>서브 카테고리 3</li>
+          </ul>
+        </div>
+        <!-- sub-top e -->
+        <!-- contents s -->
+        <div class="contents">
+          <!-- 여기부터 컨텐츠 추가 -->
+          <div class="faq-wrap">
+            <!-- 타이틀 -->
+            <h3 class="faq-title">FAQ</h3>
+            <!-- tab s -->
+            <div class="tab-area">
+              <ul class="tab-list">
+                <li class="on"><a href="#">배송</a></li>
+                <li><a href="#">주문/결제</a></li>
+                <li><a href="#">선물포장</a></li>
+                <li><a href="#">쇼핑백</a></li>
+                <li><a href="#">취소/반품/교환</a></li>
+                <li><a href="#">사이트 이용/장애</a></li>
+                <li><a href="#">회원정보/혜택</a></li>
+                <li><a href="#">오프라인 스토어</a></li>
+              </ul>
+            </div>
+            <!-- tab e -->
+
+            <!-- faq s -->
+            <div class="faq-area">
+              <ul class="faq-list">
+                <li>
+                  <em class="question"
+                    >제주 및 도서 산간 배송 시 추가 비용이 있나요?</em
+                  >
+                  <p class="answer">추가 비용이 발생하지 않습니다.</p>
+                </li>
+                <li>
+                  <em class="question">군부대(사서함)로 발송 가능한가요?</em>
+                  <p class="answer">
+                    군부대(사서함) 주소는 택배사(CJ대한통운) 사정으로 배송
+                    불가합니다. 주문 시, 결제 및 배송이 진행 가능하나, 반송될 수
+                    있으며, 추가 반송비용이 청구될 수 있습니다.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- faq e -->
+
+          <!-- pager s -->
+          <div class="pager">
+            <button class="prev"></button>
+            <div class="pager-numlist">
+              <a href="#" class="on">1</a>
+              <a href="#">2</a>
+            </div>
+            <button class="next"></button>
+          </div>
+          <!-- pager e -->
+        </div>
+        <!-- contents e -->
+      </div>
+      <!-- sub-container e -->
+      <!-- footer s -->
+      <footer class="footer">
+        <div class="footer-top">
+          <ul class="footer-link">
+            <li><a href="#">고객서비스</a></li>
+            <li><a href="#">고객서비스</a></li>
+          </ul>
+          <ul class="sns-list">
+            <li><a href="#" target="_blank" title="새창열림">INSTAGRAM</a></li>
+            <li><a href="#" target="_blank" title="새창열림">FACEBOOK</a></li>
+            <li><a href="#" target="_blank" title="새창열림">KAKAOTALK</a></li>
+            <li><a href="#" target="_blank" title="새창열림">WEIBO</a></li>
+          </ul>
+        </div>
+        <div class="footer-btm">
+          <div class="footer-logo">
+            <!-- 이미지 혹은 텍스트로 삽입 예정 -->
+          </div>
+        </div>
+      </footer>
+      <!-- footer e -->
+    </div>
+  </body>
+</html>
