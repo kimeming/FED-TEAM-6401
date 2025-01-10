@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TAMBURINS</title>
+    <!-- css s -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/layout.css">
+    <!-- css e -->
+    <!-- JS s -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/layout.js"></script>
+    <!-- JS e -->
 </head>
 <body>
     <div class="wrapper">
@@ -12,47 +20,119 @@
             <a href="#main">본문 바로가기</a>
         </div>
         <!-- skip e -->
+        <div class="dimm"></div>
         <!-- header s -->
         <header class="header">
             <div class="inner-header">
+                <div class="header-left">
+                    <button type="button" class="menu-btn"><span class="blind">메뉴 버튼</span></button>
+                </div>
                 <h1 class="logo">
-                    <!-- 이미지 혹은 svg 추가 -->
+                    <a href="#">TAMBURINS</a>
                 </h1>
                 <!-- gnb-wrap s -->
                 <div class="gnb-wrap">
-                    <!-- gnb s -->
-                    <nav class="gnb">
-                        <ul class="gnb-list">
-                            <li>
-                                <a href="#">EVENING GLOW</a>
-                                <ul class="dep2">
-                                    <li>
-                                        <a href="#">
-                                            <img src="" alt="" class="dep2-img">
-                                            <p class="dep2-tit">EVENING GLOW</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- gnb e -->
-                    <!-- gnb-link s -->
-                    <div class="gnb-link">
-                        <button type="button" class="login-btn">로그인</button>
-                        <ul class="link-list">
-                            <li><a href="#">고객서비스</a></li>
-                            <li><a href="#">SHOP IN KOREAN</a></li>
-                        </ul>
+                    <div class="gnb-top">
+                        <button type="button" class="gnb-close"><span class="blind">gnb 닫힘</span></button>
                     </div>
-                    <!-- gnb-link e -->
+                    <div class="gnb-inner">
+                        <!-- gnb s -->
+                        <nav class="gnb">
+                            <ul class="gnb-list">
+                                <li>
+                                    <a href="#">EVENING GLOW</a>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="#">
+                                                <p class="dep2-tit">EVENING GLOW</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">PERFUME</a>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="#">
+                                                <p class="dep2-tit">EVENING GLOW</p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <p class="dep2-tit">EVENING GLOW</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">HAND&LIP</a>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="#">
+                                                <p class="dep2-tit">EVENING GLOW</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">BODY</a>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="#">
+                                                <p class="dep2-tit">EVENING GLOW</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">HOME FRAGRANCE</a>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="#">
+                                                <p class="dep2-tit">EVENING GLOW</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">STORE</a>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="#">
+                                                <p class="dep2-tit">EVENING GLOW</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">COMMUNITY</a>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="#">
+                                                <p class="dep2-tit">EVENING GLOW</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <!-- gnb e -->
+                        <!-- gnb-link s -->
+                        <div class="gnb-link">
+                            <ul class="link-list">
+                                <li><a href="#">로그인</a></li>
+                                <li><a href="#">고객서비스</a></li>
+                                <li><a href="#">SHOP IN KOREAN</a></li>
+                            </ul>
+                        </div>
+                        <!-- gnb-link e -->
+                    </div>
                 </div>
                 <!-- gnb-wrap e -->
                 <!-- util s -->
                 <div class="util">
-                    <button type="button" class="search-open-btn"><span class="screen-out">검색 버튼</span></button>
-                    <button type="button" class="cart-btn"><span class="screen-out">장바구니 버튼</span></button>
-                    <button type="button" class="menu-btn"><span class="screen-out">메뉴 버튼</span></button>
+                    <button type="button" class="search-open-btn"><span class="blind">검색 버튼</span></button>
+                    <button type="button" class="cart-btn"><span class="blind">장바구니 버튼</span></button>
                 </div>
                 <!-- util e -->
             </div>
@@ -64,7 +144,7 @@
                             <input type="text" id="searchForm" name="query" placeholder="어떤 상품을 찾으시나요?" title="검색어" tabindex="0">
                         </fieldset>
                     </form>
-                    <button type="button" class="search-btn"><span class="screen-out">통합검색</span></button>
+                    <button type="button" class="search-btn"><span class="blind">통합검색</span></button>
                 </div>
             </div>
         </header>
@@ -73,13 +153,15 @@
         <main class="main-container" id="main">
             <!-- section visual s -->
             <section class="section visual">
-                <h2 class="screen-out">메인 비주얼 영역</h2>
-                <!-- 유튜브 아이프레임 또는 비디오 삽입 예정 -->
+                <h2 class="blind">메인 비주얼 영역</h2>
+                <div class="video-wrap">
+                    <video muted="muted" playsinline="" preload="auto" autoplay="true"  src="./img/main/video-main.mp4" poster="./img/main/img-main-video-cover.png" class="main-video"></video>
+                </div>
             </section>
             <!-- section visual e -->
             <!-- section best s -->
             <section class="section best">
-                <h2 class="screen-out">베스트셀러 영역</h2>
+                <h2 class="blind">베스트셀러 영역</h2>
                 <h3 class="section-tit">Bestseller</h3>
                 <!-- swiper 추가 필요-->
                 <ul class="product-list"> 
@@ -98,7 +180,7 @@
             <!-- section best e -->
             <!-- section new s -->
             <section class="section new">
-                <h2 class="screen-out">신상품 영역</h2>
+                <h2 class="blind">신상품 영역</h2>
             <div class="new-product-wrap">
                     <h3 class="section-tit">Evening Glow</h3>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sunt fugiat delectus dolorum enim doloribus quae distinctio consequatur. Debitis porro ipsum minima totam dolorem obcaecati tenetur dolorum aperiam deserunt quia?</p>
@@ -108,7 +190,7 @@
             <!-- section new e -->
             <!-- section store s -->
             <section class="section store">
-                <h2 class="screen-out">매장소개 영역</h2>
+                <h2 class="blind">매장소개 영역</h2>
                 <div class="store-wrap">
                     <div class="store-img-slide">
                         <!-- swiper 추가 예정 -->
@@ -140,7 +222,7 @@
             </div>
             <div class="footer-btm">
                 <div class="footer-logo">
-                    <!-- 이미지 혹은 텍스트로 삽입 예정 -->
+                    <p>TAMBURINS</p>
                 </div>
             </div>
         </footer>
