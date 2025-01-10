@@ -4,7 +4,7 @@
 
 /* product-list-area s */
 .product-list-area {
-    width: 100vw;
+    width: 100%;
 }
 /* product-list-area e */
 
@@ -14,16 +14,39 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1px;
-    width: 100%;
+}
+.product-list-wrap li{
+    position: relative;
+    overflow: hidden;
+}
+.product-list-wrap li:hover .product-img{
+    animation: productImgScaleUp 25s linear infinite;
+}
+@keyframes productImgScaleUp {
+    to{
+        scale: 1.5;
+    }    
 }
 /* product-list-wrap e */
 
-/* product-select-box s */
-.product-select-box {
-    position: relative;
+/* product-img s */
+.product-img{
     width: 100%;
 }
-/* product-select-box e */
+/* product-img e */
+
+/* product-info s */
+.product-info{
+    padding: 20px;
+    padding-bottom: 30px;
+}
+.product-info h2{
+    font-weight: bold;
+}
+/* product-info e */
+
+
+
 
 /* =========================================
 ===============미디어쿼리 영역 시작==============*/
