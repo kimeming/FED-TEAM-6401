@@ -71,16 +71,31 @@ $(() => {
   });
 
   $searchClose.on('click', () => {
-    $searchWrap.removeClass('open');
-    $body.removeClass('on');
-    $dimm.removeClass('on');
+    searchClose();
   });
 
   $dimm.on('click', () => {
-    $dimm.removeClass('on');
-    $body.removeClass('on');
-    $searchWrap.removeClass('open');
+    searchClose();
   });
+
+  $('#searchForm').on('input', function () {
+    const $result = $('.result'),
+      $recommend = $('.recommend');
+    ;
+    if ($(this).val().trim() !== '') {
+      $('.search-content').removeClass('active');
+      $result.addClass('active');
+    } else {
+      $('.search-content').removeClass('active');
+      $recommend.addClass('active');
+    }
+});
+
+function searchClose(){
+  $searchWrap.removeClass('open');
+    $body.removeClass('on');
+    $dimm.removeClass('on');
+}
 
   // header sticky
   sticky();
