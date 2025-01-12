@@ -52,7 +52,7 @@
 }
 
 @media screen and (min-width: 1400px) {
-    .gnb-list>li>a {font-size: 32px;}
+    .gnb-list>li>a {font-size: 1.8vw;}
     .gnb .dep2 {font-size: 20px;}
 }
 /* gnb e */

@@ -8,13 +8,12 @@
     <link rel="stylesheet" href="./css/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/base.css">
     <!-- css e -->
     <!-- JS s -->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/layout.js"></script>
-    <script src="./js/main.js"></script>
     <!-- JS e -->
 </head>
 <body>
@@ -133,7 +132,6 @@
                 </div>
                 <!-- util e -->
             </div>
-            <!-- search-wrap s -->
             <div class="search-wrap">
                 <div class="search-top">
                     <button type="button" class="search-close-btn">
@@ -196,153 +194,169 @@
                     </form>
                 </div>
             </div>
-            <!-- search-wrap e -->
         </header>
         <!-- header e -->
-        <!-- main s -->
-        <main class="main-container" id="main">
-            <!-- section visual s -->
-            <section class="section visual">
-                <h2 class="blind">메인 비주얼 영역</h2>
-                <div class="video-wrap">
-                    <video muted="muted" playsinline="" preload="auto" autoplay="true"  src="./img/main/video-main.mp4" poster="./img/main/img-main-video-cover.png" class="web"></video>
-                    <video muted="muted" playsinline="" preload="auto" autoplay="true"  src="./img/main/video-main-visual-mob.mp4" poster="./img/main/img-main-video-cover.png" class="mob"></video>
-                </div>
-            </section>
-            <!-- section visual e -->
-            <!-- section best s -->
-            <section class="section best">
-                <div class="inner">
-                    <h2 class="blind">베스트셀러 영역</h2>
-                    <h3 class="section-tit">Bestseller</h3>
-                    <!-- swiper 추가 필요-->
-                    <div class="swiper best-slide">
-                        <ul class="product-list swiper-wrapper"> 
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="./img/main/bestseller_1.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 149,000</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="./img/main/bestseller_2.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="./img/main/bestseller_3.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="./img/main/bestseller_4.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="./img/main/bestseller_5.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <!-- section best e -->
-            <!-- section new s -->
-            <section class="section new">
-                <div class="inner">
-                    <h2 class="blind">신상품 영역</h2>
-                    <div class="new-product-wrap">
-                        <h3 class="section-tit">Evening Glow</h3>
-                        <div class="intro-box">
-                            <span>Rose Tinted by Sunset | Raspberry | Musk</span>
-                            <p>
-                                A rose is a rose is a rose.<br>
-                                In every moment, a rose perfectly embodies its essence as a rose. From the initial sprout of a seed to its vibrant bloom, it constantly evolves yet always retains the refined beauty of a rose. As the sunset paints the rose in raspberry-red hues and layers of bright light from fresh dill and zesty lemon peel cascade, earthy patchouli and cypriol add a grounding depth, like sturdy and elegant thorns guarding its delicate petals, revealing yet another perfect rose.
-                            </p>
+        <!-- sub-container s -->
+        <div class="sub-container" id="main">
+            <!-- sub-top s -->
+            <div class="sub-top">
+                <h3 class="sub-title">서브 타이틀</h3>
+                <ul class="category-tab">
+                    <li class="on"><a href="#">서브 카테고리 1</a></li>
+                    <li><a href="#">서브 카테고리 2</a></li>
+                    <li><a href="#">서브 카테고리 3</a></li>
+                </ul>
+            </div>
+            <!-- sub-top e -->
+            <!-- contents s -->
+            <div class="contents">
+                <!-- product-view s -->
+                <div class="product-view-area">
+                    <div class="product-view-wrap">
+                        <!-- thumb-box s -->
+                        <div class="thumb-box">
+                            <div class="product-slide swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="./img/img-test01.jpg" alt="이브닝글로우"></div>
+                                    <div class="swiper-slide"><img src="./img/img-test01.jpg" alt="이브닝글로우"></div>
+                                    <div class="swiper-slide"><img src="./img/img-test01.jpg" alt="이브닝글로우"></div>
+                                    <div class="swiper-slide"><img src="./img/img-test01.jpg" alt="이브닝글로우"></div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="link-btn">Go To Shop</a>
-                    </div>
-                </div>
-            </section>
-            <!-- section new e -->
-            <!-- section store s -->
-            <section class="section store">
-                <div class="inner">
-                    <h2 class="blind">매장소개 영역</h2>
-                    <div class="store-wrap">
-                        <div class="store-slide-wrap">
-                            <div class="store-slide swiper">
+                        <!-- thumb-box e -->
+                        <!-- detail-box s -->
+                        <div class="detail-box sub-section">
+                            <h4 class="name">퍼퓸 이브닝글로우</h4>
+                            <em class="price">₩ 149,000</em>
+                            <div class="desc">
+                                <p class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</p>
+                                <span>
+                                    모든 순간에 장미는 장미로써 완벽하게 존재합니다. 씨앗에서 움트어 화려하게 피어지는 매 순간, 끊임없이 변화하는 것처럼 보이지만 본질적으로 장미는 장미의 고아한 아름다움을 내포하고 있습니다. 해질녘 노을이 장미를 라즈베리처럼 발갛게 물들이고, 신선한 딜과 상큼한 레몬껍질로 밝은 빛을 겹쳐내면 살결을 보호하는 견고하고 우아한 가시처럼 얼씨한 패츌리와 사이프리올이 무게감을 더해 또 하나의 완전한 장미를 보여줍니다.
+                                </span>
+                            </div>
+                        </div>
+                        <!-- detail-box e -->
+                        <!-- option-box s -->
+                        <div class="option-box sub-section">
+                            <!-- option-list s -->
+                            <div class="swiper option-list">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="./img/store/img-store-hannam01.jpg" alt="플래그십 스토어 한남">
+                                        <a href="#" class="item">
+                                            <img src="./img/evening_glow/img_evenig_glow_01.jpg" alt="이브닝글로우">
+                                        </a>
+                                        <p>퍼퓸 이브닝글로우</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/store/img-store-sungsu01.jpg" alt="플래그십 스토어 성수">
+                                        <a href="#" class="item">
+                                            <img src="./img/evening_glow/img_evenig_glow_02.jpg" alt="이브닝글로우">
+                                        </a>
+                                        <p>퍼퓸 이브닝글로우</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/store/img-store-samchung01.jpg" alt="플래그십 스토어 삼청">
+                                        <a href="#" class="item">
+                                            <img src="./img/evening_glow/img_evenig_glow_03.jpg" alt="이브닝글로우">
+                                        </a>
+                                        <p>퍼퓸 이브닝글로우</p>
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="./img/store/img-store-dosan01.jpg" alt="하우스 도산">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="./img/store/img-store-sinsa01.jpg" alt="플래그십 스토어 신사">
+                                        <a href="#" class="item">
+                                            <img src="./img/evening_glow/img_evenig_glow_04.jpg" alt="이브닝글로우">
+                                        </a>
+                                        <p>퍼퓸 이브닝글로우</p>
                                     </div>
                                 </div>
-                                <div class="swiper-scrollbar"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-button-next"></div>
                             </div>
-                            <p class="store-name">플래그십 스토어 한남</p>
-                        </div>
-                        <div class="store-info">
-                            <h3 class="section-tit">스토어 로케이터</h3>
-                            <p>지금 바로 가까운 매장에서 탬버린즈의 다양한 제품들을 체험해 보세요.</p>
-                            <!-- 더미텍스트, 텍스트수정예정 -->
-                            <a href="#" class="link-btn">Find Store</a>
+                            <!-- option-list e -->
+                            <!-- more-option s -->
+                            <div class="more-option-box sub-section">
+                                <p class="box-tit">사이즈</p>
+                                <div class="link-btn-wrap">
+                                    <a href="#" class="link-btn round-btn">11mL</a>
+                                    <a href="#" class="link-btn round-btn">50mL</a>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button type="button" class="add-btn">Add To Cart</button>
+                                </div>
+                            </div>
+                            <!-- more-option e -->
+                            <div class="accordion-wrap">
+                                <div class="sub-section">
+                                    <ul class="accordion">
+                                        <li>
+                                            <a href="#" class="accordion-btn">제품 상세정보</a>
+                                            <div class="accordion-cont">
+                                                <ul class="text-list">
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="accordion-btn">제품 상세정보</a>
+                                            <div class="accordion-cont">
+                                                <ul class="text-list">
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="accordion-btn">제품 상세정보</a>
+                                            <div class="accordion-cont">
+                                                <ul class="text-list">
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                    <li>
+                                                        <em class="list-tit">리스트 타이틀</em>
+                                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum inventore esse quia provident, quae veritatis beatae dicta?</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- section store e -->
-        </main>
-        <!-- main e -->
+                <!-- product-view e -->
+                <ul class="breadcrumb">
+                    <li><a href="#" class="home">HOME</a></li>
+                    <li><a href="#">이브닝글로우</a></li>
+                    <li><a href="#">퍼퓸 이브닝글로우</a></li>
+                </ul>
+            </div>
+            <!-- contents e -->
+        </div>
+        <!-- sub-container e -->
         <!-- footer s -->
         <footer class="footer">
             <div class="footer-inner">
