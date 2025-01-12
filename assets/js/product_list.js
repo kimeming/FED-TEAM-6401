@@ -15,12 +15,11 @@ const pLVal = Object.values(productList);
 console.log(productList, pLKey, pLVal);
 
 let pLCnt = pLVal[0].length;
-console.log(pLVal[0][0].productTitle);
-
+// console.log(pLVal[0][0].productTitle);
 
 // product-list-wrap에 넣을 컴포넌트 만들기
 Vue.component("list-comp", {
-    // (1) 템플릿 설정
+  // (1) 템플릿 설정
   template: `
     <li class="product-select-box">
       <a class="product-view-nav" href="#" alt="제품 상세히보기">
@@ -29,40 +28,37 @@ Vue.component("list-comp", {
         </section>
         <div class="product-info">
           <h2 class="product-title">{{pTitle}}</h2>
-          <em class="product-price">₩ 149,000</em>
-          <strong class="product-note-count">+15 가지 향</strong>
+          <em class="product-price">{{pPrice}}</em>
+          <strong class="product-note-count">{{pNoteCount}}</strong>
         </div>
       </a>
     </li>
     `, ///template ///
 
-    props:['list-num'],
-    data(){
-        return{
-            // 이미지 src: "./img/evening_glow/img_evenig_glow_01.jpg"
-            pSrc:`./img/evening_glow/img_evenig_glow_${this.setNum()}.jpg`,
-            // 상품이름
-            pTitle: pLVal[0][0].productTitle,
-            // 가격
-            pPrice: pLVal[0][0].productPrice,
-            // 노트개수
-            pNoteCont:pLVal[0][0].productNoteCount
-        }
-        
-    }, ///data
-    
-    methods : { 
-        setNum(){
-            let lN = this.listNum;
-            return lN<10?'0'+lN:lN
-        }
+  props: ["list-num"],
+  data() {
+    return {
+      // 이미지 src: "./img/evening_glow/img_evenig_glow_01.jpg"
+      pSrc: `./img/evening_glow/img_evenig_glow_${this.setNum()}.jpg`,
+      // 상품이름
+      pTitle: pLVal[0][this.productIdx()].productTitle,
+      // 가격
+      pPrice: pLVal[0][this.productIdx()].productPrice,
+      // 노트개수
+      pNoteCont: pLVal[0][this.productIdx()].productNoteCount,
+    };
+  }, ///data
 
-
-        
+  methods: {
+    setNum() {
+      let lN = this.listNum;
+      return lN < 10 ? "0" + lN : lN;
+    },
+    productIdx(){
+      return this.listNum -1;
     }
-
+  },
 }); ///Vue 컴포넌트////////
 
 // 새 인스턴스 생성
-new Vue({el:'.product-list-wrap'})
-
+new Vue({ el: ".product-list-wrap" });
