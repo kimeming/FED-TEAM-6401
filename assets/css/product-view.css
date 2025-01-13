@@ -2,11 +2,17 @@
 
 /* 제품리스트 CSS - product-list.css */
 
-/*  */
-
-.product-indicator-wap{
+/* thumb-box s */
+.thumb-box{
     width: 50%;
 }
-.product-detail-wrap{
+.thumb-box>img{
+    width: 100%;
+    
+}
+/* thumb-box e */
+/* detail-box s */
+.detail-box{
     width: 50%;
 }
+/* detail-box e */
