@@ -29,7 +29,7 @@ Vue.component("list-comp", {
         <div class="product-info">
           <h2 class="product-title">{{pTitle}}</h2>
           <em class="product-price">{{pPrice}}</em>
-          <strong class="product-note-count">{{pNoteCount}}</strong>
+          <strong class="product-note-count">{{pNoteCnt}}</strong>
         </div>
       </a>
     </li>
@@ -45,7 +45,7 @@ Vue.component("list-comp", {
       // 가격
       pPrice: pLVal[0][this.productIdx()].productPrice,
       // 노트개수
-      pNoteCont: pLVal[0][this.productIdx()].productNoteCount,
+      pNoteCnt: pLVal[0][this.productIdx()].productNoteCount,
     };
   }, ///data
 
