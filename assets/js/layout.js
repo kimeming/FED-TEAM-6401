@@ -1,12 +1,16 @@
 $(() => {
   // 임시 gnb js - 수정예정
   $(".menu-btn").click(function () {
-    $(".gnb-wrap").addClass("open");
+    if(!$(this).hasClass('on')){
+      $(this).addClass('on');
+      $(".gnb-wrap").addClass("open");
+    } else {
+      $(this).removeClass('on')
+      $(".gnb-wrap").removeClass("open");
+    }
   });
 
-  $(".gnb-close").click(function () {
-    $(".gnb-wrap").removeClass("open");
-  });
+
 
   $(".gnb-list>li>a").click(function () {
     if (!$(this).hasClass("on")) {

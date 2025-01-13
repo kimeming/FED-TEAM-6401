@@ -29,10 +29,12 @@
     /* color */
     --point-color: #FF0000;
     --header-btn-color: #000;
+    --menu-btn-color: #fff;
 
     /* 단위 (높이, 마진 패딩 값 등) */
     --header-height: 45px;
     --gnb-link-height: 120px;
+    --header-btn-size: 20px;
 }
 
 /* reset css s */
