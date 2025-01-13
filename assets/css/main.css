@@ -1,16 +1,16 @@
 @charset "utf-8";
 /* 메인 공통 */
-.section .inner {max-width: 1600px; margin: 0 auto; padding: 80px 15px;}
+.section .inner {max-width: 1660px; margin: 0 auto; padding: 80px 15px;}
 .section-tit {font-size: 28px; font-weight: 700; font-family: var(--tamburins); padding-bottom: 0.8em;}
 .link-btn {display: inline-flex; justify-content: space-between; width: 100%; max-width: 300px; padding: 19px 25px; transition: background-color .3s; border: 1px solid #000;}
 .link-btn:hover, .link-btn:focus {background-color: #000; color: #fff;}
 @media screen and (min-width: 768px) {
-    .section .inner {padding: 100px 15px;}
+    .section .inner {padding: 100px 20px;}
     .section-tit {font-size: 1.5em;}
 }
 
 @media screen and (min-width: 1200px) {
-    .section .inner {padding: 140px 15px;}
+    .section .inner {padding: 140px 30px;}
     .section-tit {font-size: 2.5em;}
 }
 /* section - main visual */
@@ -54,7 +54,7 @@
 .store-wrap .section-tit {font-family: var(--pretendard);}
 
 .store-slide {padding-bottom: 20px;}
-.store-name {margin-top: 1rem; opacity: 0; transition: opacity 0.4s;}
+.store-name {margin-top: 1rem; opacity: 0; transition: opacity 0.5s;}
 .store-name.show {opacity: 1;}
 .store-slide .swiper-scrollbar {border-radius: 0; width: 100%; left: 0;}
 .store-slide .swiper-scrollbar-drag {background: #000; border-radius: 0;}
@@ -74,4 +74,14 @@
     .store-slide .swiper-button-next {width: 60px; height: 60px;} 
     .store-slide .swiper-button-next:after, 
     .store-slide .swiper-button-prev:after {font-size: 20px;}
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
