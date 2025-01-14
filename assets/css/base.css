@@ -12,11 +12,13 @@
 .contents {margin-top: calc(var(--header-height) + 95px);}
 .contents.type2 {margin-top: var(--header-height);}
 .inner-cont {max-width: 600px; margin: 0 auto; padding: 70px 15px;}
+.inner-cont h3 {font-size: 25px; font-weight: bold; margin-bottom: 20px;}
 @media screen and (min-width: 768px) {
     .sub-top .inner {flex-direction: row; align-items: center;}
     .sub-title {border-bottom: none; font-size: 18px;}
     .category-tab>li {font-size: 14px;}
 
     .contents {margin-top: calc(var(--header-height) + 50px);}
+    .inner-cont h3 {font-size: 30px; margin-bottom: 25px;}
 }
 
