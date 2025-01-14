@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* 메인 공통 */
 .section .inner {max-width: 1660px; margin: 0 auto; padding: 80px 15px;}
-.section-tit {font-size: 28px; font-weight: 700; font-family: var(--tamburins); padding-bottom: 0.8em;}
+.section-tit {font-size: 28px; font-weight: 700; font-family: var(--tamburins); padding-bottom: 0.8em; line-height: 1;}
 .link-btn {display: inline-flex; justify-content: space-between; width: 100%; max-width: 300px; padding: 19px 25px; transition: background-color .3s; border: 1px solid #000;}
 .link-btn:hover, .link-btn:focus {background-color: #000; color: #fff;}
 @media screen and (min-width: 768px) {
