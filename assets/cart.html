@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/layout.css">
     <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/cart.css">
     <!-- css e -->
     <!-- JS s -->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/layout.js"></script>
+    <script src="./js/cart.js"></script>
     <!-- JS e -->
 </head>
 <body>
@@ -29,7 +31,9 @@
                     <button type="button" class="search-open-btn"><span class="blind">검색 버튼</span></button>
                 </div>
                 <h1 class="logo">
-                    <a href="#">TAMBURINS</a>
+                    <a href="#">
+                        <img src="./img/main/logo_red.svg" alt="TAMBURINS">
+                    </a>
                 </h1>
                 <!-- gnb-wrap s -->
                 <div class="gnb-wrap">
@@ -111,7 +115,6 @@
                         <!-- gnb-link s -->
                         <div class="gnb-link">
                             <ul class="link-list">
-                                <li><a href="#">로그인</a></li>
                                 <li><a href="#">고객서비스</a></li>
                                 <li><a href="#">SHOP IN KOREAN</a></li>
                             </ul>
@@ -122,6 +125,7 @@
                 <!-- gnb-wrap e -->
                 <!-- util s -->
                 <div class="util">
+                    <button type="button" class="account-btn cart-btn"><span class="blind">로그인 버튼</span></button>
                     <button type="button" class="cart-btn"><span class="blind">장바구니 버튼</span></button>
                     <button type="button" class="menu-btn">
                         <span class="blind">메뉴 버튼</span>
@@ -130,6 +134,7 @@
                 </div>
                 <!-- util e -->
             </div>
+            <!-- search-wrap s -->
             <div class="search-wrap">
                 <div class="search-top">
                     <button type="button" class="search-close-btn">
@@ -192,18 +197,22 @@
                     </form>
                 </div>
             </div>
+            <!-- search-wrap e -->
         </header>
         <!-- header e -->
         <!-- sub-container s -->
         <div class="sub-container" id="main">
             <!-- contents s -->
             <div class="contents">
-                <div class="cart-area">
+                <!-- inner-cont s -->
+                <div class="inner-cont wide">
+                    <!-- cart-wrap s -->
                     <div class="cart-wrap">
                         <div class="cart-box left">
                             <div class="product-head">
-                                
+                                <input type="checkbox" id="" name="">
                             </div>
+                            <!-- cart-list s -->
                             <ul class="cart-list">
                                 <li class="item">
                                     <div class="item-selector">
@@ -211,7 +220,7 @@
                                     </div>
                                     <div class="item-thumbnail">
                                         <a href="#">
-                                            <img src="" alt="">
+                                            <img src="./img/img-test01.jpg" alt="test">
                                         </a>
                                     </div>
                                     <div class="item-info">
@@ -227,12 +236,42 @@
                                     </div>
                                 </li>
                             </ul>
+                            <!-- cart-list e -->
                         </div>
                         <div class="cart-box right">
-                            
+                            <div class="inner">
+                                <div class="noti-box">
+                                    <p class="noti">30,000원 이상 구매 시 무료 배송</p>
+                                    <a href="#" title="뒤로가기" class="link-btn round-btn">계속 쇼핑하기</a>
+                                </div>
+                                <ul class="price-detail">
+                                    <li>
+                                        <p>총 상품 금액</p>
+                                        <span class="price">₩ 31,000</span>
+                                    </li>
+                                    <li>
+                                        <p>배송비</p>
+                                        <span class="shipping">₩ 3,000</span>
+                                    </li>
+                                    <li>
+                                        <p>총 할인 금액</p>
+                                        <span class="discount">₩ 0</span>
+                                    </li>
+                                </ul>
+                                <div class="total-price">
+                                    <p>결제 예상 금액</p>
+                                    <span class="total">₩ 34,000</span>
+                                </div>
+                                <div class="btn-wrap">
+                                    <button class="btn-square bg-gray">선택 주문하기</button>
+                                    <button class="btn-square bg-white">전체 주문하기</button>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- cart-wrap e -->
                 </div>
+                <!-- inner-cont e -->
             </div>
             <!-- contents e -->
         </div>
