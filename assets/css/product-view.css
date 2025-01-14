@@ -1,27 +1,119 @@
 @charset "utf-8";
 
 /* 제품리스트 CSS - product-list.css */
-.product-view-wrap{
-    margin-top: 120px;
-}
 /* thumb-box s */
 .thumb-box {
   width: 50%;
 }
-.thumb-box .swiper-wrapper img {
+.thumb-box .product-slide-wrap {
+  flex-direction: column;
+  height: 100%;
+}
+.thumb-box .product-slide-wrap img {
   width: 100%;
   height: 100vh;
 }
-/* thumb-box e */
-/* detail-box s */
-.detail-box {
+.thumb-box .bullet-box {
   position: fixed;
-  width: 50%;
+  top: 50%;
+  left: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.thumb-box .bullet-box .bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #a6a6a6;
+  display: inline-block;
+}
+/* thumb-box e */
+/* detail-box-wrap s */
+.detail-box-wrap {
+  position: fixed;
   right: 0;
-  top: 30%;
-  padding: 20px;
+  top: 0;
+  width: 50%;
+  height: 3000px;
+  padding: 10vw 10vw;
+}
+.detail-box-wrap h4 {
+  font-size: 22px;
+  font-weight: normal;
+  padding: 5px 0;
+  font-weight: 500;
+}
+.detail-box-wrap em {
+  font-size: 20px;
+  display: block;
+  padding: 0px 0 15px;
+}
+.detail-box-wrap .fragrance {
+  font-size: 18px;
+  padding: 10px 0;
+}
+.detail-box-wrap span {
+  font-size: 15px;
 }
 /* detail-box e */
-.swiper-wrapper {
-  flex-direction: column;
+
+/* option box s */
+.option-box a {
+  width: 100%;
+  height: 100%;
 }
+.option-box a img {
+  width: 5.1vw;
+  height: 6.3vw;
+  border-radius: 0.2vw;
+  margin: 0 auto;
+}
+.option-box .swiper-slide p {
+  font-size: 10px;
+  text-align: center;
+  padding: 10px 0 0;
+}
+.option-box .swiper {
+  border-bottom: 1px solid #efefef;
+  padding: 30px 0 20px;
+}
+/* option box e */
+
+/* more option box s */
+.more-option-box p {
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+.more-option-box .link-btn-wrap {
+  display: flex;
+  width: 100px;
+  gap: 5px;
+}
+.more-option-box .link-btn-wrap a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 94px;
+  height: 40px;
+  padding: 0 32px;
+  background-color: #fff;
+  border-radius: 50px;
+  border: 1px solid #efefef;
+  line-height: 100%;
+  font-size: 13px;
+  color: #767676;
+}
+.more-option-box .btn-wrap {
+  margin: 20px 0;
+  padding: 10px 5px;
+  text-align: center;
+  background-color: #000;
+  border-radius: .5vw;
+}
+.more-option-box .btn-wrap .add-btn {
+  color: #fff;
+  border: none;
+}
+/* more option box e */
