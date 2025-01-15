@@ -7,7 +7,7 @@
   padding: 0 15px;
 }
 .store_section {
-  padding: 80px 0;
+  padding: 3rem 0;
 }
 .store_list > li {
   margin-bottom: 80px;
@@ -28,9 +28,12 @@
 .store_info .store_name {
   font-weight: bold;
 }
-.store_info > a {
+.store_address {
   font-size: 14px;
   text-decoration: underline;
+}
+.hide_address {
+  display: none;
 }
 .store_disc {
   display: flex;
@@ -51,7 +54,7 @@
 .store_grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 80px;
+  gap: 20px 80px;
 }
 .store_grid > .item {
   padding: 40px 20px;
@@ -65,9 +68,47 @@
   font-size: 14px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
+  .store_section {
+    padding: 20px 0;
+  }
   .store_grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .store_wrap {
+    padding: 0;
+  }
+  .store_section {
+    padding: 20px 15px;
+  }
+  .store_contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .store_info {
+    display: block;
+  }
+  .store_disc {
+    align-items: center;
+    padding: 1rem 0;
+  }
+  .show_address {
+    display: none;
+  }
+  .hide_address {
+    display: block;
+  }
+  .store_grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+  .store_grid > .item {
+    padding: 15px 20px;
+    text-align: center;
   }
 }
