@@ -5,7 +5,7 @@
     padding: 0 0 80px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 30px;
+    gap: 10px 25px;
    
 }
 
@@ -16,8 +16,10 @@
 .tab-list li.on{
     background-color: #000;
     color: #fff;
-    padding: 7px 15px;
     border-radius: 12px;
+}
+.tab-list li>a {
+    padding: 7px 15px;
 }
 .pager{
     display: flex;
@@ -35,3 +37,16 @@
 }
 
 .answer {display: none;}
+
+.question{
+    display: block;
+}
+.question.on{
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+
+.pager-numlist>a{
+    margin: 0 10px;
+}
