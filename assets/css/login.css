@@ -1,11 +1,11 @@
 .inner-cont.login {max-width: 400px;
     margin-bottom: 220px;
 }
-.scont {
+.login_scont {
     text-align: center;
 }
-.scont input[type=text],
-.scont input[type=password]{
+.login_scont input[type=text],
+.login_scont input[type=password]{
     width: 345px;
     height: 40px;
     border: 1px solid #777;
@@ -16,13 +16,13 @@
     color: #1d1d1d;
     font-size: 13px;
 }
-.scont input[type=text] {
+.login_scont input[type=text] {
     margin-bottom: 15px;
 }
-.scont input[type=password] {
+.login_scont input[type=password] {
     margin-bottom: 2%;
 }
-.scont input[type=submit] {
+.login_scont input[type=submit] {
     background-color: black;
     width: 345px;
     height: 40px;
@@ -44,11 +44,15 @@
 .addbx a {
     color: #000;
     text-decoration: none;
+    margin-right: 5px;
 }
-.scont ul li:nth-of-type(5) {
+.login_scont ul li:nth-of-type(5) {
     margin-bottom: 2%;
+    font-size: 13px;
 }
-
+#seleml {
+    margin-bottom: 15px;
+}
 
 @media screen and (max-width: 1024px) {
     ul {
@@ -59,11 +63,11 @@
         width: 100%;
         
     }
-    .scont input[type=text],
-    .scont input[type=password]{
+    .login_scont input[type=text],
+    .login_scont input[type=password]{
         width: 100%;
     }
-    .scont input[type=text] {
+    .login_scont input[type=text] {
         margin-bottom: 2%;
     }
     #sbtn {
@@ -72,10 +76,10 @@
     .addbx {
         margin-top: 0;
     }
-    .scont input[type=submit] {
+    .login_scont input[type=submit] {
         width: 100%;
     }
-    .scont ul li:nth-of-type(5) {
+    .login_scont ul li:nth-of-type(5) {
         margin-bottom: 2%;
     }
 }
