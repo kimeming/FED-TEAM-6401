@@ -1,4 +1,7 @@
-.inner-cont.login {max-width: 400px;}
+
+.inner-cont.login {max-width: 400px;
+    margin-bottom: 220px;
+}
 .scont {
     text-align: center;
 }
@@ -14,7 +17,7 @@
     color: #1d1d1d;
 }
 .scont input[type=text] {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .scont input[type=password] {
     margin-bottom: 2%;
@@ -34,7 +37,7 @@
 }
 .addbx {
     text-align: center;
-    font-size: 11px;
+    font-size: 12px;
     margin-top: 5%;
 }
 .addbx a {
