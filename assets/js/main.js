@@ -1,4 +1,19 @@
 $(() => {
+    // header logo ani
+    const $logo = $('.header .logo');
+
+    setTimeout(() => {
+        $logo.addClass('active');
+    }, 2000);
+
+    // main video ani (pc)
+    const pcVideo = $('.video-wrap .web');
+    pcVideo[0].pause();
+
+    setTimeout(function() {
+        pcVideo[0].play();
+    }, 3000);
+
     // best seller slide
     const bestSlide = new Swiper('.best-slide', {
         slidesPerView: 1,
