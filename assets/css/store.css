@@ -32,9 +32,6 @@
   font-size: 14px;
   text-decoration: underline;
 }
-.hide_address {
-  display: none;
-}
 .store_disc {
   display: flex;
   flex-direction: column;
@@ -90,17 +87,24 @@
     align-items: center;
   }
   .store_info {
-    display: block;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .store_info > h2 {
+    font-size: 18px;
   }
   .store_disc {
     align-items: center;
     padding: 1rem 0;
   }
-  .show_address {
-    display: none;
-  }
-  .hide_address {
-    display: block;
+  .store_address {
+    font-size: 12px;
+    text-decoration: none;
+    padding: 4px 8px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 20px;
   }
   .store_grid {
     grid-template-columns: repeat(1, 1fr);
