@@ -120,7 +120,8 @@
 .result-list .item-name {color: #777;}
 .result-list .result {color: #000;}
 
-.search-wrap .more-btn {width: 100%; padding: 7px 20px; border: 1px solid var(--border-color); border-radius: 5px;}
+.search-wrap .btn-wrap {margin-top: 1.5rem;}
+.search-wrap .more-btn {display: none; width: 100%; padding: 7px 20px; border: 1px solid var(--border-color); border-radius: 5px;}
 
 @media screen and (min-width: 768px) {
     .result-list .item>a {gap: 20px;}
