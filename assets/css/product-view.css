@@ -1,6 +1,9 @@
 @charset "utf-8";
 
 /* 제품리스트 CSS - product-list.css */
+html {
+  scroll-behavior: smooth;
+}
 /* product-view-wrap */
 .product-view-wrap {
   display: flex;
@@ -8,6 +11,9 @@
 .product-view-wrap .sticky-area {
   position: relative;
   width: 50%;
+}
+.product-slide {
+  position: relative;
 }
 
 /* thumb-box s */
@@ -23,7 +29,7 @@
   height: 100vh;
 }
 .thumb-box .bullet-box {
-  position: fixed;
+  position: sticky;
   top: 50%;
   left: 1%;
   display: flex;
@@ -37,13 +43,24 @@
   background-color: #a6a6a6;
   display: inline-block;
 }
+.thumb-box .bullet-sticky-area {
+  position: absolute;
+  top: 0;
+  left: 2%;
+  height: 89%;
+}
+.thumb-box .bullet-box .bullet.on{
+  background-color: #000;
+}
+
 /* thumb-box e */
 /* detail-box-wrap s */
 .detail-box-wrap {
   position: sticky;
   right: 0;
   top: 0;
-  padding: 10vw 10vw 0;
+  padding: 10vw 10vw 2vw;
+  overflow: hidden;
 }
 .detail-box-wrap h4 {
   font-size: 22px;
@@ -128,9 +145,9 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin: 35px 0;
+  margin-top: 35px;
 }
-.accordion-wrap .accordion > li {
+.accordion-wrap .accordion .accordion-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
