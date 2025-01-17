@@ -1,3 +1,11 @@
+.contents-tit {
+    font-size: 16px;
+    border-bottom: 1px solid #000;
+}
+.inner-cont h3 {
+    font-size: 15px;
+    font-weight: 500;
+}
 .inner-cont.login {max-width: 400px;
     margin-bottom: 220px;
 }
@@ -18,9 +26,11 @@
 }
 .login_scont input[type=text] {
     margin-bottom: 15px;
+    width: 100%;
 }
 .login_scont input[type=password] {
     margin-bottom: 2%;
+    width: 100%
 }
 .login_scont input[type=submit] {
     background-color: black;
@@ -31,6 +41,7 @@
     padding-left: 5px;
     color:#fff;
     font-size: 12px;
+    width: 100%
 }
 #sbtn {
     background-color: black;
