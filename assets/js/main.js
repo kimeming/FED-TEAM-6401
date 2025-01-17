@@ -1,18 +1,17 @@
 $(() => {
-    // header logo ani
-    const $logo = $('.header .logo');
+    // header intro animation - 첫 진입 시에만
+    if(window.innerWidth >= 1024){
+        const $logo = $('.header .logo');
+        const pcVideo = $('.video-wrap .web');
+        $('.header .util, .header-left').fadeOut();
+        pcVideo[0].pause();
 
-    setTimeout(() => {
-        $logo.addClass('active');
-    }, 2000);
-
-    // main video ani (pc)
-    const pcVideo = $('.video-wrap .web');
-    pcVideo[0].pause();
-
-    setTimeout(function() {
-        pcVideo[0].play();
-    }, 3000);
+        setTimeout(function() {
+            $logo.addClass('active');
+            pcVideo[0].play();
+            $('.header .util, .header-left').fadeIn();
+        }, 2000);
+    }
 
     // best seller slide
     const bestSlide = new Swiper('.best-slide', {
