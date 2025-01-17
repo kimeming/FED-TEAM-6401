@@ -49,54 +49,63 @@ const productList = {
       preductNote: "노을에 물든 장미 | 라즈베리 | 머스크",
       productPrice: "₩ 149,000",
       productNoteCount: "+15 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_01.jpg"
     },
     {
       productTitle: "쉘 퍼퓸 핸드 이브닝글로우",
       preductNote: "노을에 물든 장미 | 라즈베리 | 머스크",
       productPrice: "₩ 18,500",
       productNoteCount: "+5 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_02.jpg"
     },
     {
       productTitle: "에그 립밤 로즈우디 글로우",
       preductNote: "자몽 | 우아한 장미 | 머스크",
       productPrice: "₩ 28,900",
       productNoteCount: "+5 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_03.jpg"
     },
     {
       productTitle: "퍼퓸 밤 이브닝글로우",
       preductNote: "노을에 물든 장미 | 라즈베리 | 머스크",
       productPrice: "₩ 46,500",
       productNoteCount: "+7 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_04.jpg"
     },
     {
       productTitle: "퍼퓸 이브닝글로우",
       preductNote: "노을에 물든 장미 | 라즈베리 | 머스크",
       productPrice: "₩ 42,000",
       productNoteCount: "+8 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_05.jpg"
     },
     {
       productTitle: "메탈 웨어 쉘",
       preductNote: "쉘 퍼퓸 핸드 15mL 메탈 링",
       productPrice: "₩ 38,000",
       productNoteCount: "+4 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_06.jpg"
     },
     {
       productTitle: "레더 웨어 에그립밤",
       preductNote: "에그 립밤 레더 케이스",
       productPrice: "₩ 35,000",
       productNoteCount: "+4 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_07.jpg"
     },
     {
       productTitle: "레더 웨어 퍼퓸 밤",
       preductNote: "퍼퓸 밤 레더 케이스",
       productPrice: "₩ 42,000",
       productNoteCount: "+4 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_08.jpg"
     },
     {
       productTitle: "레더 웨어 퍼퓸",
       preductNote: "퍼퓸 11mL 레더 케이스",
       productPrice: "₩ 42,000",
       productNoteCount: "+4 가지 향",
+      productImage: "./img/evening_glow/img_evenig_glow_09.jpg"
     },
   ],
 
