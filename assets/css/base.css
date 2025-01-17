@@ -33,6 +33,8 @@
 .tab-list li>a {
     padding: 7px 15px;
 }
+.tab-view-list>li {display: none;}
+.tab-view-list>li.on {display: block;}
 @media screen and (min-width: 768px) {
     .sub-top .inner {flex-direction: row; align-items: center;}
     .sub-title {border-bottom: none; font-size: 18px;}
