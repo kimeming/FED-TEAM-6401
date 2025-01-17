@@ -97,4 +97,7 @@
     .login_scont ul li:nth-of-type(5) {
         margin-bottom: 2%;
     }
+    .login_scont ul li:nth-of-type(7) {
+        margin-bottom: 15px;
+    }
 }
