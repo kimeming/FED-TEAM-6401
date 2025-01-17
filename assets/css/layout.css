@@ -103,10 +103,15 @@
 
 .search-form {padding: 15px 15px 30px;}
 .form-inner {display: flex; flex-direction: column; gap: 25px;}
-.search-form input {border: none;  background: transparent; width: calc(100% - 40px); padding: 10px 17px;}
+.search-form input {border: none;  background: transparent; width: calc(100% - 40px); padding: 10px 35px 10px 17px;}
 .search-box {background: #f9f9f9; position: relative; padding: 5px 10px;}
 .search-box button {position: absolute; right: 11px; top: 50%; transform: translateY(-50%);}
-.search-btn {width: 30px; height: 30px; background: url('../img/main/icon_search_b.svg') no-repeat center/70%;}
+.search-btn {width: 35px; height: 35px; background: url('../img/main/icon_search_b.svg') no-repeat center/50%;}
+.search-box button.erase-btn {width: 35px; height: 35px; right: 46px; opacity: 0; transition: opacity .25s;}
+.search-box button.erase-btn.on {opacity: 1;}
+.erase-btn::before, .erase-btn::after {content: ''; position: absolute; left: 50%; top: 50%; width: 20px; height: 2px; background-color: #aaa; translate: -50% -50%;}
+.erase-btn::before {rotate: 45deg;}
+.erase-btn::after {rotate: -45deg;}
 
 .search-content {display: none;}
 .search-content.active {display: block;}

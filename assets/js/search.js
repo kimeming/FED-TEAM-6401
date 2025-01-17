@@ -17,6 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const result = document.querySelector('.result');
         const recommend = document.querySelector('.recommend');
         const searchContent = document.querySelector('.search-content');
+        const eraseBtn = document.querySelector('.erase-btn');
+        
+        eraseBtn.classList.add('on');
 
         if (searchForm.value.trim() !== '') {
             // 검색어가 있을 경우
@@ -75,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 검색결과 더보기
-    let currentIndex = 5;
+    let curIdx = 5;
     function loadMoreResults() {
         const searchQuery = searchForm.value.toLowerCase().trim();
         const resultList = document.querySelector('.result-list');
@@ -85,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             product.productTitle.toLowerCase().includes(searchQuery)
         );
 
-        const moreResults = filteredProducts.slice(currentIndex, currentIndex + 5);
+        const moreResults = filteredProducts.slice(curIdx, curIdx + 5);
 
         moreResults.forEach(product => {
             const li = document.createElement('li');
@@ -101,9 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
             resultList.appendChild(li);
         });
 
-        currentIndex += 5;
+        curIdx += 5;
 
-        if (currentIndex >= filteredProducts.length) {
+        if (curIdx >= filteredProducts.length) {
             document.querySelector('.more-btn').style.display = 'none';
         }
     }
