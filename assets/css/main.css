@@ -1,4 +1,8 @@
 @charset "utf-8";
+/* 메인페이지 pc에서만 로고 active */
+@media screen and (min-width: 1024px) {
+    .logo.active {scale: 8; translate: 0 10vh; transition: .3s;}
+}
 /* 메인 공통 */
 .section .inner {max-width: 1660px; margin: 0 auto; padding: 80px 15px;}
 .section-tit {font-size: 28px; font-weight: 700; font-family: var(--tamburins); padding-bottom: 0.8em; line-height: 1;}

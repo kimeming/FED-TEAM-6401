@@ -11,6 +11,7 @@
 }
 /* inner-header s */
 .inner-header {display: flex; justify-content: space-between; align-items: center; padding: 10px; height: 100%;}
+.logo>a {display: flex;}
 .logo img {height: 15px;}
 .header-left {display: flex; align-items: center;}
 @media screen and (min-width: 768px) {
