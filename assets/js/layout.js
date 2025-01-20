@@ -9,7 +9,7 @@ $(() => {
         $header = $('.header'),
         $menuBtn = $(".menu-btn"),
         $gnbWrap = $('.gnb-wrap'),
-        $gnbA = $('.gnb-list>li>a'),
+        $gnbA = $('.gnb-list .dep1'),
         $dep2 = $('.gnb-list .dep2'),
         $dep2A = $('.gnb-list .dep2>li>a'),
         $searchWrap = $('.search-wrap'),
@@ -78,18 +78,6 @@ $(() => {
     searchClose();
   });
 
-  $('#searchForm').on('input', function () {
-    const $result = $('.result'),
-      $recommend = $('.recommend');
-    ;
-    if ($(this).val().trim() !== '') {
-      $('.search-content').removeClass('active');
-      $result.addClass('active');
-    } else {
-      $('.search-content').removeClass('active');
-      $recommend.addClass('active');
-    }
-});
 
 function searchClose(){
   $searchWrap.removeClass('open');
