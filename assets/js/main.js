@@ -5,11 +5,13 @@ $(() => {
         const pcVideo = $('.video-wrap .web');
         $('.header .util, .header-left').fadeOut();
         pcVideo[0].pause();
+        $('body').addClass('on');
 
         setTimeout(function() {
             $logo.addClass('active');
             pcVideo[0].play();
             $('.header .util, .header-left').fadeIn();
+            $('body').removeClass('on');
         }, 2000);
     }
 

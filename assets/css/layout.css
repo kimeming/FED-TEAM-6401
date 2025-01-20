@@ -34,28 +34,28 @@
 
 .gnb-inner {display: flex; flex-direction: column; padding-top: var(--header-height); height: calc(100% + var(--header-height));}
 
-.gnb-list>li>a {display: flex; padding: 13px 15px; font-size: 18px;}
+.gnb .dep1 {display: flex; padding: 13px 15px; font-size: 18px; cursor: pointer;}
 .gnb .dep2 {display: none; padding: 0 15px 30px; font-size: 15px;}
 .gnb-link {height: var(--gnb-link-height); padding: 10px;}
 
 .link-list>li:not(:last-child) {padding-bottom: 10px;}
 
 @media screen and (min-width: 768px) {
-    .gnb-list>li>a {font-size: 22px;}
+    .gnb .dep1  {font-size: 22px;}
     .gnb .dep2 {font-size: 18px;}
 }
 
 @media screen and (min-width: 1024px) {
-    .gnb-list>li>a {font-size: 22px;}
+    .gnb .dep1  {font-size: 22px;}
     .gnb .dep2 {font-size: 18px;}
 }
 
 @media screen and (min-width: 1200px) {
-    .gnb-list>li>a {font-size: 28px;}
+    .gnb .dep1 {font-size: 28px;}
 }
 
 @media screen and (min-width: 1400px) {
-    .gnb-list>li>a {font-size: 1.8vw;}
+    .gnb .dep1 {font-size: 1.8vw;}
     .gnb .dep2 {font-size: 20px;}
 }
 /* gnb e */
