@@ -44,3 +44,13 @@
     .inner-cont h3 {font-size: 30px; margin-bottom: 25px;}
 }
 
+@media screen and (max-width: 400px) {
+    .tab-list {
+        flex-wrap: nowrap;
+        gap: 10px;
+        overflow-x: auto;
+        margin-bottom: 40px;
+        padding-bottom: 10px;
+    }
+}
+
