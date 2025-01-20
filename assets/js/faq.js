@@ -5,7 +5,11 @@ $( document ).ready(function() {
     // 대상선정
     // 클릭대상 question , 이벤트대상 : anwser
     $('.question').click(function(){
-        $(this).toggleClass('on');
-        $(this).next('.answer').stop().slideToggle();
+        if(!$(this).hasClass('on')){
+            $('.question').removeClass('on');
+            $('.answer').stop().slideUp();
+            $(this).addClass('on');
+            $(this).next('.answer').stop().slideDown();
+        }
     });
 });
