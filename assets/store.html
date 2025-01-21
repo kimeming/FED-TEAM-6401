@@ -14,7 +14,7 @@
     <!-- JS s -->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/layout.js"></script>
-    <script src="./js/store.js"></script>
+    <script src="./js/store.js" defer></script>
     <!-- JS e -->
   </head>
   <body>
@@ -231,18 +231,20 @@
               <ul class="store_list">
                 <!-- 한남 [10개] -->
                 <li>
-                  <div class="store_img">
-                    <img src="./img/store/img_store_hannam_01.jpg" alt="플래그십 스토어 한남점 첫번째 이미지" />
-                    <img src="./img/store/img_store_hannam_02.jpg" alt="플래그십 스토어 한남점 두번째 이미지" />
-                    <img src="./img/store/img_store_hannam_03.jpg" alt="플래그십 스토어 한남점 세번째 이미지" />
-                    <img src="./img/store/img_store_hannam_04.jpg" alt="플래그십 스토어 한남점 네번째 이미지" />
-                    <img src="./img/store/img_store_hannam_05.jpg" alt="플래그십 스토어 한남점 다섯번째 이미지" />
-                    <img src="./img/store/img_store_hannam_06.jpg" alt="플래그십 스토어 한남점 여섯번째 이미지" />
-                    <img src="./img/store/img_store_hannam_07.jpg" alt="플래그십 스토어 한남점 일곱번째 이미지" />
-                    <img src="./img/store/img_store_hannam_08.jpg" alt="플래그십 스토어 한남점 여덟번째 이미지" />
-                    <img src="./img/store/img_store_hannam_09.jpg" alt="플래그십 스토어 한남점 아홉번째 이미지" />
-                    <img src="./img/store/img_store_hannam_10.jpg" alt="플래그십 스토어 한남점 열번째 이미지" />
-                  </div>
+                    <div class="store_slide_wrap">
+                      <ul class="store_img">
+                        <img src="./img/store/img_store_hannam_01.jpg" alt="플래그십 스토어 한남점 첫번째 이미지" />
+                        <img src="./img/store/img_store_hannam_02.jpg" alt="플래그십 스토어 한남점 두번째 이미지" />
+                        <img src="./img/store/img_store_hannam_03.jpg" alt="플래그십 스토어 한남점 세번째 이미지" />
+                        <img src="./img/store/img_store_hannam_04.jpg" alt="플래그십 스토어 한남점 네번째 이미지" />
+                        <img src="./img/store/img_store_hannam_05.jpg" alt="플래그십 스토어 한남점 다섯번째 이미지" />
+                        <img src="./img/store/img_store_hannam_06.jpg" alt="플래그십 스토어 한남점 여섯번째 이미지" />
+                        <img src="./img/store/img_store_hannam_07.jpg" alt="플래그십 스토어 한남점 일곱번째 이미지" />
+                        <img src="./img/store/img_store_hannam_08.jpg" alt="플래그십 스토어 한남점 여덟번째 이미지" />
+                        <img src="./img/store/img_store_hannam_09.jpg" alt="플래그십 스토어 한남점 아홉번째 이미지" />
+                        <img src="./img/store/img_store_hannam_10.jpg" alt="플래그십 스토어 한남점 열번째 이미지" />
+                      </ul>
+                    </div>
                   <div class="store_contents">
                     <div class="store_info">
                       <h2 class="store_name">플래그십 스토어 한남</h2>
@@ -292,7 +294,14 @@
                 <!-- 도산 -->
                 <li>
                   <div class="store_img">
-                    <video src="./img/store/img_store_dosan_01.mp4" loop muted autoplay playsinline alt="하우스도산 첫번째 영상"></video>
+                    <video
+                      src="./img/store/img_store_dosan_01.mp4"
+                      loop
+                      muted
+                      autoplay
+                      playsinline
+                      alt="하우스도산 첫번째 영상"
+                    ></video>
                   </div>
                   <div class="store_contents">
                     <div class="store_info">

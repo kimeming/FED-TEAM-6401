@@ -12,10 +12,14 @@
 .store_list > li {
   margin-bottom: 80px;
 }
+.store_slide_wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
 .store_img {
   display: flex;
   transition: transform 0.3s ease;
-  overflow: hidden;
 }
 .store_img > img {
   width: 100%;
