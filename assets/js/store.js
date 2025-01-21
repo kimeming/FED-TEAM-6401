@@ -1,5 +1,11 @@
 // 6401 팀프로젝트 :: 탬버린즈 - store.js //
 
+/*************************************************************
+  [  요구사항  ]
+  - prev, next 버튼 없이 스와이프로 동작
+  - 배너 개수에 맞게 하단에 바형 인디케이터 설정 및 조작
+**************************************************************/
+
 const targetEl = document.querySelectorAll('.store_slide_wrap');
 
 targetEl.forEach(el => setElFn(el));
@@ -10,11 +16,6 @@ function setElFn(tgEl){
   const indicBox = tgEl.querySelector(".indic_box");
   const slides = tgEl.querySelectorAll(".store_img li");
   
-  /*************************************************************
-    [  요구사항  ]
-    - prev, next 버튼 없이 스와이프로 동작
-    - 배너 개수에 맞게 하단에 바형 인디케이터 설정 및 조작
-  *****************************************************************/
   
   slides.forEach((el) => {
     storeOl.innerHTML += `<li></li>`;
