@@ -1,5 +1,5 @@
 // layout.js
-
+import linkSetData from "../../data/gnb-data.js";
 // SearchWrap 컴포넌트
 export const SearchWrap = {
   template: `
@@ -49,15 +49,7 @@ export const SearchWrap = {
 export const GNB = {
   data() {
     return {
-      categories: {
-        "EVENING GLOW": ["이브닝 글로우"],
-        PERFUME: ["퍼퓸", "퍼퓸 밤"],
-        "HAND&LIP": ["쉘 퍼퓸 핸드", "에그 립밤", "체인 핸드"],
-        BODY: ["샤워리 바디", "퍼퓸드 핸드 앤 바디"],
-        "HOME FRAGRANCE": ["카 디퓨저", "룸 프래그런스", "퍼퓸 캔들"],
-        STORE: "없음",
-        COMMUNITY: ["FAQ"],
-      },
+      linkSetData,
     };
   },
   template: `
@@ -66,16 +58,16 @@ export const GNB = {
               <!-- gnb s -->
               <nav class="gnb">
                   <ul class="gnb-list">
-                      <li v-for="(item, category) in categories" :key="category">
-                          <router-link class="dep1" :to="'/' + category.toLowerCase().replace(/\s/g, '-')">{{ category }}</router-link>
-                          <ul v-if="Array.isArray(item) && item.length > 0" class="dep2">
-                              <li v-for="(subItem, index) in item" :key="index">
-                                <router-link tag="a" :to="'/' + category.toLowerCase().replace(/\s/g, '-') + '/' + subItem.toLowerCase().replace(/\s/g, '-')">
-                                    <p class="dep2-tit">{{ subItem }}</p>
-                                </router-link>
-                              </li>
-                          </ul>
-                      </li>
+                    <li v-for="(item, key) in linkSetData" :key="key">
+                      <router-link class="dep1" :to="item.link.path">{{ key }}</router-link>
+                      <ul v-if="item.menu && Object.keys(item.menu).length" class="dep2">
+                        <li v-for="(subItem, subKey) in item.menu" :key="subKey">
+                          <router-link :to="{ name: subItem.name, params: subItem.params }">
+                            <p class="dep2-tit">{{ subKey }}</p>
+                          </router-link>
+                        </li>
+                      </ul>
+                    </li>
                   </ul>
               </nav>
               <!-- gnb e -->
