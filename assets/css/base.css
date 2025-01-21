@@ -18,8 +18,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px 25px;
-   
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
 }
+.tab-list::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
 
 .tab-list li {
     display: flex;
