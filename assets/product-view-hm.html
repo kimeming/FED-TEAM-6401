@@ -18,6 +18,14 @@
       referrerpolicy="no-referrer"
     />
     <!-- css e -->
+    <!-- 뷰JS 스탠드얼론 버전 가져오기! -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <!-- 뷰JS vuex CDN -->
+    <script src="https://unpkg.com/vuex@3.0.0"></script>
+
+    <!-- 뷰JS 라우터 CDN -->
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
     <!-- JS s -->
     <script type="module" src="./js/product_view.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
@@ -215,14 +223,14 @@
       <!-- sub-container s -->
       <div class="sub-container" id="main">
         <!-- sub-top s -->
-        <div class="sub-top">
+        <!-- <div class="sub-top">
           <h3 class="sub-title">이브닝글로우</h3>
           <ul class="category-tab">
             <li class="on"><a href="#">이브닝글로우</a></li>
-            <!-- <li><a href="#">서브 카테고리 2</a></li>
-            <li><a href="#">서브 카테고리 3</a></li> -->
+            <li><a href="#">서브 카테고리 2</a></li>
+            <li><a href="#">서브 카테고리 3</a></li>
           </ul>
-        </div>
+        </div> -->
         <!-- sub-top e -->
         <!-- contents s -->
         <div class="contents">
@@ -231,6 +239,7 @@
             <div class="product-view-wrap">
               <!-- thumb-box s -->
               <div class="thumb-box">
+                <!-- 슬라이드 1 -->
                 <div class="product-slide">
                   <div class="product-slide-wrap">
                     <div class="product-detail-img">
@@ -248,12 +257,30 @@
                   </div>
                   <div class="bullet-sticky-area">
                     <div class="bullet-box">
-                      <div class="bullet"></div>
+                      <div class="bullet on"></div>
                       <div class="bullet"></div>
                       <div class="bullet"></div>
                       <div class="bullet"></div>
                     </div>
                   </div>
+                </div>
+                <!-- 슬라이드 2 -->
+                <div class="dragSwiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/view/item1/img_item_1.jpg" alt="이브닝글로우" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/view/item1/img_item_2.jpg" alt="이브닝글로우" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/view/item1/img_item_3.jpg" alt="이브닝글로우" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/view/item1/img_item_4.jpg" alt="이브닝글로우" />
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
                 </div>
               </div>
               <!-- thumb-box e -->
@@ -265,14 +292,17 @@
                     <em class="price">₩ 149,000</em>
                     <div class="desc">
                       <p class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</p>
-                      <span>
-                        모든 순간에 장미는 장미로써 완벽하게 존재합니다. 씨앗에서 움트어 화려하게 피어지는 매 순간,
-                        끊임없이 변화하는 것처럼 보이지만 본질적으로 장미는 장미의 고아한 아름다움을 내포하고 있습니다.
-                        해질녘 노을이 장미를 라즈베리처럼 발갛게 물들이고, 신선한 딜과 상큼한 레몬껍질로 밝은 빛을
-                        겹쳐내면 살결을 보호하는 견고하고 우아한 가시처럼 얼씨한 패츌리와 사이프리올이 무게감을 더해 또
-                        하나의 완전한 장미를 보여줍니다.
-                      </span>
+                      <button>
+                        <i class="fa-solid fa-chevron-down" style="color: #1d1d1d"></i>
+                      </button>
                     </div>
+                    <span>
+                      모든 순간에 장미는 장미로써 완벽하게 존재합니다. 씨앗에서 움트어 화려하게 피어지는 매 순간,
+                      끊임없이 변화하는 것처럼 보이지만 본질적으로 장미는 장미의 고아한 아름다움을 내포하고 있습니다.
+                      해질녘 노을이 장미를 라즈베리처럼 발갛게 물들이고, 신선한 딜과 상큼한 레몬껍질로 밝은 빛을
+                      겹쳐내면 살결을 보호하는 견고하고 우아한 가시처럼 얼씨한 패츌리와 사이프리올이 무게감을 더해 또
+                      하나의 완전한 장미를 보여줍니다.
+                    </span>
                   </div>
 
                   <!-- detail-box e -->
@@ -353,32 +383,46 @@
                               <i class="fa-solid fa-chevron-right" style="color: #1d1d1d"></i>
                             </a>
                             <div class="accordion-cont">
-                              <ul class="text-list">
-                                <li>
-                                  <em class="list-tit">리스트 타이틀</em>
-                                  <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda
-                                    tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum
-                                    inventore esse quia provident, quae veritatis beatae dicta?
-                                  </p>
-                                </li>
-                                <li>
-                                  <em class="list-tit">리스트 타이틀</em>
-                                  <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda
-                                    tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum
-                                    inventore esse quia provident, quae veritatis beatae dicta?
-                                  </p>
-                                </li>
-                                <li>
-                                  <em class="list-tit">리스트 타이틀</em>
-                                  <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum minus ad assumenda
-                                    tempore neque suscipit laudantium voluptatum deserunt, ratione quam recusandae eum
-                                    inventore esse quia provident, quae veritatis beatae dicta?
-                                  </p>
-                                </li>
-                              </ul>
+                              <div class="ProductOuterDetail-info-wrap">
+                                <button>
+                                  <i class="fa-solid fa-chevron-right" style="color: #1d1d1d"></i>
+                                </button>
+                                <h3>제품상세정보</h3>
+                                <p>
+                                  감각적으로 향을 즐길 수 있는 새로운 형태의 퍼퓸밤. 핸디한 사이즈의 퍼퓸 밤과 함께
+                                  어디서든 자유롭게 향을 경험하고 스스로를 표현해보세요. 부드러운 텍스처로 맥박이 뛰는
+                                  손목, 귀밑 등에 부드럽게 발라주면 체온에 의해 은은하게 퍼지는 향을 느끼실 수 있습니다.
+                                  아이코닉한 퍼퓸 밤 디자인은 탬버린즈 퍼퓸의 일부가 미러링된 형태로 확장된 퍼퓸의
+                                  페르소나를 표현합니다.
+                                </p>
+                                <h3 class="ProductOuterDetail_sub-title">향노트</h3>
+                                <p>Top: <span>레몬, 딜</span></p>
+                                <p>Middle: <span>로즈, 라즈베리</span></p>
+                                <p>Base: <span>머스크, 사이프리올, 패츌리</span></p>
+                                <h3 class="ProductOuterDetail_sub-title">전성분</h3>
+                                <p>
+                                  카프릴릭/카프릭트라이글리세라이드, 향료, 다이메티콘, 마이크로크리스탈린왁스, 파라핀,
+                                  페닐트라이메티콘, 합성왁스, 마이크로크리스탈린왁스, 리모넨, 리날룰, 시트로넬올,
+                                  제라니올, 비에이치티
+                                </p>
+                                <h3 class="ProductOuterDetail_sub-title">사용방법</h3>
+                                <p>
+                                  용기 하단을 돌려 내용물을 끌어올려 손목, 귀 뒤 등 맥박이 뛰는 부위에 가볍게 발라줍니다.
+                                </p>
+                                <h3 class="ProductOuterDetail_sub-title">사용할 때의 주의사항</h3>
+                                <p>
+                                  1. 손목 등에 가볍게 테스트 후 사용하세요. 2. 사용 시 묻어날 수 있으니 잘 흡수시켜
+                                  사용해주세요. 3. 제형 특성상 온도에 민감하여 고온 보관시 스웨팅 현상이 발생할 수
+                                  있으니 유의해주세요.  * 본 제품에 이상이 있을 경우 공정거래위원회 고시 소비자 분쟁
+                                  해결 기준에 의해 보상해 드립니다.
+                                </p>
+                                <h3 class="ProductOuterDetail_sub-title">사용기한</h3>
+                                <p>
+                                  사용기한 24개월(상품 발송일 기준으로 사용기한이 12개월 이상 남은 상품만을 판매합니다.)
+                                </p>
+                                <h3 class="ProductOuterDetail_sub-title">제조업자</h3>
+                                <p>코스맥스(주)</p>
+                              </div>
                             </div>
                           </li>
                           <li>
@@ -387,6 +431,9 @@
                               <i class="fa-solid fa-chevron-right" style="color: #1d1d1d"></i>
                             </a>
                             <div class="accordion-cont">
+                              <button>
+                                <i class="fa-solid fa-chevron-right" style="color: #1d1d1d"></i>
+                              </button>
                               <ul class="text-list">
                                 <li>
                                   <em class="list-tit">리스트 타이틀</em>
@@ -421,6 +468,9 @@
                               <i class="fa-solid fa-chevron-right" style="color: #1d1d1d"></i>
                             </a>
                             <div class="accordion-cont">
+                              <button>
+                                <i class="fa-solid fa-chevron-right" style="color: #1d1d1d"></i>
+                              </button>
                               <ul class="text-list">
                                 <li>
                                   <em class="list-tit">리스트 타이틀</em>
