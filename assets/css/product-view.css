@@ -4,6 +4,9 @@
 html {
   scroll-behavior: smooth;
 }
+.contents {
+  margin-top: 0;
+}
 /* product-view-wrap */
 .product-view-wrap {
   display: flex;
@@ -21,12 +24,14 @@ html {
   width: 50%;
 }
 .thumb-box .product-slide-wrap {
+  position: relative;
   flex-direction: column;
   height: 100%;
 }
 .thumb-box .product-slide-wrap img {
   width: 100%;
   height: 100vh;
+  object-fit: cover;
 }
 .thumb-box .bullet-box {
   position: sticky;
@@ -35,13 +40,16 @@ html {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  align-items: center;
+  
 }
 .thumb-box .bullet-box .bullet {
-  width: 8px;
-  height: 8px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background-color: #a6a6a6;
   display: inline-block;
+  transition: .4s;
 }
 .thumb-box .bullet-sticky-area {
   position: absolute;
@@ -49,12 +57,17 @@ html {
   left: 2%;
   height: 89%;
 }
-.thumb-box .bullet-box .bullet.on{
+.thumb-box .bullet-box .bullet.on {
   background-color: #000;
+  width: 8px;
+  height: 8px;
 }
 
 /* thumb-box e */
 /* detail-box-wrap s */
+.desc button{
+  display: none;
+}
 .detail-box-wrap {
   position: sticky;
   right: 0;
@@ -79,6 +92,8 @@ html {
 }
 .detail-box-wrap span {
   font-size: 15px;
+  margin: 10px 0;
+  line-height: 1.6;
 }
 /* detail-box e */
 
@@ -86,8 +101,10 @@ html {
 .option-box a img {
   width: 5.1vw;
   height: 6.3vw;
-  border-radius: 0.2vw;
+  border-radius: 0.3vw;
   margin: 0 auto;
+  padding: 0.2vw;
+  box-sizing: border-box;
 }
 .option-box .swiper-slide p {
   font-size: 10px;
@@ -147,25 +164,99 @@ html {
   gap: 25px;
   margin-top: 35px;
 }
-.accordion-wrap .accordion .accordion-btn {
+.accordion-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.accordion-btn.on i{
+rotate: 90deg;
 }
 
 .accordion-wrap .accordion-btn {
   font-size: 14px;
   color: #1d1d1d;
 }
-.accordion-wrap .accordion-cont {
+.accordion-cont {
   position: absolute;
-  width: 480px;
+  width: 100%;
   height: 100vh;
   top: 0;
-  translate: 150%;
-  background-color: #333;
+  right: -150%;
+  background-color: #fff;
+
+  padding: 70px 40px 40px;
+  z-index: 2;
+ 
+} 
+.accordion-cont.on {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0%;
+  background-color: #fff;
+  
+  padding: 70px 40px 40px;
+  z-index: 2;
+
+}
+
+.accordion-cont button{
+  position: absolute;
+  right: 50px;
+  z-index: 3;
+}
+.ProductOuterDetail-info-wrap h3{
+  font-size: 20px;
+}
+
+.accordion-cont >p{
+  white-space: pre-line;
+    font-size: 13px;
+    line-height: 22px;
+
+}
+.ProductOuterDetail-info-wrap h3{
+  display: block;
+  margin: 1.354vw 0 .312vw;
+  font-weight: bolder;
+}
+.ProductOuterDetail-info-wrap p{
+
+  white-space: pre-line;
+      font-size: 13px;
+      line-height: 22px;
 }
 /* accordion-wrap e */
+/* .shopping-box-wrap s */
+.shopping-box-wrap strong{
+  display: block;
+  margin: 30px 0 20px;
+  font-weight: bold;
+}
+.shopping-box-wrap p{
+  margin-top: 10px;
+  font-size: 14px;
+}
+.size-table strong{
+  font-weight: bold;
+  font-size: 15px;
+
+}
+.size-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.size-table tr{
+  border-bottom: 1px solid #ccc;
+  
+}
+.size-table td{
+  padding: .5vw 0;
+}
+/* .shopping-box-wrap e */
+
 .breadcrumb {
   height: 70px;
   display: flex;
@@ -173,3 +264,135 @@ html {
   justify-content: center;
   gap: 10px;
 }
+.dragSwiper {
+  display: none;
+}
+.swiper-pagination-bullet-active {
+  background-color: #000;
+}
+
+/* =========================================
+===============미디어쿼리 영역 시작==============*/
+
+/******************* 1024px *******************/
+@media (max-width: 1024px) {
+  .sub-top {
+    display: none;
+  }
+  
+  .product-view-wrap {
+    flex-direction: column;
+  }
+  .product-view-wrap .thumb-box {
+    width: 100%;
+  }
+  .thumb-box .product-slide-wrap {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    left: 0;
+  }
+  .dragSwiper {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    height: 118vw;
+    position: relative;
+    cursor: pointer;
+  }
+  .dragSwiper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .thumb-box .product-slide-wrap div {
+    width: 100%;
+    object-fit: cover;
+  }
+  .product-view-wrap .sticky-area {
+    width: 100%;
+  }
+
+  .thumb-box .bullet-sticky-area {
+    display: none;
+  }
+
+  .detail-box span {
+    display: block;
+    overflow: hidden;
+    height: 0;
+    transition: 0.4s;
+  }
+  .detail-box span.on {
+    height: 150px;
+  }
+  .desc {
+    display: flex;
+    gap: 10px;
+  }
+  .desc button{
+    display: block;
+  }
+  
+  .desc button.on {
+    rotate: 180deg;
+  }
+  .detail-box-wrap {
+    color: #1d1d1d;
+  }
+  .detail-box h4,
+  em {
+    font-size: 20px;
+  }
+  .detail-box .fragrance {
+    font-size: 18px;
+  }
+  .option-box a img {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 1.2vw;
+  }
+  .option-box .swiper {
+    border-bottom: 1px solid #efefef;
+    padding: 10px 0 20px;
+  }
+  .swiper-pagination {
+    display: block;
+  }
+  .dragSwiper {
+    display: block;
+  }
+  .product-slide {
+    display: none;
+  }
+  .accordion-cont {
+    position: relative;
+    width: 100%;
+    height: 0;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    
+    padding: 0;
+    overflow: hidden;
+  }
+  .accordion-cont.on {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    
+    padding: 20px 10px;
+  }
+  .accordion-cont button{
+    display: none;
+  }
+}
+
+/******************* 모바일 *******************/
+
+/* ========================================
+  ===============미디어쿼리 영역 끝==============*/

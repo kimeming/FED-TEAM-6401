@@ -53,12 +53,29 @@
 .product-info {
   padding: 20px;
   padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .product-info h2 {
-  font-weight: bold;
+  font-weight: 700;
 }
 .product-info em {
-  font-size: 12px;
+  font-size: 14px;
+    color: #575656;
+}
+.product-info strong{
+  font-weight: 500;
+  font-size: 17px;
+}
+.product-info section{
+  display: flex;
+  justify-content: space-between;
+}
+.product-info section .product-note-count{
+  font-size: 14px;
+  color: #737373;
+  
 }
 /* product-info e */
 
