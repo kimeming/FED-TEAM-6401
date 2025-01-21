@@ -1,9 +1,10 @@
 // 제품디테일페이지 - product_detail.js
 
+$('a').click(function (e) {
+  return false;
+})
 // 개선해야할부분 01.15
 // 광휠 스크롤막기
-
-
 // swiper s /////
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 5,
@@ -75,17 +76,16 @@ function bulletFn() {
 $(".desc button").click((e) => {
   $(".detail-box span").toggleClass("on");
   $(".desc button").toggleClass("on");
-  $()
+  $();
 });
-
 
 $(".accordion .accordion-btn").each((i, e) => {
   $(e).click(() => {
     $(".accordion-cont").eq(i).toggleClass("on");
     $(e).toggleClass("on");
-    $('.accordion-cont button').click(()=>{
+    $(".accordion-cont button").click(() => {
       $(".accordion-cont").eq(i).removeClass("on");
       $(e).removeClass("on");
-    })
+    });
   });
 });
