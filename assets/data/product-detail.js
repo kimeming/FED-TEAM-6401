@@ -1,17 +1,17 @@
 // 탬버린즈 상품 데이터 JS - product-detail.js
 
 // 데이터뽑아오기
-const temp = [];
-const productDetailInfo = $(".ProductDetail_detail-inner__jvQMc");
-temp.push({
-  productTitle: productDetailInfo.querySelector("h1").innerText,
-  productPrice: productDetailInfo.querySelector("em").innerText,
-  preductNote: productDetailInfo.querySelector("span").innerText,
-  productDescription: productDetailInfo.querySelector(".ProductDetail_detail-desc__MRvLd ").innerText,
-});
+// const temp = [];
+// const productDetailInfo = $(".ProductDetail_detail-inner__jvQMc");
+// temp.push({
+//   productTitle: productDetailInfo.querySelector("h1").innerText,
+//   productPrice: productDetailInfo.querySelector("em").innerText,
+//   preductNote: productDetailInfo.querySelector("span").innerText,
+//   productDescription: productDetailInfo.querySelector(".ProductDetail_detail-desc__MRvLd ").innerText,
+// });
 
-// 출력하기
-console.log(temp);
+// // 출력하기
+// console.log(temp);
 
 const productDetail = {
   /*********************** 
@@ -30,6 +30,7 @@ const productDetail = {
     ***********************/
 
   "퍼퓸 이브닝글로우": {
+    producIdx : 1, 
     productTitle: "퍼퓸 이브닝글로우",
     productPrice: "₩ 149,000",
     preductNote: "노을에 물든 장미 | 라즈베리 | 머스크",
@@ -38,6 +39,7 @@ const productDetail = {
   },
 
   "퍼퓸 펌키니": {
+    producIdx : 2,
     productTitle: "퍼퓸 펌키니",
     productPrice: "₩ 149,000",
     preductNote: "달콤한 호박ㅣ차조기잎ㅣ코코넛밀크",
@@ -46,6 +48,7 @@ const productDetail = {
   },
 
   "퍼퓸 홀리메탈": {
+    producIdx : 3,
     productTitle: "퍼퓸 홀리메탈",
     productPrice: "₩ 149,000",
     preductNote: "측백나무잎ㅣ차가운 금속ㅣ화이트 머스크",
@@ -54,6 +57,7 @@ const productDetail = {
   },
 
   "퍼퓸 볼드시트러스": {
+    producIdx : 4,
     productTitle: "퍼퓸 볼드시트러스",
     productPrice: "₩ 149,000",
     preductNote: "다채로운 시트러스ㅣ캐럿시드ㅣ고소한 결명자",
@@ -61,6 +65,7 @@ const productDetail = {
       "상큼하고 다채로운 시트러스로 경쾌하게 시작하는 볼드시트러스는 만다린의 달콤한 과육과 비터오렌지의 씁쓸한 껍질이 만나 고소한 결명자와 어우러지며 독특한 향취를 만들어냅니다. 젖은 흙이 떠오르는 사이프리올은 알싸한 암브레트씨드와 섞이며 우디한 잔향의 묵직한 무게감으로 맺어줍니다.",
   },
   "퍼퓸 우드솔트비치": {
+    producIdx : 5,
     productTitle: "퍼퓸 우드솔트비치",
     productPrice: "₩ 149,000",
     preductNote: "로즈우드ㅣ씨솔트ㅣ암브레트 시드",
@@ -68,3 +73,5 @@ const productDetail = {
       "햇살에 물든 에메랄드빛 바다와 숲의 경계에서 불어오는 시원한 바람을 떠오르게 합니다. 첫 시작을 여는 달콤한 로즈우드와 베르가못이 기분좋은 청량함을 주고, 짭짤한 바다내음이 느껴지는 씨솔트향은 한가로운 여름날의 추억을 비춥니다. 뒤이어 시더우드와 머스크가 포근하게 감싸 안아 무게감 있게 마무리됩니다.",
   },
 };
+
+export default productDetail
