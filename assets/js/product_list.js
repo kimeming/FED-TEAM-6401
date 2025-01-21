@@ -19,7 +19,7 @@ console.log(sCategory, productList[sCategory]);
 $(".category-tab li").click(function () {
   $(this).addClass("on");
   $(this).siblings().removeClass("on");
-  let ssCategory = $('.category-tab li').contains('on')
+  let ssCategory = $(".category-tab li").contains("on");
   console.log(ssCategory);
 });
 
@@ -45,8 +45,10 @@ Vue.component("list-comp", {
         <div class="product-info">
           <h2 class="product-title">{{pTitle}}</h2>
           <em class="product-note">{{pNote}}</em>
+          <section>
           <strong class="product-price">{{pPrice}}</strong>
           <span class="product-note-count">{{pNoteCnt}}</span>
+          </section>
         </div>
       </a>
     </li>
