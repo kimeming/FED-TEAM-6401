@@ -12,6 +12,11 @@
 .store_list > li {
   margin-bottom: 80px;
 }
+.store_img {
+  display: flex;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
 .store_img > img {
   width: 100%;
 }

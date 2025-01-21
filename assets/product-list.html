@@ -216,7 +216,7 @@
           <div class="inner">
             <h3 class="sub-title">EVENING GLOW</h3>
             <ul class="category-tab">
-              <li class="on"><a href="#">퍼퓸</a></li>
+              <li class="on"><a to="/perfume">퍼퓸</a></li>
               <li class=""><a href="#">퍼퓸</a></li>
               <!-- <li><a href="#">서브 카테고리 2</a></li>
               <li><a href="#">서브 카테고리 3</a></li> -->
@@ -229,14 +229,14 @@
           <!-- sub-top 있는 페이지에서는 여기부터 컨텐츠 추가 -->
           <div class="product-list-area">
             <ul class="product-list-wrap">
-              <list-comp 
-              v-for="v in listOfCategories"
-              v-bind:key="v-idx"
-              v-bind:list-idx="v.idx"
-              v-bind:product-title="v.productTitle"
-              v-bind:product-price="v.productPrice"
-              v-bind:product-note-count="v.productNoteCount"
-              v-bind:product-note="v.productNote"
+              
+              <list-comp
+                v-for="(v,i) in listOfCategories"
+                v-bind:list-idx="v.idx"
+                v-bind:product-title="v.productTitle"
+                v-bind:product-price="v.productPrice"
+                v-bind:product-note-count="v.productNoteCount"
+                v-bind:product-note="v.productNote"
               ></list-comp>
             </ul>
           </div>
