@@ -1,5 +1,5 @@
 // layout.js
-import linkSetData from "../../data/gnb-data.js";
+import linkSetData from "/assets/data/gnb-data.js";
 // SearchWrap 컴포넌트
 export const SearchWrap = {
   template: `
@@ -59,15 +59,16 @@ export const GNB = {
               <nav class="gnb">
                   <ul class="gnb-list">
                     <li v-for="(item, key) in linkSetData" :key="key">
-                      <router-link class="dep1" :to="item.link.path">{{ key }}</router-link>
+                      <a class="dep1" :href="item.link.path">{{ key }}</a>
                       <ul v-if="item.menu && Object.keys(item.menu).length" class="dep2">
                         <li v-for="(subItem, subKey) in item.menu" :key="subKey">
-                          <router-link :to="{ name: subItem.name, params: subItem.params }">
+                          <a :href="'/' + subItem.name + '?item=' + subItem.params.cls">
                             <p class="dep2-tit">{{ subKey }}</p>
-                          </router-link>
+                          </a>
                         </li>
                       </ul>
                     </li>
+
                   </ul>
               </nav>
               <!-- gnb e -->
@@ -95,7 +96,7 @@ export const Header = {
           <button type="button" class="search-open-btn"><span class="blind">검색 버튼</span></button>
         </div>
         <h1 class="logo">
-          <a href="#"><img src="./img/main/logo_red.svg" alt="TAMBURINS"></a>
+          <a href="#"><img src="/ASSETS/img/main/logo_red.svg" alt="TAMBURINS"></a>
         </h1>
         <gnb-comp></gnb-comp>
         <div class="util">
@@ -135,7 +136,7 @@ export const Footer = {
                 </div>
                 <div class="footer-btm">
                     <div class="footer-logo">
-                        <img src="./img/main/logo.svg" alt="TAMBURINS">
+                        <img src="/ASSETS/img/main/logo.svg" alt="TAMBURINS">
                     </div>
                 </div>
             </div>
