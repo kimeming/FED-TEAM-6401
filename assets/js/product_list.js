@@ -28,6 +28,16 @@ Vue.component("list-comp", {
   // (1) 템플릿 설정
   template: `
     <li class="product-select-box">
+      <button class="cart-btn">
+        <div class="cart-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path
+              d="M15.507 4.49999H12.366C12.339 3.00599 10.944 1.79999 9.23398 1.79999C7.52398 1.79999 6.13799 3.00599 6.10199 4.49999H2.96099L1.79999 16.2H16.677L15.516 4.49999H15.507ZM9.23398 3.14999C10.197 3.14999 10.98 3.75299 11.016 4.49999H7.46099C7.49699 3.75299 8.27998 3.14999 9.24298 3.14999H9.23398ZM3.28498 14.85L4.17599 5.84999H14.283L15.174 14.85H3.27599H3.28498Z"
+              fill="white"
+            ></path>
+          </svg>
+        </div>
+      </button>
       <a class="product-view-nav" href="./product-view-hm.html" alt="제품 상세히보기">
         <section class="product-img-wrap">
             <img v-bind:src="pSrc" alt="테스트이미지"/>
