@@ -17,7 +17,7 @@ const SubTopComp={
           <div class="inner" v-for="(val,key) in linkSetData">
             <h3 class="sub-title">{{key}}</h3>
             <ul class="category-tab" v-for="(v,k) in val.menu ">
-              <li class="tab" @click=onTab()><a href="#">{{k}}</a></li>
+              <li class="tab" ><a href="#">{{k}}</a></li>
             </ul>
           </div>
         </div>
@@ -29,10 +29,17 @@ const SubTopComp={
   },
   methods:{
     onTab(){
-      const tab=document.querySelectorAll('.tab');
-      tab.forEach(t=>t.classList.add('on'));
+      
     }
-  }
+  },
+  mounted(){
+    const tab=document.querySelectorAll('.tab');
+      tab.forEach(t=>{
+        t.onclick= function() {
+          tab.forEach(el=>el.classList.remove('on'));
+          this.classList.add('on');
+        }});
+  },
 };
 
 
