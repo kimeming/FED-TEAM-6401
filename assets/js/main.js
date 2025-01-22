@@ -3,7 +3,7 @@ $(() => {
     if(window.innerWidth >= 1024){
         const $logo = $('.header .logo');
         const pcVideo = $('.video-wrap .web');
-        $('.header .util, .header-left').fadeOut();
+        $('.header .util, .header-left').css('display', 'none');
         pcVideo[0].pause();
         $('body').addClass('on');
 
@@ -12,7 +12,7 @@ $(() => {
             pcVideo[0].play();
             $('.header .util, .header-left').fadeIn();
             $('body').removeClass('on');
-        }, 2000);
+        }, 500);
     }
 
     // best seller slide
