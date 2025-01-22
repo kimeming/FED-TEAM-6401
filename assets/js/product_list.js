@@ -104,6 +104,7 @@ Vue.component("list-comp", {
   },
 }); ///Vue 컴포넌트////////
 
+
 // 새 인스턴스 생성
 new Vue({
   el: ".product-list-wrap",

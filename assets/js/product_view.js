@@ -1,8 +1,28 @@
 // 제품디테일페이지 - product_detail.js
+import { Header, Footer } from "./component/layout-comp.js";
+import { View } from "./component/product-view-comp.js";
+import router from './router.js';
+///////////////////////////////////////////////////////////////////
+/////////////////////////Vue/////////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
-$('a').click(function (e) {
+new Vue({
+  el: "#app-view",
+  components: {
+    "header-comp": Header,
+    "view-comp": View,
+    "footer-comp": Footer,
+  },
+  router,
+});
+
+///////////////////////////////////////////////////////////////////
+/////////////////////////Vue/////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+
+$("a").click(function (e) {
   return false;
-})
+});
 // 개선해야할부분 01.15
 // 광휠 스크롤막기
 // swiper s /////
@@ -73,6 +93,7 @@ function bulletFn() {
 // bulletFn e /////
 
 // css 변경  s///
+
 $(".desc button").click((e) => {
   $(".detail-box span").toggleClass("on");
   $(".desc button").toggleClass("on");
@@ -89,3 +110,4 @@ $(".accordion .accordion-btn").each((i, e) => {
     });
   });
 });
+// css 변경  e///
