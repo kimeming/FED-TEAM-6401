@@ -1,12 +1,23 @@
 $(() => {
   // header intro animation - 첫 진입 시에만
+  let animationPlayed = false;
+  let isResizing = false;
+
   function headerAni() {
+    if (animationPlayed || isResizing) return;
+    animationPlayed = true;
+
     if (window.innerWidth >= 1024) {
       const $logo = $(".header .logo");
       const pcVideo = $(".video-wrap .web");
-      $(".header .util, .header-left").css("display", "none");
+      $(".header .util, .header-left").hide();
       pcVideo[0].pause();
       $("body").addClass("on");
+
+      // 스크롤 위치 확인
+      if ($(window).scrollTop() > 0) {
+        $logo.addClass("active");
+      }
 
       setTimeout(function () {
         $logo.addClass("active");
@@ -15,11 +26,17 @@ $(() => {
         $("body").removeClass("on");
       }, 500);
     }
-    // scrollTop이 0일때만 실행 조건걸기
-    // header util 안보이게
-    // 첫 진입때만 실행하기
   }
 
+  // 리사이즈 이벤트 처리
+  $(window).on("resize", function () {
+    isResizing = true; 
+    setTimeout(function () {
+      isResizing = false;
+    }, 500);
+  });
+
+  // 초기 애니메이션 실행
   headerAni();
 
   // best seller slide
