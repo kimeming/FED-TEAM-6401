@@ -138,11 +138,17 @@
 
 /** footer s **/
 .footer {margin-top: auto; padding: 40px 15px;}
-.footer-top {display: flex; justify-content: space-between;}
-.footer-top a:hover, .footer-top a:focus {text-decoration: underline;}
+.footer-btm {display: flex; justify-content: space-between; margin-top: 20px;}
 
-.footer-logo {text-align: center;}
-.footer-btm {margin-top: 60px;}
+.footer-btm a:hover, .footer-top a:focus {text-decoration: underline;}
+.footer-btm p {font-weight: 700;}
+
+@media screen and (min-width: 768px) {
+    .footer-btm {margin-top: 40px; padding: 0 10px;}
+    .footer-btm ul {display: flex; gap: 10px;}
+    .footer-btm>div {display: flex; gap: 10px;}
+}
+
 /** footer e **/
 
 /* 공통 max-width */
