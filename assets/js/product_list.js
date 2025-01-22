@@ -1,6 +1,5 @@
 // 제품리스트 JS - product_list.js
 import { Header, Footer } from './component/layout-comp.js';
-import { Main } from './component/main-comp.js';
 import router from './router.js';
 
 // 데이터 불러오기
