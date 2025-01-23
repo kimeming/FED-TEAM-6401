@@ -14,7 +14,7 @@ export const subTop = {
     `,
 }
 
-export const SubContainer = {
+export const SubType1 = {
     template: `
         <!-- sub-container s -->
         <div class="sub-container" id="main">
@@ -22,9 +22,7 @@ export const SubContainer = {
             <sub-top-comp></sub-top-comp>
             <!-- sub-top e -->
             <!-- contents s -->
-            <div class="contents">
-                <!-- 여기부터 컨텐츠 추가 -->
-            </div>
+            <router-view></router-view>
             <!-- contents e -->
         </div>
         <!-- sub-container e -->
@@ -32,4 +30,18 @@ export const SubContainer = {
     components: {
         "sub-top-comp": subTop,
     },
+}
+
+export const SubType2 = {
+    template: `
+        <!-- sub-container s -->
+        <div class="sub-container" id="main">
+            <!-- contents s -->
+            <div class="contents type2">
+                <router-view></router-view>
+            </div>
+            <!-- contents e -->
+        </div>
+        <!-- sub-container e -->
+    `,
 }

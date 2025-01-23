@@ -59,16 +59,15 @@ export const GNB = {
               <nav class="gnb">
                   <ul class="gnb-list">
                     <li v-for="(item, key) in linkSetData" :key="key">
-                      <a class="dep1" :href="item.link.path">{{ key }}</a>
+                      <router-link class="dep1" :to="item.link.path">{{ key }}</router-link>
                       <ul v-if="item.menu && Object.keys(item.menu).length" class="dep2">
                         <li v-for="(subItem, subKey) in item.menu" :key="subKey">
-                          <a :href="'/' + subItem.name + '?item=' + subItem.params.cls">
+                          <router-link :to="'/' + subItem.name + '?item=' + subItem.params.cls">
                             <p class="dep2-tit">{{ subKey }}</p>
-                          </a>
+                          </router-link>
                         </li>
                       </ul>
                     </li>
-
                   </ul>
               </nav>
               <!-- gnb e -->
