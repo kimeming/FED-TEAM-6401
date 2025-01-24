@@ -1,7 +1,10 @@
 @charset "utf-8";
 
 /* 제품리스트 CSS - product-list.css */
-
+.sub-top .category-tab{
+  /* width: 100vw; */
+align-items: center;
+}
 /* product-list-area s */
 .product-list-area {
   width: 100%;
