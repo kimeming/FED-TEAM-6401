@@ -1,6 +1,38 @@
 // main component
+import productList from '/assets/data/product-list.js'
+
+const bestProducts = productList.sort((a, b) => b.pSellin - a.pSellin).slice(0, 5);
 
 export const Main = {
+    data(){
+        return {
+            bestProducts: [],
+        }
+    },
+    mounted(){
+        this.bestProducts = bestProducts;
+
+        const bestSlide = new Swiper(".best-slide", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            breakpoints: {
+                360: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                    centeredSlides: false,
+                },
+            },
+        });
+    },
     template: `
     <main class="main-container" id="main">
             <!-- section visual s -->
@@ -19,64 +51,16 @@ export const Main = {
                     <h3 class="section-tit">Bestseller</h3>
                     <div class="swiper best-slide">
                         <ul class="product-list swiper-wrapper"> 
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_1.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 149,000</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_2.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_3.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_4.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_5.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
+                            <li v-for="product in bestProducts" :key="product.idx" class="swiper-slide">
+                                <a :href="product.link" class="item">
+                                <div class="img-box">
+                                    <img :src="product.pImage" alt="product.pTitle">
+                                </div>
+                                <div class="info-box">
+                                    <p class="name">{{ product.pTitle }}</p>
+                                    <span class="fragrance">{{ product.pNote }}</span>
+                                    <strong class="price">{{ product.pPrice }}</strong>
+                                </div>
                                 </a>
                             </li>
                         </ul>
