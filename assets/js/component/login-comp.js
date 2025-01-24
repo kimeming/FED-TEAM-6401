@@ -3,34 +3,34 @@
 // Login 컴포넌트
 export const Login = {
   template: `
-                     <h3 class="contents-tit">로그인</h3>
-                     <div class="login_scont">
-                        <form action="process.php" method="post">
-                            <!-- 아이디박스 -->
-                             <div class="box">
-                            <div class="minput">
-                                <input type="text" name="mid" id="mid" maxlength="10" placeholder="아이디(이메일)" />
-                                <!-- name속성은 서버쪽 사용용도로 작성함(id명과 같은 이름 많이씀) -->
-                            </div>
-                            <div class="minput">
-                                <!-- 비번박스 -->
-                                <input type="password" name="mpw" id="mpw" maxlength="10" placeholder="비밀번호" />
-                            </div>
-                            <!-- 버튼박스 -->
-                            <div class="btnbx">
-                                <input type="submit" id="sbtn" value="로그인" />
-                            </div>
-                            <!-- 기타링크 -->
-                            <div class="addbx">
-                                <span>
-                                    <a href="#">아이디가 없으신가요?</a>
-                                </span>
-                                <span>
-                                    <a href="join.html">회원가입 하기</a>
-                                </span>
-                            </div>
-                        </form>
-                     </div>
+        <h3 class="contents-tit">로그인</h3>
+        <div class="login_scont">
+           <form action="process.php" method="post">
+               <!-- 아이디박스 -->
+                <div class="box">
+               <div class="minput">
+                   <input type="text" name="mid" id="mid" maxlength="10" placeholder="아이디(이메일)" />
+                   <!-- name속성은 서버쪽 사용용도로 작성함(id명과 같은 이름 많이씀) -->
+               </div>
+               <div class="minput">
+                   <!-- 비번박스 -->
+                   <input type="password" name="mpw" id="mpw" maxlength="10" placeholder="비밀번호" />
+               </div>
+               <!-- 버튼박스 -->
+               <div class="btnbx">
+                   <input type="submit" id="sbtn" value="로그인" />
+               </div>
+               <!-- 기타링크 -->
+               <div class="addbx">
+                   <span>
+                       <a href="#">아이디가 없으신가요?</a>
+                   </span>
+                   <span>
+                       <a href="join.html">회원가입 하기</a>
+                   </span>
+               </div>
+           </form>
+        </div>
     `,
 };
 

@@ -66,6 +66,7 @@
 }
 #seleml {
     margin-bottom: 15px;
+    margin-left: 10px;
 }
 .stit {
     border-bottom: 1px solid #000;
@@ -76,13 +77,16 @@
     justify-content: center;
 }
 #email1 {
-    width:120px;
+    /* width:120px; */
+    width: calc(50% - 17px);
 }
 #email2 {
-    width: 200px;
+    /* width: 200px; */
+    width: calc(50% - 17px);
 }
 .gol {
     margin: 0 10px;
+    line-height: 35px;
 }
 
 
@@ -121,8 +125,14 @@
     .login_scont ul li:nth-of-type(6) {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
     #email2 {
         flex-direction: column;
+    }
+    #seleml {
+        width: 100%;
+        margin-left: 0px;
     }
 }
