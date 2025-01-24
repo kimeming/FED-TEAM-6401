@@ -52,10 +52,13 @@
     font-size: 12px;
     margin-top: 5%;
 }
-.addbx a {
+.addbx span a {
     color: #000;
     text-decoration: none;
     margin-right: 5px;
+}
+.addbx span:nth-of-type(1) a{
+    color: #7e7e7e;
 }
 .login_scont ul li:nth-of-type(5) {
     margin-bottom: 2%;
