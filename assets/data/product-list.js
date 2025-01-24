@@ -14,7 +14,7 @@
 //     idx: idxN,
 //     categot: "EVENING GLOW",
 //     subCat: "",
-//     pImage: "./img/evening_glow/img_evening_glow_" + (imgN = imgN < 0 ? imgN : "0" + imgN) + ".jpg",
+//     pImage: "./img/evening_glow/img_evening_glow_" + (imgN == imgN < 0 ? imgN : "0" + imgN) + ".jpg",
 //     pTitle: el.querySelector("h2").innerText,
 //     pNote: el.querySelector("em").innerText,
 //     pPrice: el.querySelector("strong").innerText,
@@ -441,7 +441,7 @@ const productList = [
     idx: 35,
     categot: "HAND&LIP",
     subCat: "쉘 퍼퓸 핸드",
-    pImage: "./img/shell_perfume_hand/img_shell_perfume_hand_010.jpg",
+    pImage: "./img/shell_perfume_hand/img_shell_perfume_hand_10.jpg",
     pTitle: "퍼퓸핸드 미니 듀오 세트 베스트(PUMKINI+FEY9)",
     pNote: "PUMKINI+FEY9",
     pPrice: "₩ 35,000",
@@ -451,7 +451,7 @@ const productList = [
     idx: 36,
     categot: "HAND&LIP",
     subCat: "쉘 퍼퓸 핸드",
-    pImage: "./img/shell_perfume_hand/img_shell_perfume_hand_011.jpg",
+    pImage: "./img/shell_perfume_hand/img_shell_perfume_hand_11.jpg",
     pTitle: "퍼퓸핸드 미니 듀오 세트 베스트(CHAMO+VEIN)",
     pNote: "CHAMO+VEIN",
     pPrice: "₩ 35,000",
@@ -874,7 +874,7 @@ const productList = [
     pSellin: 88646,
   },
 ];
-console.log(productList);
+// console.log(productList);
 
 // console.log("arr1",arr1)
 // 데이터 export

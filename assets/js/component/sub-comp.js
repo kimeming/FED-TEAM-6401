@@ -1,17 +1,30 @@
 // sub page layout component
+import store from "../vuex_store_store.js";
 export const subTop = {
     template: `
         <div class="sub-top">
-            <div class="inner">
-                <h3 class="sub-title">서브 타이틀</h3>
-                <ul class="category-tab">
-                    <li class="on"><a href="#">서브 카테고리 1</a></li>
-                    <li><a href="#">서브 카테고리 2</a></li>
-                    <li><a href="#">서브 카테고리 3</a></li>
-                </ul>
-            </div>
+         <div class="inner" >
+         <ul class="category-tab"  v-for="(val,key) in $store.state.linkSetData">
+         <h3 class="sub-title">{{key}}</h3>
+            <li class="tab" :class="{on: $store.state.catName === k }" @click="getCatName(k)"
+            v-for="(v,k) in val.menu">
+                <a href="#">{{k}}</a>
+            </li>
+            </ul>
+
         </div>
+    </div>
     `,
+    data() {
+        return {};
+      },
+      methods: {
+        getCatName(pm) {
+            // console.log("가져온카테고리", pm);
+            // 파라미터 스토어로 보내기
+            store.commit("setData", pm);
+          },
+      },
 }
 
 export const SubContainer = {

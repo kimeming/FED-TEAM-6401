@@ -18,23 +18,19 @@
       referrerpolicy="no-referrer"
     />
     <!-- css e -->
-    <!-- 뷰JS 스탠드얼론 버전 가져오기! -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-
-    <!-- 뷰JS vuex CDN -->
-    <script src="https://unpkg.com/vuex@3.0.0"></script>
-
-    <!-- 뷰JS 라우터 CDN -->
-    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
     <!-- JS s -->
+    <script type="module" src="./js/vuex_store.js"></script>
     <script type="module" src="./js/product_view.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://unpkg.com/vuex@3.0.0"></script>
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/layout.js"></script>
     <!-- JS e -->
   </head>
   <body>
-    <div id="app-view" class="wrapper">
+    <div id="app" class="wrapper">
       <!-- skip s -->
       <div class="skip">
         <a href="#main">본문 바로가기</a>
@@ -44,11 +40,11 @@
       <header-comp></header-comp>
       <!-- header e -->
       <!-- sub-container s -->
-      <div class="sub-container" id="main">
+      
         <!-- contents s -->
         <view-comp></view-comp>
         <!-- contents e -->
-      </div>
+      
       <!-- sub-container e -->
       <!-- footer s -->
       <footer-comp></footer-comp>
