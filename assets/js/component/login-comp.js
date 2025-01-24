@@ -3,7 +3,7 @@
 // Login 컴포넌트
 export const Login = {
   template: `
-        <h3 class="contents-tit">로그인</h3>
+                     <h3 class="contents-tit">로그인</h3>
                      <div class="login_scont">
                         <form action="process.php" method="post">
                             <!-- 아이디박스 -->
@@ -23,13 +23,10 @@ export const Login = {
                             <!-- 기타링크 -->
                             <div class="addbx">
                                 <span>
-                                    <a href="#">아이디찾기　|</a>
+                                    <a href="#">아이디가 없으신가요?</a>
                                 </span>
                                 <span>
-                                    <a href="#">비밀번호찾기　|</a>
-                                </span>
-                                <span>
-                                    <a href="join.html">회원가입</a>
+                                    <a href="join.html">회원가입 하기</a>
                                 </span>
                             </div>
                         </form>
