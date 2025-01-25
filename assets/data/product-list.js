@@ -18,7 +18,7 @@
 //     pTitle: el.querySelector("h2").innerText,
 //     pNote: el.querySelector("em").innerText,
 //     pPrice: el.querySelector("strong").innerText,
-//     pSellin: rndNum,
+//     pSelling: rndNum,
 //   });
 // });
 // // 출력하기
@@ -47,17 +47,17 @@
                 HAND&LIP (쉘 퍼퓸 핸드, 에그 립밤, 체인 핸드)
                 BODY (샤워리 바디, 퍼퓸드 핸드 앤 바디)
                 HOME FRAGRANCE (카 디퓨저, 룸 프래그런스, 퍼퓸 캔들)
-             
+
     -소분류(subCatgory) - 현재 데이터가 소분류로 나눠져 놓은거라 그대로 추가하시면됩니다!
     -이미지 경로()pImage - 
     -제품명(pTitle) - 
     -제품가격(pNote) -
     -제품노트(pPrice) - 
-    -구매개수(pSellingCont) - 임의 숫자
+    -구매개수(pSelling) - 임의 숫자
     __________________________________
 
-   productLIst = [ =>배열안에 객체로 만들어주세요
-   {
+  productLIst = [ =>배열안에 객체로 만들어주세요
+    {
       idx: 1,
       categoty: "EVENING GLOW",
       subCatgory: "이브닝글로우",
@@ -65,7 +65,7 @@
       pTitle: "퍼퓸 이브닝글로우",
       pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
       pPrice: "₩ 149,000",
-      pSellingCont : 31231
+      pSelling : 31231
       
     },
     {
@@ -76,7 +76,7 @@
       pTitle: "쉘 퍼퓸 핸드 이브닝글로우",
       pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
       pPrice: "₩ 149,000",
-      pSellingCont : 31231
+      pSelling : 31231
       
     },
     ....
@@ -87,7 +87,7 @@
       pTitle: "퍼퓸 밤 이브닝글로우",
       pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
       pPrice: "₩ 46,500",
-      pSellingCont : 31231
+      pSelling : 31231
     }
    {4번 제품정보},
    {5번 제품정보},
@@ -102,7 +102,7 @@ const productList = [
     pTitle: "퍼퓸 이브닝글로우",
     pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
     pPrice: "₩ 149,000",
-    pSellin: 86958,
+    pSelling: 86958,
   },
   {
     idx: 2,
@@ -112,7 +112,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 이브닝글로우",
     pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
     pPrice: "₩ 18,500",
-    pSellin: 49243,
+    pSelling: 49243,
   },
   {
     idx: 3,
@@ -122,7 +122,7 @@ const productList = [
     pTitle: "에그 립밤 로즈우디 글로우",
     pNote: "자몽 | 우아한 장미 | 머스크",
     pPrice: "₩ 28,900",
-    pSellin: 82712,
+    pSelling: 82712,
   },
   {
     idx: 4,
@@ -132,7 +132,7 @@ const productList = [
     pTitle: "퍼퓸 밤 이브닝글로우",
     pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
     pPrice: "₩ 46,500",
-    pSellin: 80574,
+    pSelling: 80574,
   },
   {
     idx: 5,
@@ -142,7 +142,7 @@ const productList = [
     pTitle: "퍼퓸 이브닝글로우",
     pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
     pPrice: "₩ 42,000",
-    pSellin: 86358,
+    pSelling: 86358,
   },
   {
     idx: 6,
@@ -152,7 +152,7 @@ const productList = [
     pTitle: "메탈 웨어 쉘",
     pNote: "쉘 퍼퓸 핸드 15mL 메탈 링",
     pPrice: "₩ 38,000",
-    pSellin: 86893,
+    pSelling: 86893,
   },
   {
     idx: 7,
@@ -162,7 +162,7 @@ const productList = [
     pTitle: "레더 웨어 에그립밤",
     pNote: "에그 립밤 레더 케이스",
     pPrice: "₩ 35,000",
-    pSellin: 10731,
+    pSelling: 10731,
   },
   {
     idx: 8,
@@ -172,7 +172,7 @@ const productList = [
     pTitle: "레더 웨어 퍼퓸 밤",
     pNote: "퍼퓸 밤 레더 케이스",
     pPrice: "₩ 42,000",
-    pSellin: 81175,
+    pSelling: 81175,
   },
   {
     idx: 9,
@@ -182,7 +182,7 @@ const productList = [
     pTitle: "레더 웨어 퍼퓸",
     pNote: "퍼퓸 11mL 레더 케이스",
     pPrice: "₩ 42,000",
-    pSellin: 887,
+    pSelling: 887,
   },
 
   {
@@ -193,7 +193,7 @@ const productList = [
     pTitle: "에그 퍼퓸 펌키니",
     pNote: "달콤한 호박ㅣ차조기잎ㅣ코코넛밀크",
     pPrice: "₩ 45,800",
-    pSellin: 9925,
+    pSelling: 9925,
   },
   {
     idx: 11,
@@ -203,7 +203,7 @@ const productList = [
     pTitle: "에그 퍼퓸 카모",
     pNote: "진득한 카모마일 | 부드러운 나무결 | 머스크",
     pPrice: "₩ 45,800",
-    pSellin: 9399,
+    pSelling: 9399,
   },
   {
     idx: 12,
@@ -213,7 +213,7 @@ const productList = [
     pTitle: "에그 퍼퓸 홀리메탈",
     pNote: "측백나무잎ㅣ차가운 금속ㅣ화이트 머스크",
     pPrice: "₩ 45,800",
-    pSellin: 46847,
+    pSelling: 46847,
   },
   {
     idx: 13,
@@ -223,7 +223,7 @@ const productList = [
     pTitle: "퍼퓸 이브닝글로우",
     pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
     pPrice: "₩ 42,000",
-    pSellin: 14087,
+    pSelling: 14087,
   },
   {
     idx: 14,
@@ -233,7 +233,7 @@ const productList = [
     pTitle: "퍼퓸 카모",
     pNote: "진득한 카모마일 | 부드러운 나무결 | 머스크",
     pPrice: "₩ 42,000",
-    pSellin: 23437,
+    pSelling: 23437,
   },
   {
     idx: 15,
@@ -243,7 +243,7 @@ const productList = [
     pTitle: "퍼퓸 화이트다즐링",
     pNote: "화이트 샴페인 | 다즐링 티 | 크리미한 머스크",
     pPrice: "₩ 42,000",
-    pSellin: 31628,
+    pSelling: 31628,
   },
   {
     idx: 16,
@@ -253,7 +253,7 @@ const productList = [
     pTitle: "퍼퓸 이브닝글로우",
     pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
     pPrice: "₩ 149,000",
-    pSellin: 31981,
+    pSelling: 31981,
   },
   {
     idx: 17,
@@ -263,7 +263,7 @@ const productList = [
     pTitle: "퍼퓸 펌키니",
     pNote: "달콤한 호박ㅣ차조기잎ㅣ코코넛밀크",
     pPrice: "₩ 149,000",
-    pSellin: 58047,
+    pSelling: 58047,
   },
   {
     idx: 18,
@@ -273,7 +273,7 @@ const productList = [
     pTitle: "퍼퓸 홀리메탈",
     pNote: "측백나무잎ㅣ차가운 금속ㅣ화이트 머스크",
     pPrice: "₩ 149,000",
-    pSellin: 66324,
+    pSelling: 66324,
   },
 
   {
@@ -284,7 +284,7 @@ const productList = [
     pTitle: "퍼퓸 밤 이브닝글로우",
     pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
     pPrice: "₩ 46,500",
-    pSellin: 22867,
+    pSelling: 22867,
   },
   {
     idx: 20,
@@ -294,7 +294,7 @@ const productList = [
     pTitle: "퍼퓸 밤 홀리메탈",
     pNote: "측백나무잎ㅣ차가운 금속ㅣ화이트 머스크",
     pPrice: "₩ 46,500",
-    pSellin: 46801,
+    pSelling: 46801,
   },
   {
     idx: 21,
@@ -304,7 +304,7 @@ const productList = [
     pTitle: "퍼퓸 밤 펌키니",
     pNote: "달콤한 호박ㅣ차조기잎ㅣ코코넛밀크",
     pPrice: "₩ 46,500",
-    pSellin: 32726,
+    pSelling: 32726,
   },
   {
     idx: 22,
@@ -314,7 +314,7 @@ const productList = [
     pTitle: "퍼퓸 밤 카모",
     pNote: "진득한 카모마일 | 부드러운 나무결 | 머스크",
     pPrice: "₩ 46,500",
-    pSellin: 84622,
+    pSelling: 84622,
   },
   {
     idx: 23,
@@ -324,7 +324,7 @@ const productList = [
     pTitle: "퍼퓸 밤 라레",
     pNote: "이슬을 머금은 풋사과 | 화이트 튤립 | 샌달우드",
     pPrice: "₩ 46,500",
-    pSellin: 69497,
+    pSelling: 69497,
   },
   {
     idx: 24,
@@ -334,7 +334,7 @@ const productList = [
     pTitle: "퍼퓸 밤 버가샌달",
     pNote: "지중해의 베르가못 | 쌉싸래한 청귤 | 샌달우드",
     pPrice: "₩ 46,500",
-    pSellin: 60152,
+    pSelling: 60152,
   },
   {
     idx: 25,
@@ -344,7 +344,7 @@ const productList = [
     pTitle: "퍼퓸 밤 스웨이드페어",
     pNote: "시원한 배 | 스웨이드 | 쌉쌀한 갈바넘",
     pPrice: "₩ 46,500",
-    pSellin: 36344,
+    pSelling: 36344,
   },
 
   {
@@ -355,7 +355,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 이브닝글로우",
     pNote: "노을에 물든 장미 | 라즈베리 | 머스크",
     pPrice: "₩ 32,000",
-    pSellin: 74094,
+    pSelling: 74094,
   },
   {
     idx: 27,
@@ -365,7 +365,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 펌키니",
     pNote: "달콤한 호박 | 차조기잎 | 코코넛밀크",
     pPrice: "₩ 32,000",
-    pSellin: 96456,
+    pSelling: 96456,
   },
   {
     idx: 28,
@@ -375,7 +375,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 볼드시트러스",
     pNote: "다채로운 시트러스 | 캐럿시드 | 고소한 결명자",
     pPrice: "₩ 32,000",
-    pSellin: 51119,
+    pSelling: 51119,
   },
   {
     idx: 29,
@@ -385,7 +385,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 홀리메탈",
     pNote: "측백나무잎 | 차가운 금속 | 화이트 머스크",
     pPrice: "₩ 32,000",
-    pSellin: 91172,
+    pSelling: 91172,
   },
   {
     idx: 30,
@@ -395,7 +395,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 카모",
     pNote: "진득한 카모마일 | 부드러운 나무결 | 머스크",
     pPrice: "₩ 32,000",
-    pSellin: 3615,
+    pSelling: 3615,
   },
   {
     idx: 31,
@@ -405,7 +405,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 라레",
     pNote: "이슬을 머금은 풋사과 | 화이트 튤립 | 샌달우드",
     pPrice: "₩ 32,000",
-    pSellin: 34888,
+    pSelling: 34888,
   },
   {
     idx: 32,
@@ -415,7 +415,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 버가샌달",
     pNote: "지중해의 베르가못 | 쌉싸래한 청귤 | 샌달우드",
     pPrice: "₩ 32,000",
-    pSellin: 54249,
+    pSelling: 54249,
   },
   {
     idx: 33,
@@ -425,7 +425,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 페이구",
     pNote: "무화과나무 | 엠브레트 씨앗 | 달콤 씁쓸한",
     pPrice: "₩ 32,000",
-    pSellin: 24682,
+    pSelling: 24682,
   },
   {
     idx: 34,
@@ -435,7 +435,7 @@ const productList = [
     pTitle: "쉘 퍼퓸 핸드 베인",
     pNote: "월계수 잎 | 은방울꽃 | 정돈된 가죽",
     pPrice: "₩ 32,000",
-    pSellin: 51182,
+    pSelling: 51182,
   },
   {
     idx: 35,
@@ -445,7 +445,7 @@ const productList = [
     pTitle: "퍼퓸핸드 미니 듀오 세트 베스트(PUMKINI+FEY9)",
     pNote: "PUMKINI+FEY9",
     pPrice: "₩ 35,000",
-    pSellin: 39679,
+    pSelling: 39679,
   },
   {
     idx: 36,
@@ -455,7 +455,7 @@ const productList = [
     pTitle: "퍼퓸핸드 미니 듀오 세트 베스트(CHAMO+VEIN)",
     pNote: "CHAMO+VEIN",
     pPrice: "₩ 35,000",
-    pSellin: 85558,
+    pSelling: 85558,
   },
 
   {
@@ -466,7 +466,7 @@ const productList = [
     pTitle: "에그 립밤 로즈우디 글로우",
     pNote: "자몽 | 우아한 장미 | 머스크",
     pPrice: "₩ 28,900",
-    pSellin: 27533,
+    pSelling: 27533,
   },
   {
     idx: 38,
@@ -476,7 +476,7 @@ const productList = [
     pTitle: "에그 립밤 로즈우디",
     pNote: "자몽 | 우아한 장미 | 머스크",
     pPrice: "₩ 28,900",
-    pSellin: 31205,
+    pSelling: 31205,
   },
   {
     idx: 39,
@@ -486,7 +486,7 @@ const productList = [
     pTitle: "에그 립밤 밀크티",
     pNote: "베르가못 | 은은한 블랙티 | 코코넛",
     pPrice: "₩ 28,900",
-    pSellin: 23295,
+    pSelling: 23295,
   },
   {
     idx: 40,
@@ -496,7 +496,7 @@ const productList = [
     pTitle: "에그 립밤 언센티드",
     pNote: "언센티드(무향)",
     pPrice: "₩ 28,900",
-    pSellin: 71991,
+    pSelling: 71991,
   },
   {
     idx: 41,
@@ -506,7 +506,7 @@ const productList = [
     pTitle: "에그 립밤 우디그린",
     pNote: "신선한 만다린 과즙 | 아로마틱 허브 | 부쿠",
     pPrice: "₩ 28,900",
-    pSellin: 63672,
+    pSelling: 63672,
   },
 
   {
@@ -517,7 +517,7 @@ const productList = [
     pTitle: "체인 핸드 7",
     pNote: "로즈우드 | 코코넛 향 | 우아함",
     pPrice: "₩ 24,000",
-    pSellin: 18880,
+    pSelling: 18880,
   },
   {
     idx: 43,
@@ -527,7 +527,7 @@ const productList = [
     pTitle: "체인 핸드 000",
     pNote: "샌달우드 | 패츌리 | 흙 내음",
     pPrice: "₩ 24,000",
-    pSellin: 98815,
+    pSelling: 98815,
   },
   {
     idx: 44,
@@ -537,7 +537,7 @@ const productList = [
     pTitle: "체인 핸드 421",
     pNote: "바닐라 우디 | 너티함",
     pPrice: "₩ 24,000",
-    pSellin: 50725,
+    pSelling: 50725,
   },
 
   {
@@ -548,7 +548,7 @@ const productList = [
     pTitle: "샤워리바디워시 얼리모닝듀",
     pNote: "애플민트ㅣ신선한 월계수ㅣ이른 아침의 청량함",
     pPrice: "₩ 34,500",
-    pSellin: 37248,
+    pSelling: 37248,
   },
   {
     idx: 46,
@@ -558,7 +558,7 @@ const productList = [
     pTitle: "샤워리바디워시 비가리코",
     pNote: "씁쓸한 오렌지 | 시더우드 | 달콤한 리코라이스",
     pPrice: "₩ 34,500",
-    pSellin: 65441,
+    pSelling: 65441,
   },
   {
     idx: 47,
@@ -568,7 +568,7 @@ const productList = [
     pTitle: "샤워리바디워시 님버스",
     pNote: "도넛피치 | 어린 코코넛의 풋내음 | 포근한 머스크",
     pPrice: "₩ 34,500",
-    pSellin: 71236,
+    pSelling: 71236,
   },
   {
     idx: 48,
@@ -578,7 +578,7 @@ const productList = [
     pTitle: "샤워리바디 듀오 얼리모닝듀",
     pNote: "애플민트ㅣ신선한 월계수ㅣ이른 아침의 청량함",
     pPrice: "₩ 70,000",
-    pSellin: 76562,
+    pSelling: 76562,
   },
   {
     idx: 49,
@@ -588,7 +588,7 @@ const productList = [
     pTitle: "샤워리바디 듀오 비가리코",
     pNote: "씁쓸한 오렌지 | 시더우드 | 달콤한 리코라이스",
     pPrice: "₩ 70,000",
-    pSellin: 31385,
+    pSelling: 31385,
   },
   {
     idx: 50,
@@ -598,7 +598,7 @@ const productList = [
     pTitle: "샤워리바디 듀오 님버스",
     pNote: "도넛피치 | 어린 코코넛의 풋내음 | 포근한 머스크",
     pPrice: "₩ 70,000",
-    pSellin: 27776,
+    pSelling: 27776,
   },
   {
     idx: 51,
@@ -608,7 +608,7 @@ const productList = [
     pTitle: "샤워리바디로션 얼리모닝듀",
     pNote: "애플민트ㅣ신선한 월계수ㅣ이른 아침의 청량함",
     pPrice: "₩ 39,000",
-    pSellin: 30090,
+    pSelling: 30090,
   },
   {
     idx: 52,
@@ -618,7 +618,7 @@ const productList = [
     pTitle: "샤워리바디로션 비가리코",
     pNote: "씁쓸한 오렌지 | 시더우드 | 달콤한 리코라이스",
     pPrice: "₩ 39,000",
-    pSellin: 5035,
+    pSelling: 5035,
   },
   {
     idx: 53,
@@ -628,7 +628,7 @@ const productList = [
     pTitle: "샤워리바디로션 포그",
     pNote: "물안개 낀 숲 | 젖은 나무 | 캐시미어 우드",
     pPrice: "₩ 39,000",
-    pSellin: 66727,
+    pSelling: 66727,
   },
 
   {
@@ -639,7 +639,7 @@ const productList = [
     pTitle: "퍼퓸드 핸드워시 카모",
     pNote: "진득한 카모마일 | 부드러운 나무결 | 머스크",
     pPrice: "₩ 34,000",
-    pSellin: 28204,
+    pSelling: 28204,
   },
   {
     idx: 55,
@@ -649,7 +649,7 @@ const productList = [
     pTitle: "퍼퓸드 핸드워시 000",
     pNote: "샌달우드 | 패츌리 | 흙 내음",
     pPrice: "₩ 34,000",
-    pSellin: 66176,
+    pSelling: 66176,
   },
   {
     idx: 56,
@@ -659,7 +659,7 @@ const productList = [
     pTitle: "퍼퓸드 핸드워시 7",
     pNote: "로즈우드 | 코코넛 향 | 우아함",
     pPrice: "₩ 34,000",
-    pSellin: 302,
+    pSelling: 302,
   },
 
   {
@@ -670,7 +670,7 @@ const productList = [
     pTitle: "카 디퓨저 비가리코",
     pNote: "씁쓸한 오렌지ㅣ시더우드ㅣ달콤한 리코라이스",
     pPrice: "₩ 85,000",
-    pSellin: 62960,
+    pSelling: 62960,
   },
   {
     idx: 58,
@@ -680,7 +680,7 @@ const productList = [
     pTitle: "카 디퓨저 카모",
     pNote: "진득한 카모마일ㅣ부드러운 나무결ㅣ머스크",
     pPrice: "₩ 85,000",
-    pSellin: 29070,
+    pSelling: 29070,
   },
   {
     idx: 59,
@@ -690,7 +690,7 @@ const productList = [
     pTitle: "카 디퓨저 블루포레스트",
     pNote: "안개 낀 사이프레스 숲ㅣ달콤한 허브ㅣ따뜻한 앰버",
     pPrice: "₩ 85,000",
-    pSellin: 66854,
+    pSelling: 66854,
   },
   {
     idx: 60,
@@ -700,7 +700,7 @@ const productList = [
     pTitle: "카 디퓨저 릴리코코",
     pNote: "물기 어린 릴리ㅣ푸른 대나무ㅣ크리미한 코코넛",
     pPrice: "₩ 85,000",
-    pSellin: 63893,
+    pSelling: 63893,
   },
   {
     idx: 61,
@@ -710,7 +710,7 @@ const productList = [
     pTitle: "카 디퓨저 비가리코 리필",
     pNote: "씁쓸한 오렌지ㅣ시더우드ㅣ달콤한 리코라이스",
     pPrice: "₩ 31,000",
-    pSellin: 8247,
+    pSelling: 8247,
   },
   {
     idx: 62,
@@ -720,7 +720,7 @@ const productList = [
     pTitle: "카 디퓨저 미니 비가리코",
     pNote: "씁쓸한 오렌지ㅣ시더우드ㅣ달콤한 리코라이스",
     pPrice: "₩ 46,500",
-    pSellin: 81759,
+    pSelling: 81759,
   },
   {
     idx: 63,
@@ -730,7 +730,7 @@ const productList = [
     pTitle: "카 디퓨저 미니 카모",
     pNote: "진득한 카모마일ㅣ부드러운 나무결ㅣ머스크",
     pPrice: "₩ 46,500",
-    pSellin: 51606,
+    pSelling: 51606,
   },
   {
     idx: 64,
@@ -740,7 +740,7 @@ const productList = [
     pTitle: "카 디퓨저 미니 블루포레스트",
     pNote: "안개 낀 사이프레스 숲ㅣ달콤한 허브ㅣ따뜻한 앰버",
     pPrice: "₩ 46,500",
-    pSellin: 37744,
+    pSelling: 37744,
   },
 
   {
@@ -751,7 +751,7 @@ const productList = [
     pTitle: "룸 스프레이 파피루스",
     pNote: "파피루스ㅣ그린티ㅣ샌달우드",
     pPrice: "품절",
-    pSellin: 27727,
+    pSelling: 27727,
   },
   {
     idx: 66,
@@ -761,7 +761,7 @@ const productList = [
     pTitle: "디퓨저 파피루스",
     pNote: "파피루스ㅣ그린티ㅣ샌달우드",
     pPrice: "오프라인 한정 판매",
-    pSellin: 37358,
+    pSelling: 37358,
   },
   {
     idx: 67,
@@ -771,7 +771,7 @@ const productList = [
     pTitle: "룸 스프레이 파인네스트",
     pNote: "유칼립투스ㅣ파인니들ㅣ히노키우드",
     pPrice: "품절",
-    pSellin: 65103,
+    pSelling: 65103,
   },
   {
     idx: 68,
@@ -781,7 +781,7 @@ const productList = [
     pTitle: "디퓨저 파인네스트",
     pNote: "유칼립투스ㅣ파인니들ㅣ히노키우드",
     pPrice: "오프라인 한정 판매",
-    pSellin: 71424,
+    pSelling: 71424,
   },
   {
     idx: 69,
@@ -791,7 +791,7 @@ const productList = [
     pTitle: "룸 스프레이 멈버드",
     pNote: "유자ㅣ국화ㅣ머스크",
     pPrice: "품절",
-    pSellin: 9188,
+    pSelling: 9188,
   },
   {
     idx: 70,
@@ -801,7 +801,7 @@ const productList = [
     pTitle: "디퓨저 멈버드",
     pNote: "유자ㅣ국화ㅣ머스크",
     pPrice: "오프라인 한정 판매",
-    pSellin: 43248,
+    pSelling: 43248,
   },
   {
     idx: 71,
@@ -811,7 +811,7 @@ const productList = [
     pTitle: "룸 스프레이 먹",
     pNote: "그을린 소나무ㅣ먹물ㅣ패출리",
     pPrice: "품절",
-    pSellin: 32138,
+    pSelling: 32138,
   },
   {
     idx: 72,
@@ -821,7 +821,7 @@ const productList = [
     pTitle: "디퓨저 먹",
     pNote: "그을린 소나무ㅣ먹물ㅣ패출리",
     pPrice: "오프라인 한정 판매",
-    pSellin: 77585,
+    pSelling: 77585,
   },
   {
     idx: 73,
@@ -831,7 +831,7 @@ const productList = [
     pTitle: "퍼퓸 캔들 펌키니",
     pNote: "달콤한 호박 | 차조기잎 | 코코넛밀크",
     pPrice: "₩ 83,000",
-    pSellin: 30625,
+    pSelling: 30625,
   },
   {
     idx: 74,
@@ -841,7 +841,7 @@ const productList = [
     pTitle: "퍼퓸 캔들 홀리메탈",
     pNote: "측백나무잎 | 차가운 금속 | 화이트 머스크",
     pPrice: "₩ 83,000",
-    pSellin: 78213,
+    pSelling: 78213,
   },
   {
     idx: 75,
@@ -851,7 +851,7 @@ const productList = [
     pTitle: "퍼퓸 캔들 베이더인더레이크",
     pNote: "쑥 | 안개 낀 호수 | 촉촉한 이끼",
     pPrice: "₩ 83,000",
-    pSellin: 32318,
+    pSelling: 32318,
   },
   {
     idx: 76,
@@ -861,7 +861,7 @@ const productList = [
     pTitle: "퍼퓸 캔들 레이트어텀",
     pNote: "비터오렌지 | 사탕수수 풀내음 | 머스크",
     pPrice: "₩ 83,000",
-    pSellin: 82056,
+    pSelling: 82056,
   },
   {
     idx: 77,
@@ -871,7 +871,7 @@ const productList = [
     pTitle: "퍼퓸 캔들 미니 세트",
     pNote: "캔들 네 가지 향",
     pPrice: "₩ 148,000",
-    pSellin: 88646,
+    pSelling: 88646,
   },
 ];
 console.log(productList);
