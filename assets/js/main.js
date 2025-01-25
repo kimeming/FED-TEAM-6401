@@ -39,28 +39,6 @@ $(() => {
   // 초기 애니메이션 실행
   headerAni();
 
-  // best seller slide
-  const bestSlide = new Swiper(".best-slide", {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    centeredSlides: true,
-    breakpoints: {
-      360: {
-        slidesPerView: 2,
-        spaceBetween: 40,
-      },
-      768: {
-        slidesPerView: 3,
-        spaceBetween: 40,
-      },
-      1024: {
-        slidesPerView: 5,
-        spaceBetween: 50,
-        centeredSlides: false,
-      },
-    },
-  });
-
   // store slide
   const storeSlide = new Swiper(".store-slide", {
     slidesPerView: 1,

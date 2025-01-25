@@ -1,17 +1,21 @@
 // main component
-import productList from '/assets/data/product-list.js'
+import productList from '/assets/data/product-list.js';
+import {newProduct} from '/assets/data/main-data.js';
 
-const bestProducts = productList.sort((a, b) => b.pSellin - a.pSellin).slice(0, 5);
+const bestProducts = [...productList].sort((a, b) => b.pSelling - a.pSelling).slice(0, 5);
 
 export const Main = {
     data(){
         return {
             bestProducts: [],
+            newProduct: [],
         }
     },
     mounted(){
         this.bestProducts = bestProducts;
+        this.newProduct = newProduct;
 
+        // bestseller sllide
         const bestSlide = new Swiper(".best-slide", {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -32,6 +36,15 @@ export const Main = {
                 },
             },
         });
+
+        // new product slide
+        const newSlide = new Swiper(".new-slide", {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        })
     },
     template: `
     <main class="main-container" id="main">
@@ -52,9 +65,9 @@ export const Main = {
                     <div class="swiper best-slide">
                         <ul class="product-list swiper-wrapper"> 
                             <li v-for="product in bestProducts" :key="product.idx" class="swiper-slide">
-                                <a :href="product.link" class="item">
+                                <a :href="product.plink" class="item">
                                 <div class="img-box">
-                                    <img :src="product.pImage" alt="product.pTitle">
+                                    <img :src="product.pImage" alt="상품 이미지">
                                 </div>
                                 <div class="info-box">
                                     <p class="name">{{ product.pTitle }}</p>
@@ -70,19 +83,20 @@ export const Main = {
             <!-- section best e -->
             <!-- section new s -->
             <section class="section new">
-                <div class="inner">
-                    <h2 class="blind">신상품 영역</h2>
-                    <div class="new-product-wrap">
-                        <h3 class="section-tit">Evening Glow</h3>
-                        <div class="intro-box">
-                            <span>Rose Tinted by Sunset | Raspberry | Musk</span>
-                            <p>
-                                A rose is a rose is a rose.<br>
-                                In every moment, a rose perfectly embodies its essence as a rose. From the initial sprout of a seed to its vibrant bloom, it constantly evolves yet always retains the refined beauty of a rose. As the sunset paints the rose in raspberry-red hues and layers of bright light from fresh dill and zesty lemon peel cascade, earthy patchouli and cypriol add a grounding depth, like sturdy and elegant thorns guarding its delicate petals, revealing yet another perfect rose.
-                            </p>
-                        </div>
-                        <a href="#" class="link-btn">Go To Shop <span class="icon star"></span></a>
-                    </div>
+                <h2 class="blind">신상품 영역</h2>
+                <div class="new-slide swiper">
+                    <ul class="new-product-list swiper-wrapper">
+                        <li v-for="(slide, index) in newProduct" :key="index" class="swiper-slide":class="'item' + (index + 1)">
+                            <div class="inner">
+                                <h3 class="section-tit">{{ slide.title }}</h3>
+                                <div class="intro-box">
+                                    <span>{{ slide.intro }}</span>
+                                    <p v-html="slide.description"></p>
+                                </div>
+                                <a :href="slide.link" class="link-btn">Go To Shop <span class="icon star"></span></a>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
             <!-- section new e -->
