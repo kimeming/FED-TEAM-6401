@@ -1,28 +1,9 @@
-// 제품디테일페이지 - product_detail.js
-import { Header, Footer } from "./component/layout-comp.js";
-import { View } from "./component/product-view-comp.js";
-import router from './router.js';
-///////////////////////////////////////////////////////////////////
-/////////////////////////Vue/////////////////////////////////////
-///////////////////////////////////////////////////////////////////
-
-new Vue({
-  el: "#app-view",
-  components: {
-    "header-comp": Header,
-    "view-comp": View,
-    "footer-comp": Footer,
-  },
-  router,
-});
-
-///////////////////////////////////////////////////////////////////
-/////////////////////////Vue/////////////////////////////////////
-///////////////////////////////////////////////////////////////////
+// 제품디테일페이지 - product_view.js
 
 $("a").click(function (e) {
   return false;
 });
+
 // 개선해야할부분 01.15
 // 광휠 스크롤막기
 // swiper s /////
@@ -46,6 +27,7 @@ var swiper = new Swiper(".dragSwiper", {
 const $img = $(".product-detail-img>img");
 const IMG_HEIGHT = $img.height();
 let imgNum = 0;
+let stsWheel = false;
 
 // console.log($img, IMG_HEIGHT);
 
@@ -54,6 +36,14 @@ $(window).on("wheel", wheelFn);
 
 // wheelFn s ////
 function wheelFn(e) {
+  // (4-1) 기본기능막기 ///////
+  e.preventDefault();
+
+  // (4-2) 광휠막기 ///////
+  if (stsWheel) return;
+  stsWheel = true; // 잠금!
+  setTimeout(() => (stsWheel = false), 700); // 해제!
+
   if ($(window).width() > 1024) {
     // 마우스 휠 방향 (-면 위 스크롤, + 아래스크롤)
     let delta = e.originalEvent.deltaY;
