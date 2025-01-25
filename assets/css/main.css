@@ -10,9 +10,9 @@
 .link-btn {display: inline-flex; justify-content: space-between; align-items: center; width: 100%; max-width: 300px; padding: 19px 25px; transition: background-color .3s; border: 1px solid #000;}
 .link-btn:hover, .link-btn:focus {background-color: #000; color: #fff;}
 .link-btn .icon {width: 20px; height: 20px; display: inline-block;}
-.icon.star {background: url('../img/main/icon_star.svg') no-repeat center/100%;}
-.icon.arrow {background: url('../img/main/icon_arrow.svg') no-repeat center/30px; transform: rotate(90deg);}
-.link-btn:hover .icon.arrow, .link-btn:focus .icon.arrow {background-image: url('../img/main/icon_arrow_w.svg');}
+.icon.star {background: url('/assets/img/main/icon_star_b.svg') no-repeat center/100%;}
+.icon.arrow {background: url('/assets/img/main/icon_arrow.svg') no-repeat center/30px; transform: rotate(90deg);}
+.link-btn:hover .icon.arrow, .link-btn:focus .icon.arrow {background-image: url('/assets/img/main/icon_arrow_w.svg');}
 @media screen and (min-width: 768px) {
     .section .inner {padding: 100px 20px;}
     .section-tit {font-size: 1.5em;}
@@ -45,20 +45,40 @@
 }
 
 /* section - new */
-.section.new {min-height: 833px; background-image: url('../img/main/bg-new-temp.PNG'); background-position: top; background-size: cover; background-repeat: no-repeat;}
-.new-product-wrap {color: #fff;}
-.new-product-wrap .section-tit {font-size: 56px;}
-.new-product-wrap .intro-box p {margin-top: 1rem;}
-.new-product-wrap .link-btn {background-color: rgba(255, 255, 255, 0.2); border: none; margin-top: 30px;}
-.new-product-wrap .link-btn:hover {background-color: rgba(255,255,255,0.4);}
+.new-product-list>li {min-height: 833px; background-image: url('/assets/img/main/bg-new-temp.png'); background-position: top; background-size: cover; background-repeat: no-repeat;}
+.new-product-list .inner {max-width: 800px; margin: 0;}
+.new-slide .section-tit {font-size: 56px;}
+.new-slide .intro-box p {margin-top: 1rem;}
+.new-slide .link-btn {background-color: rgba(255, 255, 255, 0.2); border: none; margin-top: 30px;}
+.new-slide .link-btn:hover {background-color: rgba(255,255,255,0.6); color: #000;}
 
 @media screen and (min-width: 768px) {
-    .section.new {background-image: url('../img/main/pc_main_banner.png');}
+    .new-product-list>li {background-image: url('/assets/img/main/pc_main_banner.png');}
     .new-product-wrap {width: 50%;}
     .new-product-wrap .intro-box {font-size: 1.2rem;}
 }
 
-/* section store */
+/* 신상품 섹션 배경 이미지 */
+.new-product-list .item1 {background-image: url('/assets/img/main/bg-new-temp.png'); color: #fff;}
+.new-product-list .item1 .icon.star {background-image: url('/assets/img/main/icon_star.svg');}
+.new-product-list .item1 .link-btn:hover {background-color: rgba(255,255,255,0.4); color: #fff;}
+.new-product-list .item2 {background-image: url('/assets/img/main/bg-new-temp.png');}
+.new-product-list .item3 {background-image: url('/assets/img/main/bg-new-temp.png');}
+.new-product-list .item4 {background-image: url('/assets/img/main/bg-new-temp.png');}
+.new-product-list .item5 {background-image: url('/assets/img/main/bg-new-temp.png');}
+.new-product-list .item6 {background-image: url('/assets/img/main/bg-new-temp.png');}
+.new-product-list .item7 {background-image: url('/assets/img/main/bg-new-temp.png');}
+@media screen and (min-width: 768px) {
+    .new-product-list .item1 {background-image: url('/assets/img/main/pc_main_banner.png');}
+    .new-product-list .item2 {background-image: url('/assets/img/main/pc_main_banner2.png');}
+    .new-product-list .item3 {background-image: url('/assets/img/main/pc_main_banner3.png');}
+    .new-product-list .item4 {background-image: url('/assets/img/main/pc_main_banner4.png');}
+    .new-product-list .item5 {background-image: url('/assets/img/main/pc_main_banner5.png');}
+    .new-product-list .item6 {background-image: url('/assets/img/main/pc_main_banner6.png');}
+    .new-product-list .item7 {background-image: url('/assets/img/main/pc_main_banner7.png');}
+}
+
+/* section - store */
 .store-wrap {display: flex; flex-direction: column-reverse; gap: 60px; justify-content: space-between;}
 .store-wrap .section-tit {font-family: var(--pretendard);}
 

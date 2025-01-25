@@ -3,6 +3,8 @@ import productDetail from "../../data/product-detail.js"
 
 export const View = {
     template:`
+  <div class="sub-container" id="main">
+
     <div class="contents">
           <!-- product-view s -->
           <div class="product-view-area">
@@ -275,6 +277,7 @@ export const View = {
             <li>퍼퓸 이브닝글로우</li>
           </ul>
         </div>
+      </div>  
     `,
     data(){
         return{

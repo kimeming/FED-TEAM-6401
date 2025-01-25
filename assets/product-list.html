@@ -15,14 +15,15 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="https://unpkg.com/vuex@3.0.0"></script>
-    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script>
+    <!-- <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.js"></script> -->
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="./js/layout.js"></script>
-    <script type="module" src="./js/product_list.js"></script>
+    <script type="module" src="./js/vuex_store.js"></script>
+    <!-- <script type="module" src="./js/product_list.js"></script> -->
     <!-- JS e -->
   </head>
   <body>
-    <div id="app-list" class="wrapper">
+    <div id="app" class="wrapper">
       <!-- skip s -->
       <div class="skip">
         <a href="#main">본문 바로가기</a>
@@ -31,22 +32,9 @@
       <!-- header s -->
       <header-comp></header-comp>
       <!-- header e -->
-      <!-- sub-container s -->
-      <!-- header e -->
-      <!-- sub-container s -->
-      <div class="sub-container" id="main">
-        <!-- sub-top s -->
-        <!-- 없는 페이지에서는 sub-top 지워주세요!!!! -->
-        <sub-top-comp></sub-top-comp>
-        <!-- sub-top e -->
-        <!-- contents s -->
-        <div class="contents">
-          <!-- sub-top 있는 페이지에서는 여기부터 컨텐츠 추가 -->
-          <product-list-comp></product-list-comp>
-        </div>
-        <!-- contents e -->
-      </div>
-      <!-- sub-container e -->
+      <!-- list-comp s -->
+      <list-contents-comp></list-contents-comp>
+      <!-- list-comp e -->
       <!-- footer s -->
       <footer-comp></footer-comp>
       <!-- footer e -->

@@ -1,6 +1,52 @@
 // main component
+import productList from '/assets/data/product-list.js';
+import {newProduct} from '/assets/data/main-data.js';
+
+const bestProducts = [...productList].sort((a, b) => b.pSelling - a.pSelling).slice(0, 5);
 
 export const Main = {
+    data(){
+        return {
+            bestProducts: [],
+            newProduct: [],
+        }
+    },
+    mounted(){
+        this.bestProducts = bestProducts;
+        this.newProduct = newProduct;
+
+        // bestseller sllide
+        const bestSlide = new Swiper(".best-slide", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            breakpoints: {
+                360: {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                    centeredSlides: false,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                    centeredSlides: false,
+                },
+            },
+        });
+
+        // new product slide
+        const newSlide = new Swiper(".new-slide", {
+            loop: true,
+            navigation: {
+                nextEl: '.new-slide .swiper-button-next',
+                prevEl: '.new-slide .swiper-button-prev',
+            },
+        })
+    },
     template: `
     <main class="main-container" id="main">
             <!-- section visual s -->
@@ -19,64 +65,16 @@ export const Main = {
                     <h3 class="section-tit">Bestseller</h3>
                     <div class="swiper best-slide">
                         <ul class="product-list swiper-wrapper"> 
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_1.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 149,000</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_2.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_3.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_4.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="swiper-slide">
-                                <a href="#" class="item">
-                                    <div class="img-box">
-                                        <img src="/assets/img/main/bestseller_5.jpg" alt="상품 이미지">
-                                    </div>
-                                    <div class="info-box">
-                                        <p class="name">퍼퓸 이브닝글로우</p>
-                                        <span class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</span>
-                                        <strong class="price">￦ 19,800</strong>
-                                    </div>
+                            <li v-for="product in bestProducts" :key="product.idx" class="swiper-slide">
+                                <a :href="product.plink" class="item">
+                                <div class="img-box">
+                                    <img :src="product.pImage" alt="상품 이미지">
+                                </div>
+                                <div class="info-box">
+                                    <p class="name">{{ product.pTitle }}</p>
+                                    <span class="fragrance">{{ product.pNote }}</span>
+                                    <strong class="price">{{ product.pPrice }}</strong>
+                                </div>
                                 </a>
                             </li>
                         </ul>
@@ -86,19 +84,22 @@ export const Main = {
             <!-- section best e -->
             <!-- section new s -->
             <section class="section new">
-                <div class="inner">
-                    <h2 class="blind">신상품 영역</h2>
-                    <div class="new-product-wrap">
-                        <h3 class="section-tit">Evening Glow</h3>
-                        <div class="intro-box">
-                            <span>Rose Tinted by Sunset | Raspberry | Musk</span>
-                            <p>
-                                A rose is a rose is a rose.<br>
-                                In every moment, a rose perfectly embodies its essence as a rose. From the initial sprout of a seed to its vibrant bloom, it constantly evolves yet always retains the refined beauty of a rose. As the sunset paints the rose in raspberry-red hues and layers of bright light from fresh dill and zesty lemon peel cascade, earthy patchouli and cypriol add a grounding depth, like sturdy and elegant thorns guarding its delicate petals, revealing yet another perfect rose.
-                            </p>
-                        </div>
-                        <a href="#" class="link-btn">Go To Shop <span class="icon star"></span></a>
-                    </div>
+                <h2 class="blind">신상품 영역</h2>
+                <div class="new-slide swiper">
+                    <ul class="new-product-list swiper-wrapper">
+                        <li v-for="(slide, index) in newProduct" :key="index" class="swiper-slide":class="'item' + (index + 1)">
+                            <div class="inner">
+                                <h3 class="section-tit">{{ slide.title }}</h3>
+                                <div class="intro-box">
+                                    <span>{{ slide.intro }}</span>
+                                    <p v-html="slide.description"></p>
+                                </div>
+                                <a :href="slide.link" class="link-btn">Go To Shop <span class="icon star"></span></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </section>
             <!-- section new e -->

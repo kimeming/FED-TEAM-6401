@@ -7,7 +7,7 @@
         => 초기화 함수가 필요...? initSearch
 */
 // 데이터 불러오기
-import productList from "../data/product-list.js";
+import productList from "/assets/data/product-list.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -32,6 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
             result.classList.remove('active');
             recommend.classList.add('active');
         }
+
+        performSearch();
     });
 
     document.querySelectorAll('.recommend-list>li').forEach(item => {
@@ -50,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (searchQuery) {
             const filteredProducts = products.filter(product =>
-                product.productTitle.toLowerCase().includes(searchQuery)
+                product.pTitle.toLowerCase().includes(searchQuery)
             );
 
             if (filteredProducts.length === 0) {
@@ -62,9 +64,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     li.innerHTML = `
                         <a href="#">
                             <div class="img-box">
-                                <img src="${product.productImage}" alt="이미지">
+                                <img src="${product.pImage}" alt="이미지">
                             </div>
-                            <p class="item-name">${product.productTitle}</p>
+                            <p class="item-name">${product.pTitle}</p>
                         </a>
                     `;
                     resultList.appendChild(li);
@@ -85,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const products = Object.values(productList).flat();
 
         const filteredProducts = products.filter(product =>
-            product.productTitle.toLowerCase().includes(searchQuery)
+            product.pTitle.toLowerCase().includes(searchQuery)
         );
 
         const moreResults = filteredProducts.slice(curIdx, curIdx + 5);
@@ -96,9 +98,9 @@ document.addEventListener('DOMContentLoaded', () => {
             li.innerHTML = `
                 <a href="#">
                     <div class="img-box">
-                        <img src="${product.productImage}" alt="이미지">
+                        <img src="${product.pImage}" alt="이미지">
                     </div>
-                    <p class="item-name">${product.productTitle}</p>
+                    <p class="item-name">${product.pTitle}</p>
                 </a>
             `;
             resultList.appendChild(li);
