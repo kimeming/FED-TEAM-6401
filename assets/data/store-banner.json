@@ -1,8 +1,50 @@
 {
   "korea": [
     {
-      "place": "한남",
-      "bannerImg": ["ㅇㅇ"]
+      "place": "hannam",
+      "imgsrc": [
+        "img_store_hannam_01.jpg",
+        "img_store_hannam_02.jpg",
+        "img_store_hannam_03.jpg",
+        "img_store_hannam_04.jpg",
+        "img_store_hannam_05.jpg",
+        "img_store_hannam_06.jpg",
+        "img_store_hannam_07.jpg",
+        "img_store_hannam_08.jpg",
+        "img_store_hannam_09.jpg",
+        "img_store_hannam_10.jpg"
+      ]
+    },
+    {
+      "place": "seongsu",
+      "imgsrc": [
+        "img_store_seongsu_01.jpg",
+        "img_store_seongsu_02.jpg",
+        "img_store_seongsu_03.jpg",
+        "img_store_seongsu_04.jpg",
+        "img_store_seongsu_05.jpg",
+        "img_store_seongsu_06.jpg",
+        "img_store_seongsu_07.jpg"
+      ]
+    },
+    {
+      "place": "samcheong",
+      "imgsrc": [
+        "img_store_samcheong_01.jpg",
+        "img_store_samcheong_02.jpg",
+        "img_store_samcheong_03.jpg",
+        "img_store_samcheong_04.jpg"
+      ]
+    },
+    {
+      "place": "dosan",
+      "imgsrc": [
+        "img_store_dosan_01.mp4",
+        "img_store_dosan_02.jpg",
+        "img_store_dosan_03.jpg",
+        "img_store_dosan_04.jpg",
+        "img_store_dosan_05.jpg"
+      ]
     }
   ]
 }
