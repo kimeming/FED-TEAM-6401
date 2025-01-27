@@ -1,6 +1,7 @@
 // 제품 디테일페이지 컴포넌트 JS - product_view_comp
 
 import { subTop } from "./sub-comp.js";
+import store from "../vuex_store_store.js";
 
 export const List = {
   template: `
@@ -13,8 +14,12 @@ export const List = {
     <div class="contents">
       <div class="product-list-area">
         <ul class="product-list-wrap">
-          <li class="product-select-box" v-for="(v,k) in $store.state.catList" :key="k.idxN">
-            <a class="product-view-nav" href="./product-view-hm.html" alt="제품 상세히보기">
+          <li class="product-select-box" 
+          v-for="(v,k) in $store.state.catList" 
+          :key="v"
+          @click.prevent="getProductNum(v.idx)"
+          >
+            <a class="product-view-nav" href="#" alt="제품 상세히보기">
             <section class="product-img-wrap">
               <img :src="v.pImage" :alt="v.pTitle" />
             </section>
@@ -37,6 +42,15 @@ export const List = {
     `,
   data() {
     return {};
+  },
+  methods:{
+    getProductNum(pm){
+      console.log("getProductNum",pm);
+
+      // mutations 에 보내기
+      store.commit("setViewData",pm);
+      
+    }
   },
   components: {
     "sub-top-comp": subTop,
