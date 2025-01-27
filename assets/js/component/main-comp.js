@@ -28,6 +28,7 @@ export const Main = {
                 768: {
                     slidesPerView: 3,
                     spaceBetween: 40,
+                    centeredSlides: false,
                 },
                 1024: {
                     slidesPerView: 5,
@@ -41,8 +42,8 @@ export const Main = {
         const newSlide = new Swiper(".new-slide", {
             loop: true,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.new-slide .swiper-button-next',
+                prevEl: '.new-slide .swiper-button-prev',
             },
         })
     },
@@ -97,6 +98,8 @@ export const Main = {
                             </div>
                         </li>
                     </ul>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </section>
             <!-- section new e -->
