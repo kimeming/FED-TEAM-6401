@@ -11,11 +11,10 @@ const targetEl = document.querySelectorAll('.store_slide_wrap');
 targetEl.forEach(el => setElFn(el));
 
 function setElFn(tgEl){
-  // tgEl - 공통 최상위 클래스 (이것만큼 돌면서 모두 생성함!)
+  // tgEl - 공통 최상위 클래스 (이것만큼 돌면서 모두 생성)
   const storeOl = tgEl.querySelector(".store_indic ol");
   const indicBox = tgEl.querySelector(".indic_box");
   const slides = tgEl.querySelectorAll(".store_img li");
-  
   
   slides.forEach((el) => {
     storeOl.innerHTML += `<li></li>`;
