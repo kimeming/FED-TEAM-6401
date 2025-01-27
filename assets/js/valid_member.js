@@ -66,7 +66,7 @@ export default function valid_member() {
             // 아이디검사 불통과시 들어감(!NOT)
             $(this)
               .siblings(".msg")
-              .text("영문자로 시작하는 6~20글자 영문자/숫자")
+              .html("<br>영문자로 시작하는 6~20글자 영문자/숫자")
               .removeClass("on");
   
             // [ 불통과시 pass값 변경2 ]
@@ -114,7 +114,7 @@ export default function valid_member() {
       ****************************************/
         else if (cid == "mpw2") {
           if (cv != $("#mpw").val()) {
-            $(this).siblings(".msg").text("비밀번호가 일치하지 않습니다!");
+            $(this).siblings(".msg").html("<br>비밀번호가 일치하지 않습니다!");
   
             // [ 불통과시 pass값 변경4 ]
               pass = false;
@@ -265,7 +265,7 @@ export default function valid_member() {
       else {
         eml1
           .siblings(".msg")
-          .text("맞지않는 이메일 형식입니다!")
+          html("<br>맞지않는 이메일 형식입니다!")
           .removeClass("on");
   
         // [ 불통과시 pass값 변경5 ]

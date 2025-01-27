@@ -139,17 +139,18 @@ export const JoinComp = Vue.component("join-comp", {
                       <option value="gmail.com">gmail.com</option>
                       <option value="free">직접입력</option>
                     </select>
-                    <span class="msg"></span>
-                  </li>
-                  <!-- 이메일 뒷주소 직접입력 -->
-                  <li>
-                    <label htmlFor="email2"></label>
+                                        <label htmlFor="email2"></label>
                     <input
                       type="text"
                       name="email2"
                       id="email2"
                       placeholder="이메일뒷주소"
                     />
+                    <span class="msg"></span>
+                  </li>
+                  <!-- 이메일 뒷주소 직접입력 -->
+                  <li>
+
                   </li>
                   <!-- 서브밋버튼 -->
                   <li>
