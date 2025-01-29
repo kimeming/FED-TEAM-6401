@@ -4,6 +4,7 @@
   [  요구사항  ]
   - prev, next 버튼 없이 스와이프로 동작
   - 배너 개수에 맞게 하단에 바형 인디케이터 설정 및 조작
+  ❓ JSON 활용 / 데이터 태그에서 자꾸 막히는 이유..
 **************************************************************/
 
 // import storeData from '../data/store-banner.json' with { type: "json" };
@@ -28,13 +29,6 @@ function setElFn(tgEl) {
   const indicators = tgEl.querySelectorAll(".store_indic ol li");
   indicators[currentIndex].classList.add("active"); // 초기 활성화 인디케이터
 
-  // 인디케이터 마우스오버 이벤트
-  indicators.forEach((el, index) => {
-    el.onmouseover = function () {
-      goToSlide(index);
-    };
-  });
-
   // 인디케이터 박스의 너비 설정
   indicBox.style.width = 100 / slides.length + "%";
 
@@ -43,10 +37,12 @@ function setElFn(tgEl) {
 
   tgEl.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
+    e.preventDefault(); // 기본 동작 방지
   });
 
   tgEl.addEventListener("touchmove", (e) => {
     endX = e.touches[0].clientX;
+    e.preventDefault(); // 기본 동작 방지
   });
 
   tgEl.addEventListener("touchend", () => {
