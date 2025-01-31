@@ -1,82 +1,14 @@
 {
   "korea": [
     {
-      "name": "한남점",
-      "images": [
-        {
-          "src": "./img/store/img_store_hannam_01.jpg",
-          "alt": "플래그십 스토어 한남점 첫번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_02.jpg",
-          "alt": "플래그십 스토어 한남점 두번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_03.jpg",
-          "alt": "플래그십 스토어 한남점 세번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_04.jpg",
-          "alt": "플래그십 스토어 한남점 네번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_05.jpg",
-          "alt": "플래그십 스토어 한남점 다섯번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_06.jpg",
-          "alt": "플래그십 스토어 한남점 여섯번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_07.jpg",
-          "alt": "플래그십 스토어 한남점 일곱번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_08.jpg",
-          "alt": "플래그십 스토어 한남점 여덟번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_09.jpg",
-          "alt": "플래그십 스토어 한남점 아홉번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_hannam_10.jpg",
-          "alt": "플래그십 스토어 한남점 열번째 이미지"
-        }
-      ]
+      "name": "플래그십 스토어 한남",
+      "img-key": "hannam",
+      "img-cnt": 10
     },
     {
-      "name": "성수점",
-      "images": [
-        {
-          "src": "./img/store/img_store_seongsu_01.jpg",
-          "alt": "플래그십 스토어 성수점 첫번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_sungsu02.jpg",
-          "alt": "플래그십 스토어 성수점 두번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_sungsu03.jpg",
-          "alt": "플래그십 스토어 성수점 세번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_sungsu04.jpg",
-          "alt": "플래그십 스토어 성수점 네번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_sungsu05.jpg",
-          "alt": "플래그십 스토어 성수점 다섯번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_sungsu06.jpg",
-          "alt": "플래그십 스토어 성수점 여섯번째 이미지"
-        },
-        {
-          "src": "./img/store/img_store_sungsu07.jpg",
-          "alt": "플래그십 스토어 성수점 일곱번째 이미지"
-        }
-      ]
+      "name": "플래그십 스토어 성수",
+      "img-key": "seongsu",
+      "img-cnt": 7
     }
   ]
 }

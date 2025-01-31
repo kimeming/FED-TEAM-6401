@@ -8,7 +8,48 @@
   ❓ 왜 e.preventDefault 했는데 스와이프가 안되징??
 **************************************************************/
 
-// import storeData from '../data/store-banner.json' with { type: "json" };
+import storeData from '../data/store-banner.json' with { type: "json" };
+
+let countryCode = "korea";
+// 선택 데이터 할당하기
+const selData = storeData[countryCode];
+
+const targetList = document.querySelector('.store_list');
+console.log(selData, targetList);
+
+targetList.innerHTML = selData.map(v=>`
+    <li>
+      <div class="store_slide_wrap">
+        <ul class="store_img">
+        ${Array.from({length:v['img-cnt']}).map((val,seq)=>`
+          <li>
+            <img src="./img/store/img_store_${v['img-key']}_${seq<9?'0'+(seq+1):(seq+1)}.jpg" alt="플래그십 스토어 한남점 첫번째 이미지" />
+          </li>
+          `).join('')}        
+        </ul>
+        <div class="store_indic">
+          <ol></ol>
+          <!-- 표시박스 -->
+          <div class="indic_box"></div>
+        </div>
+      </div>
+      <div class="store_contents">
+        <div class="store_info">
+          <h2 class="store_name">${v['name']}</h2>
+          <a href="#" class="store_address" target="_blank">지도보기</a>
+        </div>
+        <div class="store_disc">
+          <p class="store_disc_address">서울특별시 용산구 이태원로 238</p>
+          <p class="store_disc_phone">+82 70-4101-3274</p>
+          <p>월-일 11:00am-9:00pm</p>
+        </div>
+      </div>
+    </li>
+  `);
+
+
+
+
 
 const targetEl = document.querySelectorAll(".store_slide_wrap");
 
