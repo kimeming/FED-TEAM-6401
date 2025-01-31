@@ -55,6 +55,25 @@ function setElFn(tgEl) {
       prevSlide();
     }
   });
+  tgEl.addEventListener("mousedown", (e) => {
+    startX = e.pageX;
+    e.preventDefault(); // 기본 동작 방지
+  });
+
+  tgEl.addEventListener("mousemove", (e) => {
+    endX = e.pageX;
+    e.preventDefault(); // 기본 동작 방지
+  });
+
+  tgEl.addEventListener("mouseup", () => {
+    if (startX > endX + 50) {
+      // 왼쪽으로 스와이프
+      nextSlide();
+    } else if (startX + 50 < endX) {
+      // 오른쪽으로 스와이프
+      prevSlide();
+    }
+  });
 
   function goToSlide(index) {
     currentIndex = index;
