@@ -153,7 +153,7 @@
     text-align: left;
     margin-left: 100px;
 }
-input {
+.logF ul li input {
     border-radius: 5px;
     border: 1px solid #000;
     margin: 5px 0;
@@ -165,7 +165,7 @@ input {
 /* li:nth-of-type(2) {
     margin-left:20px;
 } */
-input[type=radio] {
+.logF ul li input[type=radio] {
     /* display:flex; */
     width: 10px;
     height: 20px;
@@ -235,7 +235,7 @@ li:nth-of-type(7) {
         text-align: left;
         margin-left: 10px;
     }
-    input {
+    .logF ul li input {
         width: 320px;
     }
     .logF ul li:nth-of-type(6) {
