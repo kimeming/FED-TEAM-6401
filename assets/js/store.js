@@ -5,6 +5,7 @@
   - prev, next 버튼 없이 스와이프로 동작
   - 배너 개수에 맞게 하단에 바형 인디케이터 설정 및 조작
   ❓ JSON 활용 / 데이터 태그에서 자꾸 막히는 이유..
+  ❓ 왜 e.preventDefault 했는데 스와이프가 안되징??
 **************************************************************/
 
 // import storeData from '../data/store-banner.json' with { type: "json" };
