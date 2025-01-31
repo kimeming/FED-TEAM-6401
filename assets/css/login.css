@@ -223,11 +223,8 @@ li:nth-of-type(7) {
     .ctop h2 {
         border-bottom: 1px solid #000;
         font-size: 1.5rem;
-        /* width: 350px; */
         width: 345px;
         margin-left:0px;
-    }
-    .ctop h2 {
     }
     .logF ul {
         text-align: center;
@@ -239,12 +236,8 @@ li:nth-of-type(7) {
         width: 320px;
     }
     .logF ul li:nth-of-type(6) {
-        /* margin-left: 100px; */
         width: 320px;
         display: flex;
         justify-content: space-between;
     }
-    li:nth-of-type(2) {
-    /* margin-left:8.8px; */
-}
 }
