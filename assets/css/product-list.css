@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/* 스크롤 스무스 */
+.body{
+  scroll-behavior: smooth;
+}
 /* 제품리스트 CSS - product-list.css */
 .sub-top .category-tab{
   /* width: 100vw; */

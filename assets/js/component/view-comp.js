@@ -1,5 +1,6 @@
 // 제품 디테일페이지 컴포넌트 JS - product_view_comp
 import productDetail from "../../data/product-detail.js"
+import store from "../vuex_store_store.js";
 
 export const View = {
     template:`
@@ -60,7 +61,7 @@ export const View = {
               <div class="sticky-area">
                 <div class="detail-box-wrap">
                   <div class="detail-box sub-section">
-                    <h4 class="name">퍼퓸 이브닝글로우</h4>
+                    <h4 class="name"></h4>
                     <em class="price">₩ 149,000</em>
                     <div class="desc">
                       <p class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</p>
@@ -283,5 +284,8 @@ export const View = {
         return{
             productDetail: productDetail,
         }
+    },
+    methods:{
+
     }
 }
