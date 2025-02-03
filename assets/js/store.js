@@ -8,9 +8,9 @@
 
 import storeData from '../data/store-banner.json' with { type: "json" };
 
-let countryCode = "korea";
+let countryCode = ["korea","japan","china","exhibition"];
 // 선택 데이터 할당하기
-const selData = storeData[countryCode];
+const selData = storeData[countryCode[0]];
 
 const targetList = document.querySelector('.store_list');
 console.log(selData, targetList);
@@ -48,6 +48,7 @@ targetList.innerHTML = selData.map(v=>`
 const targetEl = document.querySelectorAll(".store_slide_wrap");
 ////// 스와이프 배너 구현 //////
 
+////// 인디케이터 //////
 targetEl.forEach((el) => setElFn(el));
 
 function setElFn(tgEl) {
