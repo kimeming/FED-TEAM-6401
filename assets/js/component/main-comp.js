@@ -121,7 +121,7 @@ export const Main = {
                                         <img src="/assets/img/store/img_store_samcheong_01.jpg" alt="플래그십 스토어 삼청">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_haus_01.jpg" alt="하우스 도산">
+                                        <img src="/assets/img/store/img_store_dosan_02.jpg" alt="하우스 도산">
                                     </div>
                                     <div class="swiper-slide">
                                         <img src="/assets/img/store/img_store_sinsa_01.jpg" alt="플래그십 스토어 신사">
