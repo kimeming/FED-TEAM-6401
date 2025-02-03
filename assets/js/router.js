@@ -3,7 +3,7 @@ import linkSetData from "/assets/data/gnb-data.js";
 import { Main } from "/assets/js/component/main-comp.js";
 import { SubLayout } from "/assets/js/component/sub-comp.js";
 import { List } from "/assets/js/component/list-comp.js";
-import { Community } from "./component/sub-comp.js";
+import { View } from "/assets/js/component/view-comp.js";
 
 const routes = [
   {
@@ -48,11 +48,32 @@ Object.keys(linkSetData).forEach((key) => {
     }
 
     routes.push({
-      path: path,
-      component: SubLayout,
-      props: { showSubTop: path !== "/community" },
-      children: [childRoute],
-    });
+      path: path, // 동적 경로 설정
+      component: SubLayout, // SubLayout을 기본 레이아웃으로 설정
+      props: { 
+        showSubTop: path !== "/community", // 커뮤니티 경로일 때만 false
+      },
+      children: [
+        {
+          path: ":subCategory?", // 동적으로 서브카테고리도 받기
+          component: List,
+          props: (route) => ({
+            category: data.menu, // 메뉴 데이터 props로 전달
+            subCategory: route.params.subCategory, // 서브카테고리 파라미터 추가
+          }),
+        },
+      ],
+      item:[
+        {
+          path : ":idx?",
+          component : View,
+          props : (route) => ({
+            idx : route.params.idx,
+          }),
+        }
+      ]
+    })
+    ;
   }
 });
 

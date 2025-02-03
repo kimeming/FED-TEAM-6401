@@ -1,5 +1,6 @@
 // layout.js
 import linkSetData from "/assets/data/gnb-data.js";
+import store from "../vuex_store_store.js";
 // SearchWrap 컴포넌트
 export const SearchWrap = {
   template: `
@@ -52,16 +53,22 @@ export const GNB = {
       linkSetData,
     };
   },
+  methods:{
+    catData1(subKey){
+      console.log('key',subKey);
+      store.commit("setListData", subKey);
+    }
+  },
   template: `
       <div class="gnb-wrap">
           <div class="gnb-inner">
               <!-- gnb s -->
               <nav class="gnb">
                   <ul class="gnb-list">
-                    <li v-for="(item, key) in linkSetData" :key="key">
-                      <router-link class="dep1" :to="item.link.path">{{ key }}</router-link>
+                    <li v-for="(item, key) in linkSetData" :key="key" >
+                      <router-link class="dep1" :to="item.link.path" >{{ key }}</router-link>
                       <ul v-if="item.menu && Object.keys(item.menu).length" class="dep2">
-                        <li v-for="(subItem, subKey) in item.menu" :key="subKey">
+                        <li v-for="(subItem, subKey) in item.menu" :key="subKey" @click="catData1(subKey)">
                           <!-- 서브카테고리 링크 -->
                           <router-link 
                             :to="'/' + subItem.name + '/' + subItem.params.cls">
@@ -85,6 +92,7 @@ export const GNB = {
           </div>
       </div>
     `,
+    
 };
 
 
