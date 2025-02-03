@@ -16,7 +16,7 @@ export const List = {
         <ul class="product-list-wrap">
           <li class="product-select-box" 
           v-for="(v,k) in $store.state.catList" 
-          :key="v"
+          :key="v.idx"
           @click.prevent="getProductNum(v.idx)"
           >
             <a class="product-view-nav" href="#" alt="제품 상세히보기">
