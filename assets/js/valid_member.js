@@ -80,7 +80,7 @@ export default function valid_member() {
             // '멋진 아이디네요~!'와 같은 메시지출력
             // 여기서 우선은 DB조회 못하므로 통과시 메시지로 출력
             // 메시지 띄우기
-            $(this).siblings(".msg").text("멋진 아이디네요~!").addClass("on");
+            $(this).siblings(".msg").css({color:'#0c0'}).text("멋진 아이디네요~!").addClass("on");
             // -> 비동기 통신 Ajax로 서버쪽에 아이디 중복검사필요!
           } ////// else //////
         } /////////////// else if : 아이디검사 ///////
@@ -260,7 +260,7 @@ export default function valid_member() {
   
       // 이메일 정규식 검사에 따른 메시지 보이기
       if (vReg(comp, "eml")) {
-        eml1.siblings(".msg").text("적합한 이메일 형식입니다!").addClass("on");
+        eml1.siblings(".msg").css({color:'#0c0'}).text("적합한 이메일 형식입니다!").addClass("on");
       } //////// if : 통과시 //////////
       else {
         eml1
