@@ -37,7 +37,7 @@ Object.keys(linkSetData).forEach((key) => {
       children: [
         {
           path: ":subCategory?", // 동적으로 서브카테고리도 받기
-          component: List, // 자식 컴포넌트인 ProductList 연결
+          component: List,
           props: (route) => ({
             category: data.menu, // 메뉴 데이터 props로 전달
             subCategory: route.params.subCategory, // 서브카테고리 파라미터 추가
