@@ -84,5 +84,32 @@
       "store-phone": "+86 21-64220858",
       "store-time": "월-일 10:00am-10:00pm"
     }
+  ],
+  "exhibition": [
+    {
+      "name": "카디퓨저 컬렉션",
+      "img-key": "shanghai",
+      "img-cnt": 11,
+      "store-address": "No.407 North Shaanxi Road, Jing'an District, Shanghai, China",
+      "store-phone": "",
+      "store-time": "월-일 11:00am-09:00pm",
+      "store-desc": "탬버린즈의 자동차 세계관에 초대합니다. 우아하고 고급스러운 가죽으로 감싸진 탬버린즈만의 자동차 디퓨져는 서울 성수, 상해의 새로운 공간에서 첫 공개됩니다. 은은한 색감의 자동차 디퓨져에서 영감을 받아 디자인된 이번 전시 공간의 강렬한 패턴들은 탬버린즈가 상상하는 미학이 담긴 자동차를 하나의 아트월로서 표현하였습니다. 핸드메이드로 하나하나 제작된 아트월뿐만 아니라, 어디에서도 마주하기 어려운 자동차 시트 디자인과 핸들의 감각적인 장면은 우리에게 새로운 미학의 수준을 제시합니다. 이번 전시에서만 만나 볼 수 있는 특별한 베네핏과 세상에 하나뿐인 자동차 GOODS DIY를 내가 원하는 디자인으로 제작해 나만의 자동차 공간을 감각적으로 만들어보세요."
+    },
+    {
+      "name": "하우스 노웨어 선전",
+      "img-key": "haus",
+      "img-cnt": 7,
+      "store-address": "NL199-103, Water Plaza, Shenzhen Mixc World, No.9668, Shennan Road, Nanshan District, Shenzhen",
+      "store-phone": "+86 18938978791",
+      "store-time": "일-목 10:00am-10:00pm / 금-토,공휴일 10:00am-10:30pm"
+    },
+    {
+      "name": "하우스 노웨어 상하이",
+      "img-key": "hausnowhere",
+      "img-cnt": 9,
+      "store-address": "1F, No.798-812, Middle Huaihai Road, Huangpu District, Shanghai, China",
+      "store-phone": "+86 21-64220858",
+      "store-time": "월-일 10:00am-10:00pm"
+    }
   ]
 }
