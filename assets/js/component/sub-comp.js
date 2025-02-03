@@ -23,13 +23,13 @@ export const subTop = {
     console.log("현재 subCategory:", subCategory);
 
     // Vuex에 저장
-    store.commit("setData", subCategory);
+    store.commit("setListData", subCategory);
   },
   watch: {
     // 라우트 변경 시 자동 업데이트
     "$route.params.subCategory"(newSubCategory) {
       console.log("라우트 변경 감지:", newSubCategory);
-      store.commit("setData", newSubCategory);
+      store.commit("setListData", newSubCategory);
     },
   },
   methods: {
