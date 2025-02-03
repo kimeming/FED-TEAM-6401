@@ -31,7 +31,7 @@ export default new Vuex.Store({
     },
     setViewData(s, pm) {
       s.productView = s.productList.filter(v=>v.idx == pm)
-      console.log(s.productView)
+      console.log("선택된 제품",s.productView)
     }
   },
   

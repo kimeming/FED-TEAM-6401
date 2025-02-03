@@ -15,7 +15,10 @@ export const List = {
             <a class="product-view-nav" href="#" alt="제품 상세히보기">
               <section class="product-img-wrap">
                 <img :src="v.pImage" :alt="v.pTitle" />
-              </section>
+                <button class="add-to-cart-btn" @click.prevent="addToCart(v.idx)">
+                Add To Cart
+                </button>
+                </section>
               <div class="product-info">
                 <h2 class="product-title">{{ v.pTitle }}</h2>
                 <em class="product-note">{{ v.pNote }}</em>
@@ -25,6 +28,7 @@ export const List = {
                 </section>
               </div>
             </a>
+            
           </li>
         </ul>
       </div>
@@ -44,5 +48,10 @@ export const List = {
       console.log("선택한 제품 ID:", pm);
       this.$store.commit("setViewData", pm);
     }
+  },
+  mounted(){
+    $('head').append(`
+     <link rel="stylesheet" href="assets/css/product-list.css" />
+    `);
   }
 };

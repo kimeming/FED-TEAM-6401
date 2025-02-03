@@ -3,6 +3,7 @@ import linkSetData from '/assets/data/gnb-data.js'
 import { Main } from '/assets/js/component/main-comp.js';
 import { SubLayout } from '/assets/js/component/sub-comp.js';
 import { List } from "/assets/js/component/list-comp.js";
+import { View } from "/assets/js/component/view-comp.js";
 
 const routes = [
   {
@@ -44,7 +45,17 @@ Object.keys(linkSetData).forEach((key) => {
           }),
         },
       ],
-    });
+      item:[
+        {
+          path : ":idx?",
+          component : View,
+          props : (route) => ({
+            idx : route.params.idx,
+          }),
+        }
+      ]
+    })
+    ;
   }
 });
 
