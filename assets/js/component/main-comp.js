@@ -112,19 +112,19 @@ export const Main = {
                             <div class="store-slide swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img-store-hannam01.jpg" alt="플래그십 스토어 한남">
+                                        <img src="/assets/img/store/img_store_hannam_01.jpg" alt="플래그십 스토어 한남">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img-store-sungsu01.jpg" alt="플래그십 스토어 성수">
+                                        <img src="/assets/img/store/img_store_seongsu_01.jpg" alt="플래그십 스토어 성수">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img-store-samchung01.jpg" alt="플래그십 스토어 삼청">
+                                        <img src="/assets/img/store/img_store_samcheong_01.jpg" alt="플래그십 스토어 삼청">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img-store-dosan01.jpg" alt="하우스 도산">
+                                        <img src="/assets/img/store/img_store_dosan_02.jpg" alt="하우스 도산">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img-store-sinsa01.jpg" alt="플래그십 스토어 신사">
+                                        <img src="/assets/img/store/img_store_sinsa_01.jpg" alt="플래그십 스토어 신사">
                                     </div>
                                 </div>
                                 <div class="swiper-scrollbar"></div>
