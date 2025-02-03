@@ -1,6 +1,7 @@
 // 제품 디테일페이지 컴포넌트 JS - product_view_comp
 import productDetail from "../../data/product-detail.js"
 import store from "../vuex_store_store.js";
+console.log(store)
 
 export const View = {
     template:`
@@ -84,54 +85,13 @@ export const View = {
                     <!-- option-list s -->
                     <div class="swiper mySwiper option-list">
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" v-for="(v,k) in $store.state.productView">
                           <a href="#" class="item">
-                            <img class="selected" src="./img/evening_glow/img_evening_glow_01.jpg" alt="이브닝글로우" />
+                            <img class="selected" :src="v.pImage" :alt="v.pTitle" :key="v.idx"/>
                           </a>
-                          <p>퍼퓸 이브닝글로우</p>
+                          <p>{{v.pTitle}}</p>
                         </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="item">
-                            <img src="./img/evening_glow/img_evening_glow_02.jpg" alt="이브닝글로우" />
-                          </a>
-                          <p>퍼퓸 이브닝글로우</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="item">
-                            <img src="./img/evening_glow/img_evening_glow_03.jpg" alt="이브닝글로우" />
-                          </a>
-                          <p>퍼퓸 이브닝글로우</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="item">
-                            <img src="./img/evening_glow/img_evening_glow_04.jpg" alt="이브닝글로우" />
-                          </a>
-                          <p>퍼퓸 이브닝글로우</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="item">
-                            <img src="./img/evening_glow/img_evening_glow_04.jpg" alt="이브닝글로우" />
-                          </a>
-                          <p>퍼퓸 이브닝글로우</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="item">
-                            <img src="./img/evening_glow/img_evening_glow_04.jpg" alt="이브닝글로우" />
-                          </a>
-                          <p>퍼퓸 이브닝글로우</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="item">
-                            <img src="./img/evening_glow/img_evening_glow_04.jpg" alt="이브닝글로우" />
-                          </a>
-                          <p>퍼퓸 이브닝글로우</p>
-                        </div>
-                        <div class="swiper-slide">
-                          <a href="#" class="item">
-                            <img src="./img/evening_glow/img_evening_glow_04.jpg" alt="이브닝글로우" />
-                          </a>
-                          <p>퍼퓸 이브닝글로우</p>
-                        </div>
+                        
                       </div>
                     </div>
                     <!-- option-list e -->

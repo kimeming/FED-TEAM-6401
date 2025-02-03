@@ -25,20 +25,17 @@ export default new Vuex.Store({
   },
   // (2) 데이터 변경 구역 : mutations
   mutations: {
-    // 정보 변경 메서드 - 카테고리 받아와서 catList 에 데이터 셋업
-    setListData(s, pm) {
-    // 들어온 카테고리 공백 없앰
-    // const cat = pm.split(" ").join("");
-    s.catList = s.productList.filter(v=>v.subCat == pm)
-    console.log(s.catList);
+    setListData(s, subKey) {
+      s.catList = s.productList.filter(v => v.subCat === subKey);
+      console.log("필터링된 카테고리 리스트:", s.catList);
     },
     setViewData(s, pm) {
       s.productView = s.productList.filter(v=>v.idx == pm)
-      console.log(s.productView)
+      // console.log("선택된 제품",s.productView)
     }
-
-    // 리스트 상품 idx 메서드
   },
+  
+  
   // (3) 비동기처리 메서드구역 : actions
   actions: {
     
