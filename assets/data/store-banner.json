@@ -1,0 +1,14 @@
+{
+  "korea": [
+    {
+      "name": "플래그십 스토어 한남",
+      "img-key": "hannam",
+      "img-cnt": 10
+    },
+    {
+      "name": "플래그십 스토어 성수",
+      "img-key": "seongsu",
+      "img-cnt": 7
+    }
+  ]
+}
