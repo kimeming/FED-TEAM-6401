@@ -3,12 +3,42 @@
     {
       "name": "플래그십 스토어 한남",
       "img-key": "hannam",
-      "img-cnt": 10
+      "img-cnt": 10,
+      "store-address": "서울특별시 용산구 이태원로 238",
+      "store-phone": "+82 70-4101-3274",
+      "store-time": "월-일 11:00am-9:00pm"
     },
     {
       "name": "플래그십 스토어 성수",
       "img-key": "seongsu",
-      "img-cnt": 7
+      "img-cnt": 7,
+      "store-address": "서울 성동구 연무장5길 8",
+      "store-phone": "+82 70 4266 6142",
+      "store-time": "월-일 11:00am-9:00pm"
+    },
+    {
+      "name": "플래그십 스토어 삼청",
+      "img-key": "samcheong",
+      "img-cnt": 4,
+      "store-address": "서울 종로구 율곡로3길 84",
+      "store-phone": "+82 70 4139 7450",
+      "store-time": "월-일 11:00am - 8:00pm"
+    },
+    {
+      "name": "하우스 도산",
+      "img-key": "dosan",
+      "img-cnt": 4,
+      "store-address": "서울 강남구 압구정로46길 50",
+      "store-phone": "+82 70 4128 2124",
+      "store-time": "월-일 11:00am-9:00pm"
+    },
+    {
+      "name": "플래그십 스토어 신사",
+      "img-key": "sinsa",
+      "img-cnt": 7,
+      "store-address": "서울 강남구 압구정로10길 44",
+      "store-phone": "+82 02 511 1246",
+      "store-time": "월-일 11:00am-9:00pm"
     }
   ]
 }
