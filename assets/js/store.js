@@ -57,7 +57,7 @@ function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
       <div class="store_contents">
         <div class="store_info">
           <h2 class="store_name">${v["name"]}</h2>
-          <a href="#" class="store_address" target="_blank">지도보기</a>
+          <a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>
         </div>
         <div class="store_disc">
           <p class="store_disc_address">${v["store-address"]}</p>

@@ -4,6 +4,7 @@
       "name": "플래그십 스토어 한남",
       "img-key": "hannam",
       "img-cnt": 10,
+      "store-map": "https://maps.app.goo.gl/1mvnS2NBVFQHhNh1A",
       "store-address": "서울특별시 용산구 이태원로 238",
       "store-phone": "+82 70-4101-3274",
       "store-time": "월-일 11:00am-9:00pm"
@@ -12,6 +13,7 @@
       "name": "플래그십 스토어 성수",
       "img-key": "seongsu",
       "img-cnt": 7,
+      "store-map": "https://maps.app.goo.gl/MPzyGiTSLrLZZG4C8",
       "store-address": "서울 성동구 연무장5길 8",
       "store-phone": "+82 70 4266 6142",
       "store-time": "월-일 11:00am-9:00pm"
@@ -20,6 +22,7 @@
       "name": "플래그십 스토어 삼청",
       "img-key": "samcheong",
       "img-cnt": 4,
+      "store-map": "https://maps.app.goo.gl/2rbNeLkbp8U2wRQT9",
       "store-address": "서울 종로구 율곡로3길 84",
       "store-phone": "+82 70 4139 7450",
       "store-time": "월-일 11:00am - 8:00pm"
@@ -28,6 +31,7 @@
       "name": "하우스 도산",
       "img-key": "dosan",
       "img-cnt": 4,
+      "store-map": "https://maps.app.goo.gl/ux6cbGW28K7pmZN3A",
       "store-address": "서울 강남구 압구정로46길 50",
       "store-phone": "+82 70 4128 2124",
       "store-time": "월-일 11:00am-9:00pm"
@@ -36,6 +40,7 @@
       "name": "플래그십 스토어 신사",
       "img-key": "sinsa",
       "img-cnt": 7,
+      "store-map": "https://maps.app.goo.gl/fQfP3pu35UtVtiod7",
       "store-address": "서울 강남구 압구정로10길 44",
       "store-phone": "+82 02 511 1246",
       "store-time": "월-일 11:00am-9:00pm"
@@ -46,6 +51,7 @@
       "name": "탬버린즈 오사카 한큐 우메다 본점",
       "img-key": "osaka",
       "img-cnt": 2,
+      "store-map": "https://maps.app.goo.gl/H6nMsoZMQPxbMMQf6",
       "store-address": "UMEDA HANKYU BUILDING, 本店 3階, 8-7 Kakudacho, Kita Ward, Osaka, 530-0017 일본",
       "store-phone": "+81 6-6313-7127",
       "store-time": "월-일 10:00am-8:00pm"
@@ -54,6 +60,7 @@
       "name": "탬버린즈 아오야마",
       "img-key": "seongsu",
       "img-cnt": 7,
+      "store-map": "https://maps.app.goo.gl/qNCK1XPDbV6FAj256",
       "store-address": "5-chōme-3-2 Minamiaoyama, Minato City, Tokyo 107-0062 일본",
       "store-phone": "+81 3-6427-9673",
       "store-time": "월-일 11:00am-8:00pm"
@@ -64,6 +71,7 @@
       "name": "플래그십 스토어 상하이",
       "img-key": "shanghai",
       "img-cnt": 11,
+      "store-map": "https://ditu.amap.com/place/B0KDT7JIXA",
       "store-address": "No.407 North Shaanxi Road, Jing'an District, Shanghai, China",
       "store-phone": "+86 18901785513",
       "store-time": "월-일 11:00am-09:00pm"
@@ -72,6 +80,7 @@
       "name": "하우스 노웨어 선전",
       "img-key": "haus",
       "img-cnt": 7,
+      "store-map": "https://ditu.amap.com/place/B0K26HXGOL",
       "store-address": "NL199-103, Water Plaza, Shenzhen Mixc World, No.9668, Shennan Road, Nanshan District, Shenzhen",
       "store-phone": "+86 18938978791",
       "store-time": "일-목 10:00am-10:00pm / 금-토,공휴일 10:00am-10:30pm"
@@ -80,6 +89,7 @@
       "name": "하우스 노웨어 상하이",
       "img-key": "hausnowhere",
       "img-cnt": 9,
+      "store-map": "https://ditu.amap.com/place/B0H3SZL2EV",
       "store-address": "1F, No.798-812, Middle Huaihai Road, Huangpu District, Shanghai, China",
       "store-phone": "+86 21-64220858",
       "store-time": "월-일 10:00am-10:00pm"
@@ -88,8 +98,8 @@
   "exhibition": [
     {
       "name": "카디퓨저 컬렉션",
-      "img-key": "shanghai",
-      "img-cnt": 11,
+      "img-key": "cardiffuser",
+      "img-cnt": 8,
       "store-address": "No.407 North Shaanxi Road, Jing'an District, Shanghai, China",
       "store-phone": "",
       "store-time": "월-일 11:00am-09:00pm",
