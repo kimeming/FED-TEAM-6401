@@ -22,7 +22,7 @@ export const subTop = {
         getCatName(pm) {
             // console.log("가져온카테고리", pm);
             // 파라미터 스토어로 보내기
-            store.commit("setData", pm);
+            store.commit("setListData", pm);
           },
       },
 }
