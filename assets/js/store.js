@@ -57,11 +57,11 @@ function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
       <div class="store_contents">
         <div class="store_info">
           <h2 class="store_name">${v["name"]}</h2>
-          <a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>
+          ${setNum == 3 ? (setNum == 3 ? '' : `<a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>`) : `<a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>`}
         </div>
-        <div class="store_disc">
+        <div class="store_disc exhibition">
+          ${setNum==3?"<p class='store_description'>"+v['store-desc']+"</p>":''}
           <p class="store_disc_address">${v["store-address"]}</p>
-          ${setNum==3?"<p>"+v['store-desc']+"</p>":''}
           <p class="store_disc_phone">${v["store-phone"]}</p>
           <p>${v["store-time"]}</p>
         </div>
@@ -170,16 +170,13 @@ function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
   else{
     descEle.style.display = 'none';
   } /// else ///
-
-
 } //////////// setListFn 함수 ////////////
-/////////////////////////////////////////
 
 document.querySelectorAll(".category-tab li").forEach((el, i, obj) => {
-  // el-요소자신, i-순번, obj-요소전체
+  // el-해당요소, i-순번, obj-요소전체
   el.onclick = function () {
     console.log(this);
-    // (1) 클래스 넣기/제거하기 기능
+    // 클래스 넣기/제거하기 기능
     // 전부 클래스 on제거
     obj.forEach((ele) => ele.classList.remove("on"));
     // 해당요소만 on넣기

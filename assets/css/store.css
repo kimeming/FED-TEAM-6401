@@ -67,6 +67,10 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+.store_description {
+  margin: 15px 0;
+  color: #828282;
+}
 .store_info {
   display: flex;
   flex-direction: column;
@@ -85,9 +89,16 @@
   justify-content: space-between;
   gap: 5px;
 }
+.exhibition.store_disc {
+  gap: 0;
+  line-height: 25px;
+}
+.exhibition.store_disc p {
+  text-align: right;  
+}
 .store_disc p {
   font-size: 14px;
-  text-align: right;
+  text-align: center;
 }
 .exhibition .store_disc p {
   text-align: left;
