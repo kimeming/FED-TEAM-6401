@@ -17,16 +17,16 @@ export const View = {
                 <div class="product-slide">
                   <div class="product-slide-wrap">
                     <div class="product-detail-img">
-                      <img src="./img/view/item1/img_item_01.jpg" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_01.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="product-detail-img">
-                      <img src="./img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="product-detail-img">
-                      <img src="./img/view/item1/img_item_03.jpg" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_03.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="product-detail-img">
-                      <img src="./img/view/item1/img_item_04.jpg" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_04.jpg" alt="이브닝글로우" />
                     </div>
                   </div>
                   <div class="bullet-sticky-area">
@@ -42,16 +42,16 @@ export const View = {
                 <div class="dragSwiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="./img/view/item1/img_item_01.jpg" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_01.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="swiper-slide">
-                      <img src="./img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="swiper-slide">
-                      <img src="./img/view/item1/img_item_03.jpg" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_03.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="swiper-slide">
-                      <img src="./img/view/item1/img_item_04.jpg" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_04.jpg" alt="이브닝글로우" />
                     </div>
                   </div>
                   <div class="swiper-pagination"></div>
@@ -62,10 +62,10 @@ export const View = {
               <div class="sticky-area">
                 <div class="detail-box-wrap">
                   <div class="detail-box sub-section">
-                    <h4 class="name"></h4>
-                    <em class="price">₩ 149,000</em>
+                    <h4 class="name" v-text="$store.state.productView.pTitle"></h4>
+                    <em class="price" v-text="$store.state.productView.pPrice"></em>
                     <div class="desc">
-                      <p class="fragrance">노을에 물든 장미 | 라즈베리 | 머스크</p>
+                      <p class="fragrance" v-text="$store.state.productView.pNote">노을에 물든 장미 | 라즈베리 | 머스크</p>
                       <button>
                         <i class="fa-solid fa-chevron-down" style="color: #1d1d1d"></i>
                       </button>
@@ -190,7 +190,7 @@ export const View = {
                               </button>
                               <div class="shopping-box-wrap">
                                 <h2>유료 쇼핑백 서비스</h2>
-                                <img src="./img/view/shoppingBag_v1.jpg" alt="쇼핑백">
+                                <img src="/assets/img/view/shoppingBag_v1.jpg" alt="쇼핑백">
                                 <strong>쇼핑백 S사이즈를 추천드립니다.</strong>
                                 <p>선물포장 패키지가 제공되는 품목 혹은 여러개의 제품을 함께 구매하실 경우 1:1 문의하기를 통해 적합한 사이즈를 추천 받으실 수 있습니다.</p>
                                 <section class="size-table">
@@ -247,5 +247,14 @@ export const View = {
     },
     methods:{
 
+    },
+    mounted(){
+      $('head').append(`
+        <link rel="stylesheet" type="text/css" href="/assets/css/product-view.css" />
+       `);
+      $('head').append(`
+        <script type="module" src="/assets/js/product_view.js"></script>
+       `);
     }
+
 }

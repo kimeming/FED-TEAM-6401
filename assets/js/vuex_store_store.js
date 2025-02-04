@@ -30,9 +30,14 @@ export default new Vuex.Store({
       console.log("필터링된 카테고리 리스트:", s.catList);
     },
     setViewData(s, pm) {
-      s.productView = s.productList.filter(v=>v.idx == pm)
-      // console.log("선택된 제품",s.productView)
-    }
+      s.productView = s.productList.find(v=>v.idx == pm);
+      console.log("선택된 제품",s.productView);
+      this.setOptionData(s.productView.subCat)
+    },
+    // setOptionData(pm){
+    //   s.productOption = s.productList.filter(v=>v.subCat === pm)
+    //   console.log(s.productOption)
+    // },
   },
   
   

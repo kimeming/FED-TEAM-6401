@@ -1,5 +1,6 @@
 // router.js
 import linkSetData from '/assets/data/gnb-data.js'
+import productList from '/assets/data/product-list.js';
 import { Main } from '/assets/js/component/main-comp.js';
 import { SubLayout } from '/assets/js/component/sub-comp.js';
 import { List } from "/assets/js/component/list-comp.js";
@@ -45,19 +46,22 @@ Object.keys(linkSetData).forEach((key) => {
           }),
         },
       ],
-      item:[
-        {
-          path : ":idx?",
-          component : View,
-          props : (route) => ({
-            idx : route.params.idx,
-          }),
-        }
-      ]
     })
     ;
   }
 });
+
+const itemPath = productList.idx ;
+console.log('hi',productList, itemPath);
+
+routes.push({
+  path: `/:itemPath`,
+  component: View,
+  props: (route) => ({
+    itemPath: route.params.itemPath,
+  }),
+})
+
 
 export const router = new VueRouter({
   mode: "history",

@@ -13,7 +13,7 @@ export const List = {
               :key="v.idx"
               @click.prevent="getProductNum(v.idx)"
               >
-            
+            <router-link :to="'/'+v.idx">
               <section class="product-img-wrap">
                 <img :src="v.pImage" :alt="v.pTitle" />
                 <button class="add-to-cart-btn">
@@ -28,7 +28,7 @@ export const List = {
                   <span class="product-note-count"></span>
                 </section>
               </div>
-          
+          </router-link>
           </li>
         </ul>
       </div>
@@ -48,10 +48,11 @@ export const List = {
       console.log("선택한 제품 ID:", pm);
       this.$store.commit("setViewData", pm);
     }
+    
   },
   mounted(){
     $('head').append(`
-     <link rel="stylesheet" href="assets/css/product-list.css" />
+     <link rel="stylesheet" type="text/css" href="/assets/css/product-list.css" />
     `);
   }
 };
