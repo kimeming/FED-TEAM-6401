@@ -45,9 +45,9 @@ const linkSetData = {
         name: "body",
         params: { item: "샤워리 바디", cls: "showery-body" },
       },
-      "퍼퓸드 핸드 앤 바디": {
+      "퍼퓸드 핸드앤바디": {
         name: "body",
-        params: { item: "퍼퓸드 핸드 앤 바디", cls: "perfumed-hand-body" },
+        params: { item: "퍼퓸드 핸드앤바디", cls: "perfumed-hand-body" },
       },
     },
   },

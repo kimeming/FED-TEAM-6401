@@ -11,8 +11,9 @@ export const List = {
           <li class="product-select-box" 
               v-for="(v, k) in $store.state.catList" 
               :key="v.idx"
-              @click.prevent="getProductNum(v.idx)">
-            <a class="product-view-nav" href="#" alt="제품 상세히보기">
+              @click.prevent="getProductNum(v.idx)"
+              >
+            
               <section class="product-img-wrap">
                 <img :src="v.pImage" :alt="v.pTitle" />
                 <button class="add-to-cart-btn">
@@ -27,8 +28,7 @@ export const List = {
                   <span class="product-note-count"></span>
                 </section>
               </div>
-            </a>
-            
+          
           </li>
         </ul>
       </div>
