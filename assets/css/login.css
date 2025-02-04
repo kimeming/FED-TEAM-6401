@@ -135,16 +135,14 @@
     }
 } */
 
-.mdg {
-    /* display: blo; */
-}
+
+
 .inner-cont {
     margin-top: 200px;
 }
 .ctop h2 {
     border-bottom: 1px solid #000;
     font-size: 1.5rem;
-    /* width: 350px; */
     margin-right: 20px;
     width: 345px;
     margin-left: 100px;
@@ -162,26 +160,132 @@
     height: 40px;
     font-size: 13px;
 }
-/* li:nth-of-type(2) {
-    margin-left:20px;
-} */
 .logF ul li input[type=radio] {
-    /* display:flex; */
     width: 10px;
     height: 20px;
-    line-height: 10px;
+    transform: translateY(5px);
 
 }
 .logF ul li:nth-of-type(6) {
-    /* margin-left: 100px; */
     width: 345px;
     display: flex;
     justify-content: space-between;
 }
-/* li:nth-of-type(6),
-li:nth-of-type(7) {
-    display: inline-block;
-} */
+#email2 {
+    width: 30%;
+}
+.logF ul li:nth-of-type(6) input,
+.logF ul li:nth-of-type(7) input  {
+    width: 100px;
+}
+.msg {
+    color:#f00;
+    font-size: 0.7rem;
+}
+#btnj {
+    background-color: #fff;
+    border: none;
+    width:60px;
+}
+.gol {
+    line-height: 44px;
+}
+.noneid {
+    color: #4b4b4b;
+}
+.msg {
+    display: block;
+}
+
+
+@media (max-width: 1024px) {
+    .inner-cont {
+        margin-left: 100px;
+    }
+}
+@media (max-width: 375px) {
+    .inner-cont {
+        margin-top: 0
+        ;
+        margin-left: -00px;
+    }
+    .ctop {
+        margin-left: 0px;
+    }
+    .ctop h2 {
+        border-bottom: 1px solid #000;
+        font-size: 1.5rem;
+        width: 345px;
+        margin-left:0px;
+    }
+    .logF ul {
+        text-align: center;
+        width: 345px;
+        text-align: left;
+        margin-left: 10px;
+    }
+    .logF ul li input {
+        width: 320px;
+    }
+    .logF ul li:nth-of-type(6) {
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.inner-cont {
+    margin-top: 200px;
+}
+.ctop h2 {
+    border-bottom: 1px solid #000;
+    font-size: 1.5rem;
+    width: 345px;
+}
+.logF ul {
+    text-align: left;
+}
+.logF ul li input {
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin: 5px 0;
+    justify-content: center;
+    width: 345px;
+    height: 40px;
+    font-size: 13px;
+}
+.logF ul li input[type=radio] {
+    width: 10px;
+    height: 20px;
+    transform: translateY(5px);
+
+}
+.logF ul li:nth-of-type(6) {
+    width: 345px;
+    display: block;
+    justify-content: space-between;
+    width: 100%;
+}
 #email2 {
     width: 30%;
 }
@@ -240,4 +344,4 @@ li:nth-of-type(7) {
         display: flex;
         justify-content: space-between;
     }
-}
+} */

@@ -12,7 +12,7 @@ console.log(JoinComp);
 ********************************/
 new Vue({
     // 1. 대상설정
-    el: '#vogue-app',
+    el: '#join-app',
     // 2. 데이터설정
     data:{},
     // 3. 메서드설정

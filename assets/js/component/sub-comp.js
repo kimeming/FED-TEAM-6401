@@ -53,3 +53,11 @@ export const SubLayout = {
     "sub-top-comp": subTop, // 상단 컴포넌트
   },
 };
+
+export const Community = {
+  template: `
+    <div class="content type2">
+      <router-view></router-view>
+    </div>
+  `,
+}

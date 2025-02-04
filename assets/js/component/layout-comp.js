@@ -23,8 +23,8 @@ export const SearchWrap = {
                             <div class="search-content recommend active">
                                 <em class="box-tit">제안</em>
                                 <ul class="recommend-list">
-                                    <li>퍼퓸 이브닝글로우 11mL</li>
-                                    <li>퍼퓸 이브닝글로우 50mL</li>
+                                    <li>퍼퓸 이브닝글로우</li>
+                                    <li>체인 핸드 000</li>
                                     <li>퍼퓸 밤 이브닝글로우</li>
                                     <li>쉘 퍼퓸 핸드 이브닝글로우</li>
                                 </ul>
@@ -106,7 +106,7 @@ export const Header = {
           <button type="button" class="search-open-btn"><span class="blind">검색 버튼</span></button>
         </div>
         <h1 class="logo">
-          <a href="#"><img src="/ASSETS/img/main/logo_red.svg" alt="TAMBURINS"></a>
+          <a href="/"><img src="/ASSETS/img/main/logo_red.svg" alt="TAMBURINS"></a>
         </h1>
         <gnb-comp></gnb-comp>
         <div class="util">
