@@ -32,12 +32,8 @@ export default new Vuex.Store({
     setViewData(s, pm) {
       s.productView = s.productList.find(v=>v.idx == pm);
       console.log("선택된 제품",s.productView);
-      this.setOptionData(s.productView.subCat)
     },
-    // setOptionData(pm){
-    //   s.productOption = s.productList.filter(v=>v.subCat === pm)
-    //   console.log(s.productOption)
-    // },
+   
   },
   
   

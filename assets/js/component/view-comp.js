@@ -85,7 +85,7 @@ export const View = {
                     <!-- option-list s -->
                     <div class="swiper mySwiper option-list">
                       <div class="swiper-wrapper">
-                        <div class="swiper-slide" v-for="(v,k) in $store.state.productView">
+                        <div class="swiper-slide" v-for="(v,k) in $store.state.catList">
                           <a href="#" class="item">
                             <img class="selected" :src="v.pImage" :alt="v.pTitle" :key="v.idx"/>
                           </a>
