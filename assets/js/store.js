@@ -17,32 +17,30 @@ let countryCode = ["korea", "japan", "china", "exhibition"];
 
 // 스토어 배너 리스트 생성함수 최초호출
 setListFn(0);
-
 /************************************ 
   함수명 : setListFn
   기능 : 스토어 배너 리스트 생성함수
 ************************************/
-function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
-  // 선택 데이터 할당하기
-  const selData = storeData[countryCode[setNum]];
+function setListFn(countryNum) {
+  // countryNum - 국가코드 전달변수
+  // 선택 데이터 할당
+  const selData = storeData[countryCode[countryNum]];
 
   console.log(selData, targetList, descEle);
 
   ////// 스와이프 배너 구현 //////
   targetList.innerHTML = selData.map(
     (v) => `
-    <li class="${setNum==3?'exhibition':''}">
+    <li class="${countryNum == 3 ? "exhibition" : ""}">
       <div class="store_slide_wrap">
         <ul class="store_img">
         ${Array.from({ length: v["img-cnt"] })
           .map(
             (val, seq) => `
           <li>
-            <img src="./img/store/img_store_${v["img-key"]}_${
-              seq < 9 ? "0" + (seq + 1) : seq + 1
-            }.jpg" alt="${v.name} ${
-              seq < 9 ? "" + (seq + 1) : seq + 1
-            }번째 이미지" />
+            <img src="./img/store/img_store_${v["img-key"]}_${seq < 9 ? "0" + (seq + 1) : seq + 1}.jpg" alt="${
+              v.name
+            } ${seq < 9 ? "" + (seq + 1) : seq + 1}번째 이미지" />
           </li>
           `
           )
@@ -57,10 +55,16 @@ function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
       <div class="store_contents">
         <div class="store_info">
           <h2 class="store_name">${v["name"]}</h2>
-          ${setNum == 3 ? (setNum == 3 ? '' : `<a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>`) : `<a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>`}
+          ${
+            countryNum == 3
+              ? countryNum == 3
+                ? ""
+                : `<a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>`
+              : `<a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>`
+          }
         </div>
         <div class="store_disc exhibition">
-          ${setNum==3?"<p class='store_description'>"+v['store-desc']+"</p>":''}
+          ${countryNum == 3 ? "<p class='store_description'>" + v["store-desc"] + "</p>" : ""}
           <p class="store_disc_address">${v["store-address"]}</p>
           <p class="store_disc_phone">${v["store-phone"]}</p>
           <p>${v["store-time"]}</p>
@@ -69,9 +73,9 @@ function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
     </li>
   `
   );
-  const targetEl = document.querySelectorAll(".store_slide_wrap");
-  ////// 스와이프 배너 구현 //////
 
+  const targetEl = document.querySelectorAll(".store_slide_wrap");
+  // 스와이프 //
   ////// 인디케이터 //////
   targetEl.forEach((el) => setElFn(el));
 
@@ -120,12 +124,10 @@ function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
       startX = e.pageX;
       e.preventDefault(); // 기본 동작 방지
     });
-
     tgEl.addEventListener("mousemove", (e) => {
       endX = e.pageX;
       e.preventDefault(); // 기본 동작 방지
     });
-
     tgEl.addEventListener("mouseup", () => {
       if (startX > endX + 50) {
         // 왼쪽으로 스와이프
@@ -136,21 +138,14 @@ function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
       }
     });
 
-    function goToSlide(index) {
-      currentIndex = index;
-      updateSlides();
-    }
-
     function nextSlide() {
       currentIndex = (currentIndex + 1) % slides.length;
       updateSlides();
     }
-
     function prevSlide() {
       currentIndex = (currentIndex - 1 + slides.length) % slides.length;
       updateSlides();
     }
-
     function updateSlides() {
       slides.forEach((slide, index) => {
         slide.style.display = index === currentIndex ? "block" : "none";
@@ -164,11 +159,12 @@ function setListFn(setNum) { // setNum - 국가코드배열순번전달변수
     updateSlides(); // 초기 슬라이드 설정
   } ////////////// setElFn 함수 /////////////////////
 
-  if(setNum==0){
-    descEle.style.display = 'block';
+  // [대한민국] 카테고리에는 별도 서브메뉴 노츨 //
+  if (countryNum == 0) {
+    descEle.style.display = "block";
   } /// if ///
-  else{
-    descEle.style.display = 'none';
+  else {
+    descEle.style.display = "none";
   } /// else ///
 } //////////// setListFn 함수 ////////////
 
