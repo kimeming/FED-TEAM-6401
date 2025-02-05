@@ -17,7 +17,7 @@ export const View = {
                 <div class="product-slide">
                   <div class="product-slide-wrap">
                     <div class="product-detail-img">
-                      <img :src="$store.state.productView.pImage" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_01.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="product-detail-img">
                       <img src="/assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
@@ -42,7 +42,7 @@ export const View = {
                 <div class="dragSwiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img :src="$store.state.productView.pImage" alt="이브닝글로우" />
+                      <img src="/assets/img/view/item1/img_item_01.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="swiper-slide">
                       <img src="/assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
