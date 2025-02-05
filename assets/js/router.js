@@ -5,6 +5,7 @@ import { Main } from '/assets/js/component/main-comp.js';
 import { SubLayout } from '/assets/js/component/sub-comp.js';
 import { List } from "/assets/js/component/list-comp.js";
 import { View } from "/assets/js/component/view-comp.js";
+import {Store} from "/assets/js/component/store-comp.js";
 import { Community } from "/assets/js/component/sub-comp.js";
 
 const routes = [
@@ -37,8 +38,19 @@ Object.keys(linkSetData).forEach((key) => {
       childRoute = {
         path: ":subCategory?",
         component: Community,
+      }
+    } 
+    else if(path === "/store"){
+      childRoute = {
+        path: ":subCategory?",
+        component: Store,
+        props: (route) => ({
+          category: data.menu,
+          subCategory: route.params.subCategory,
+        }),
       };
-    } else {
+    }
+     else {
       childRoute = {
         path: ":subCategory?",
         component: List,
@@ -58,7 +70,7 @@ Object.keys(linkSetData).forEach((key) => {
       children: [
         {
           path: ":subCategory?", // 동적으로 서브카테고리도 받기
-          component: List,
+          component: List,Store,
           props: (route) => ({
             category: data.menu, // 메뉴 데이터 props로 전달
             subCategory: route.params.subCategory, // 서브카테고리 파라미터 추가
@@ -69,17 +81,6 @@ Object.keys(linkSetData).forEach((key) => {
     ;
   }
 });
-
-const itemPath = productList.idx ;
-console.log('hi',productList, itemPath);
-
-routes.push({
-  path: `/:itemPath`,
-  component: View,
-  props: (route) => ({
-    itemPath: route.params.itemPath,
-  }),
-})
 
 
 export const router = new VueRouter({
