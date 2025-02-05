@@ -5,10 +5,11 @@
   - prev, next 버튼 없이 스와이프로 동작
   - 배너 개수에 맞게 하단에 바형 인디케이터 설정 및 조작
 **************************************************************/
-// 데이터 불러오기
+
+// 카테고리별 제이슨 데이터 불러오기
 import storeData from '../data/store-banner.json' with { type: "json" };
 
-// 대상요소
+// 스와이프 대상요소
 const descEle = document.querySelector(".store-desc");
 const targetList = document.querySelector(".store_list");
 
@@ -17,12 +18,14 @@ let countryCode = ["korea", "japan", "china", "exhibition"];
 
 // 스토어 배너 리스트 생성함수 최초호출
 setListFn(0);
+
 /************************************ 
   함수명 : setListFn
   기능 : 스토어 배너 리스트 생성함수
 ************************************/
 function setListFn(countryNum) {
   // countryNum - 국가코드 전달변수
+
   // 선택 데이터 할당
   const selData = storeData[countryCode[countryNum]];
 
@@ -76,7 +79,8 @@ function setListFn(countryNum) {
 
   const targetEl = document.querySelectorAll(".store_slide_wrap");
   //////// 스와이프 ////////
-  ////// 인디케이터 //////
+
+  ////// 배너 이미지 개수에 맞게 인디케이터 설정 //////
   targetEl.forEach((el) => setElFn(el));
 
   function setElFn(tgEl) {
@@ -157,28 +161,27 @@ function setListFn(countryNum) {
     }
 
     updateSlides(); // 초기 슬라이드 설정
-  } ////////////// setElFn 함수 /////////////////////
+  } // setElFn
 
   // [대한민국] 카테고리에는 별도 서브메뉴 노츨 //
   if (countryNum == 0) {
     descEle.style.display = "block";
-  } /// if ///
+  } // if
   else {
     descEle.style.display = "none";
-  } /// else ///
-} //////////// setListFn 함수 ////////////
+  } // else
+} // setListFn 함수 
 
+// 카테고리 탭 메뉴
 document.querySelectorAll(".category-tab li").forEach((el, i, obj) => {
-  // el-해당요소, i-순번, obj-요소전체
   el.onclick = function () {
-    console.log(this);
-    // 클래스 넣기/제거하기 기능
+
     // 전부 클래스 on제거
     obj.forEach((ele) => ele.classList.remove("on"));
     // 해당요소만 on넣기
     this.classList.add("on");
 
-    // 리스트생성함수 호출하기
+    // 리스트생성함수 호출
     setListFn(i);
   };
 });

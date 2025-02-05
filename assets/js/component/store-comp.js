@@ -1,9 +1,23 @@
 // store component
-         
 
 export const StoreComp = {
   template: `
-      <div class="contents">
+      <div class="sub-container" id="main">
+        <!-- sub-top s -->
+        <div class="sub-top">
+          <div class="inner">
+            <h3 class="sub-title">store</h3>
+            <ul class="category-tab">
+              <li class="on"><a href="#">대한민국</a></li>
+              <li><a href="#">일본</a></li>
+              <li><a href="#">중국</a></li>
+              <li><a href="#">전시</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- sub-top e -->
+        <!-- contents s -->
+        <div class="contents">
           <!-- 여기부터 컨텐츠 추가 -->
           <div class="store_wrap">
             <div class="store_section">
@@ -156,5 +170,7 @@ export const StoreComp = {
             </div>
           </div>
         </div>
+        <!-- contents e -->
+      </div>
   `,
-}
+};
