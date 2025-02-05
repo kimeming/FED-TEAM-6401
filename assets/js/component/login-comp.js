@@ -74,7 +74,7 @@ const JoinComp = Vue.component("join-comp", {
                     <span class="msg"></span>
                   </li>
                   <!-- 비밀번호 -->
-                  <li>
+                  <li class="eyeli">
                     <label htmlFor="mpw" class="itit"> </label>
                     <input
                       type="password"
