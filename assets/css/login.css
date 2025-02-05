@@ -136,8 +136,30 @@
 } */
 
 
-
-
+.contents-tit {
+    margin:0;
+    border-bottom: 1px solid #000;
+}
+.willbec {
+    display: flex;
+    justify-content: center;
+}
+.minput, .btnbx {
+    max-width:345px;
+}
+input {
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    padding: 0 5px;
+    font-size: 1rem;
+    height: 40px;
+}
+#sbtn {
+    background-color: #000;
+    color: #fff;
+}
 
 
 
@@ -162,11 +184,9 @@ transform: translate(50%, 50%);
     font-size: 1.5rem;
     margin-right: 20px;
     width: 345px;
-    /* margin-left: 100px; */
 }
 .logF ul {
     text-align: left;
-    /* margin-left: 100px; */
 }
 .logF ul li {
     max-width: 345px;
