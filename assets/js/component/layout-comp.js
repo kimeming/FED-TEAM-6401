@@ -84,7 +84,6 @@ export const GNB = {
               <!-- gnb-link s -->
               <div class="gnb-link">
                   <ul class="link-list">
-                      <li><a href="#">고객서비스</a></li>
                       <li><a href="#">SHOP IN KOREAN</a></li>
                   </ul>
               </div>
@@ -110,7 +109,7 @@ export const Header = {
         </h1>
         <gnb-comp></gnb-comp>
         <div class="util">
-          <button type="button" class="account-btn cart-btn"><span class="blind">로그인 버튼</span></button>
+          <button type="button" class="account-btn"><span class="blind">로그인 버튼</span></button>
           <button type="button" class="cart-btn"><span class="blind">장바구니 버튼</span></button>
           <button type="button" class="menu-btn">
             <span class="blind">메뉴 버튼</span>
@@ -141,8 +140,8 @@ export const Footer = {
                     <div class="left">
                       <p class="bold">COMMUNITY</p>
                       <ul class="footer-link">
-                        <li><a href="#">공지사항</a></li>
-                        <li><a href="#">고객서비스</a></li>
+                        <li><a href="/error">공지사항</a></li>
+                        <li><a href="/community/service">고객서비스</a></li>
                       </ul>
                     </div>
                     <div class="right">
