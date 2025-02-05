@@ -1,7 +1,7 @@
 // store component
          
 
-export const Store= {
+export const StoreComp = {
   template: `
       <div class="contents">
           <!-- 여기부터 컨텐츠 추가 -->
