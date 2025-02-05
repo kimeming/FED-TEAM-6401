@@ -1,6 +1,7 @@
 export const ServiceComp = Vue.component('service-comp',{
     template: `
-    <div class="svc">
+    <div class="inner-cont">
+      <div class="svc">
         <div class="svc-top">
         <h3 class="svc-title">고객서비스</h3>
         <div class="tab-area">
@@ -247,6 +248,7 @@ export const ServiceComp = Vue.component('service-comp',{
             </ul>
         </div>
         </div>
+    </div>
     </div>
     `,
 }); 
