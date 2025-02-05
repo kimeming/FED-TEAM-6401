@@ -1,24 +1,29 @@
 // sub page layout component
+import linkSetData from "/assets/data/gnb-data.js";
 import store from "/assets/js/vuex_store_store.js";
 export const subTop = {
   template: `
       <div class="sub-top">
         <div class="inner">
-          <ul class="category-tab" v-for="(val,key) in $store.state.linkSetData">
+          <ul class="category-tab" v-for="(item, key) in linkSetData" :key="key">
             <h3 class="sub-title">{{key}}</h3>
             <li class="tab" 
-                v-for="(v,k) in val.menu" 
-                :key="k"
-                @click="getCatName(k)"
-                :class="{on: $store.state.catName === k}" 
+                v-for="(subItem, subKey) in item.menu" :key="subKey"
+                
+                @click="getCatName(subKey)"
+                :class="{on: $store.state.catName === subKey}" 
                 >
-              <a href="#">{{k}}</a>
-            </li>
+                <router-link :to="'/' + subItem.name + '/' + subItem.params.cls">{{subKey}}</router-link>
+            </li> 
           </ul>
         </div>
       </div>
     `,
-
+data(){
+  return {
+    linkSetData,
+  };
+},
   methods: {
     getCatName(pm) {
       console.log("선택한 카테고리:", pm);
