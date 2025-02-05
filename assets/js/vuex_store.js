@@ -46,12 +46,5 @@ new Vue({
   },
   // DOM 관련 코딩
   mounted() {
-    const tab = document.querySelectorAll(".tab");
-    tab.forEach((t) => {
-      t.onclick = function () {
-        tab.forEach((el) => el.classList.remove("on"));
-        this.classList.add("on");
-      };
-    });
   },
 });
