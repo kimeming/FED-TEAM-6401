@@ -1,53 +1,62 @@
 // main component
-import productList from '/assets/data/product-list.js';
-import {newProduct} from '/assets/data/main-data.js';
+import productList from "/assets/data/product-list.js";
+import { newProduct } from "/assets/data/main-data.js";
 
 const bestProducts = [...productList].sort((a, b) => b.pSelling - a.pSelling).slice(0, 5);
 
 export const Main = {
-    data(){
+  data() {
+    return {
+      bestProducts: [],
+      newProduct: [],
+      productLink(idx) {
         return {
-            bestProducts: [],
-            newProduct: [],
-        }
-    },
-    mounted(){
-        this.bestProducts = bestProducts;
-        this.newProduct = newProduct;
+          path: `/detail/${idx}`,
+        };
+      },
+      getProductNum(pm) {
+        console.log("선택한 제품 ID:", pm);
+        this.$store.commit("setViewData", pm);
+      },
+    };
+  },
+  mounted() {
+    this.bestProducts = bestProducts;
+    this.newProduct = newProduct;
 
-        // bestseller sllide
-        const bestSlide = new Swiper(".best-slide", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            centeredSlides: true,
-            breakpoints: {
-                360: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                },
-                768: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
-                    centeredSlides: false,
-                },
-                1024: {
-                    slidesPerView: 5,
-                    spaceBetween: 50,
-                    centeredSlides: false,
-                },
-            },
-        });
+    // bestseller sllide
+    const bestSlide = new Swiper(".best-slide", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      centeredSlides: true,
+      breakpoints: {
+        360: {
+          slidesPerView: 2,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+          centeredSlides: false,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+          centeredSlides: false,
+        },
+      },
+    });
 
-        // new product slide
-        const newSlide = new Swiper(".new-slide", {
-            loop: true,
-            navigation: {
-                nextEl: '.new-slide .swiper-button-next',
-                prevEl: '.new-slide .swiper-button-prev',
-            },
-        })
-    },
-    template: `
+    // new product slide
+    const newSlide = new Swiper(".new-slide", {
+      loop: true,
+      navigation: {
+        nextEl: ".new-slide .swiper-button-next",
+        prevEl: ".new-slide .swiper-button-prev",
+      },
+    });
+  },
+  template: `
     <main class="main-container" id="main">
             <!-- section visual s -->
             <section class="section visual">
@@ -65,17 +74,20 @@ export const Main = {
                     <h3 class="section-tit">Bestseller</h3>
                     <div class="swiper best-slide">
                         <ul class="product-list swiper-wrapper"> 
-                            <li v-for="product in bestProducts" :key="product.idx" class="swiper-slide">
-                                <a :href="product.plink" class="item">
-                                <div class="img-box">
-                                    <img :src="product.pImage" alt="상품 이미지">
-                                </div>
-                                <div class="info-box">
-                                    <p class="name">{{ product.pTitle }}</p>
-                                    <span class="fragrance">{{ product.pNote }}</span>
-                                    <strong class="price">{{ product.pPrice }}</strong>
-                                </div>
-                                </a>
+                            <li v-for="v in bestProducts" 
+                            :key="v.idx" 
+                            class="swiper-slide" 
+                            @click.prevent="getProductNum(v.idx)">
+                                <router-link :to="productLink(v.idx)">
+                                    <div class="img-box">
+                                        <img :src="v.pImage" alt="상품 이미지">
+                                    </div>
+                                    <div class="info-box">
+                                        <p class="name">{{ v.pTitle }}</p>
+                                        <span class="fragrance">{{ v.pNote }}</span>
+                                        <strong class="price">{{ v.pPrice }}</strong>
+                                    </div>
+                                </router-link>
                             </li>
                         </ul>
                     </div>
@@ -143,5 +155,5 @@ export const Main = {
             </section>
             <!-- section store e -->
         </main>
-    `
-}
+    `,
+};
