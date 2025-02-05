@@ -105,7 +105,7 @@ Object.keys(linkSetData).forEach((key) => {
           }),
         },
       ],
-    };
+    });
 
     routes.push({
       path: path,
@@ -129,8 +129,42 @@ const router = new VueRouter({
 
 // 경로 변경 시 Vuex에 path 정보 저장
 router.beforeEach((to, from, next) => {
-  store.commit('setPath', to);  // 현재 라우트 정보 저장
-  next();  // 네비게이션 진행
+  // 현재 라우트 정보 저장
+  store.commit('setPath', to); 
+
+  // 메인 페이지 판별
+  const isMainPage = to.path === "/";
+
+  // CSS 변경
+  switchStyles(isMainPage ? "/assets/css/main.css" : "/assets/css/sub.css");
+
+  // JS 변경
+  switchScripts(isMainPage ? "/assets/js/main.js" : "/assets/js/sub.js");
+
+  next();
 });
+
+// 스타일 변경 함수
+function switchStyles(newHref) {
+  let existingLink = document.querySelector("link[href*='main.css'], link[href*='sub.css']");
+  if (existingLink) existingLink.remove(); // 기존 스타일 제거
+
+  let newLink = document.createElement("link");
+  newLink.rel = "stylesheet";
+  newLink.href = newHref;
+  document.head.appendChild(newLink);
+}
+
+// 스크립트 변경 함수
+function switchScripts(newSrc) {
+  let existingScript = document.querySelector("script[src*='main.js'], script[src*='sub.js']");
+  if (existingScript) existingScript.remove(); // 기존 스크립트 제거
+
+  let newScript = document.createElement("script");
+  newScript.src = newSrc;
+  newScript.type = "module";
+  newScript.defer = true;
+  document.body.appendChild(newScript);
+}
 
 export default router;
