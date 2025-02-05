@@ -12,6 +12,8 @@ import { Login, JoinComp } from "./component/login-comp.js";
 import { FaqComp } from "./component/faq-comp.js";
 import { ServiceComp } from "./component/service-comp.js";
 
+const itemPath = store.state.productView.idx;
+
 const routes = [
   {
     path: "/",
@@ -55,12 +57,12 @@ const routes = [
         path: "evening-glow",
         component: List,
         props: { category: "evening-glow", subCategory: "이브닝 글로우" },
-        children: [
-          {
-            path: "detail",
-            component: View,
-          }
-        ]
+        // children: [
+        //   {
+        //     path: "/detail/:itemPath",
+        //     component: View,
+        //   }
+        // ]
       }
     ]
   },
@@ -138,6 +140,10 @@ const routes = [
       },
     ],
   },
+  {
+    path : "/detail/:itemPath",
+    component: View,
+  }
 ];
 
 routes.push({

@@ -34,7 +34,7 @@ export default new Vuex.Store({
     },
     setViewData(s, pm) {
       s.productView = s.productList.find(v => v.idx == pm);
-      console.log("선택된 제품:", s.productView, s.catName);
+      console.log("선택된 제품:", s.productView);
     },
     setPath(s, route) {
       s.currentCategory = route.params.category || ""; // 카테고리 저장

@@ -43,7 +43,7 @@ export const List = {
 
     productLink(idx) {
       return {
-        path: `/${this.currentCategory}/${this.currentSubCategory}/${idx}`
+        path: `/detail/${idx}`
       };
     }
     
