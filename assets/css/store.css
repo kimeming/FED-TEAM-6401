@@ -159,12 +159,13 @@
     align-items: center;
     padding: 1rem 0;
   }
-  .exhibition.store_disc p {
+  .store_disc p {
     text-align: center;  
   }
-  .exhibition.store_description p {
-    text-align: left;  
+  .store_description.exhibition {
+    text-align: left;
   }
+  
   .store_address {
     font-size: 12px;
     text-decoration: none;

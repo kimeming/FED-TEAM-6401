@@ -1,6 +1,6 @@
 // store component
 
-export const Store= {
+export const StoreComp = {
   template: `
       
   `,

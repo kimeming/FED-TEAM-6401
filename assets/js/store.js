@@ -4,10 +4,6 @@
   [  요구사항  ]
   - prev, next 버튼 없이 스와이프로 동작
   - 배너 개수에 맞게 하단에 바형 인디케이터 설정 및 조작
-
-  [  궁금한 것  ]
-  - 왜 자꾸만 [,]이 나오는가!
-  - [.exhibition .store_description]는 text-align: left;여야 하는데 어케하죠..?
 **************************************************************/
 // 데이터 불러오기
 import storeData from '../data/store-banner.json' with { type: "json" };
@@ -67,8 +63,8 @@ function setListFn(countryNum) {
               : `<a href="${v["store-map"]}" class="store_address" target="_blank">지도보기</a>`
           }
         </div>
-        <div class="store_disc exhibition">
-          ${countryNum == 3 ? "<p class='store_description'>" + v["store-desc"] + "</p>" : ""}
+        <div class="store_disc">
+          ${countryNum == 3 ? "<p class='store_description exhibition'>" + v["store-desc"] + "</p>" : ""}
           <p class="store_disc_address">${v["store-address"]}</p>
           <p class="store_disc_phone">${v["store-phone"]}</p>
           <p>${v["store-time"]}</p>
@@ -76,10 +72,10 @@ function setListFn(countryNum) {
       </div>
     </li>
   `
-  );
+  ).join("");
 
   const targetEl = document.querySelectorAll(".store_slide_wrap");
-  // 스와이프 //
+  //////// 스와이프 ////////
   ////// 인디케이터 //////
   targetEl.forEach((el) => setElFn(el));
 
