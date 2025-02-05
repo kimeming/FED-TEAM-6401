@@ -54,17 +54,15 @@ const routes = [
       {
         path: "evening-glow",
         component: List,
-        props: { category: "EVENING GLOW", subCategory: "이브닝 글로우" },
+        props: { category: "evening-glow", subCategory: "이브닝 글로우" },
         children: [
           {
-            path: ":itemPath",
-            name: "view-evening-glow",
+            path: "detail",
             component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
-      },
-    ],
+          }
+        ]
+      }
+    ]
   },
   {
     path: "/perfume",
@@ -74,27 +72,11 @@ const routes = [
         path: "perfume",
         component: List,
         props: { category: "PERFUME", subCategory: "퍼퓸" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-perfume",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
       {
         path: "perfume-balm",
         component: List,
         props: { category: "PERFUME", subCategory: "퍼퓸 밤" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-perfume-balm",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
     ],
   },
@@ -106,40 +88,16 @@ const routes = [
         path: "shell-perfume-hand",
         component: List,
         props: { category: "HAND&LIP", subCategory: "쉘 퍼퓸 핸드" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-shell-perfume-hand",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
       {
         path: "egg-lip-balm",
         component: List,
         props: { category: "HAND&LIP", subCategory: "에그 립밤" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-egg-lip-balm",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
       {
         path: "chain-hand",
         component: List,
         props: { category: "HAND&LIP", subCategory: "체인 핸드" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-chain-hand",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
     ],
   },
@@ -151,27 +109,11 @@ const routes = [
         path: "showery-body",
         component: List,
         props: { category: "BODY", subCategory: "샤워리 바디" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-showery-body",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
       {
         path: "perfumed-hand-body",
         component: List,
         props: { category: "BODY", subCategory: "퍼퓸드 핸드앤바디" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-perfumed-hand-body",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
     ],
   },
@@ -183,40 +125,16 @@ const routes = [
         path: "car-diffuser",
         component: List,
         props: { category: "HOME FRAGRANCE", subCategory: "카 디퓨저" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-car-diffuser",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
       {
         path: "room-fragrance",
         component: List,
         props: { category: "HOME FRAGRANCE", subCategory: "룸 프래그런스" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-room-fragrance",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
       {
         path: "perfume-candle",
         component: List,
         props: { category: "HOME FRAGRANCE", subCategory: "퍼퓸 캔들" },
-        children: [
-          {
-            path: ":itemPath",
-            name: "view-perfume-candle",
-            component: View,
-            props: (route) => ({ itemPath: route.params.itemPath }),
-          },
-        ],
       },
     ],
   },
