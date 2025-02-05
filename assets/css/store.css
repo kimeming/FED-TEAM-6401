@@ -165,6 +165,9 @@
   .store_description.exhibition {
     text-align: left;
   }
+  .exhibition .store_disc p {
+    padding: 0 10px;
+  }
   .store_address {
     font-size: 12px;
     text-decoration: none;
