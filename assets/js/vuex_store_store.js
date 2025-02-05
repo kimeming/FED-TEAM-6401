@@ -44,6 +44,11 @@ export default new Vuex.Store({
     setCategory(s, category) {
       s.currentCategory = category;  // 카테고리 저장
     },
+    setPath(s, route) {
+      const paths = route.path.split("/").filter(Boolean); // 빈 값 제거
+      s.currentCategory = paths[0] || ""; // 첫 번째가 카테고리
+      s.currentSubCategory = paths[1] || ""; // 두 번째가 서브 카테고리
+    }
   },
 
   // (3) 비동기처리 메서드구역 : actions
