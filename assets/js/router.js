@@ -55,6 +55,12 @@ const routes = [
         path: "evening-glow",
         component: List,
         props: { category: "evening-glow", subCategory: "이브닝 글로우" },
+        children: [
+          {
+            path: "detail",
+            component: View,
+          }
+        ]
       }
     ]
   },
