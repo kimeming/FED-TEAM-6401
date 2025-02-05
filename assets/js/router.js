@@ -8,7 +8,7 @@ import { SubLayout, Community } from "/assets/js/component/sub-comp.js";
 import { List } from "/assets/js/component/list-comp.js";
 import { View } from "/assets/js/component/view-comp.js";
 import { StoreComp } from "/assets/js/component/store-comp.js";
-import { Login, JoinComp } from "./component/login-comp.js";
+import { LoginComp, JoinComp } from "./component/login-comp.js";
 import { FaqComp } from "./component/faq-comp.js";
 import { ServiceComp } from "./component/service-comp.js";
 
@@ -25,7 +25,7 @@ const routes = [
   },
   {
     path: "/login",
-    component: Login,
+    component: LoginComp,
   },
   {
     path: "/join",

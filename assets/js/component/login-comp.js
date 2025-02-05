@@ -9,7 +9,7 @@ import valid_member from "../valid_member.js";
 console.log(valid_member);
 
 // Login 컴포넌트
-const Login = {
+const LoginComp =  Vue.component("login-comp",{
   template: `
         <h3 class="contents-tit">로그인</h3>
         <div class="login_scont">
@@ -40,13 +40,27 @@ const Login = {
            </form>
         </div>
     `,
-};
+    // 2. 리턴함수 데이터
+    data(){
+        return{};
+    },
+    // 3. 메서드
+    methods: {},
+    // 4. 데이터셋업파트
+    created(){},
+    // 5. DOM 셋업파트
+    mounted(){
+        // 로그인 기능함수 호출!!!
+        validLogin();
+    },
+});
 
 // 1. 회원가입 컴포넌트
 const JoinComp = Vue.component("join-comp", {
   // 1-1. 템플릿코드설정 /////
 
   template: `
+          <div class="inner-cont login">
       <!--**************** 여기부터 컨텐츠 시작 *****************************-->
       <!-- 2. 회원가입 영역 -->
       <div id="join-app">
@@ -74,7 +88,7 @@ const JoinComp = Vue.component("join-comp", {
                     <span class="msg"></span>
                   </li>
                   <!-- 비밀번호 -->
-                  <li>
+                  <li class="eyeli">
                     <label htmlFor="mpw" class="itit"> </label>
                     <input
                       type="password"
@@ -183,4 +197,4 @@ const JoinComp = Vue.component("join-comp", {
 
 
 // 내보내기
-export { JoinComp, Login }
+export { JoinComp, LoginComp }

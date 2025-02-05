@@ -3,7 +3,7 @@
 // [1] 공통컴포넌트
 // import { TopComp } from "./components/common.js";
 // import { BannerComp } from "./components/banner.js";
-import { JoinComp,Login } from "./component/login-comp.js";
+import { JoinComp, LoginComp } from "./component/login-comp.js";
 
 /******************************* 
     메인 뷰 인스턴스 생성하기 
