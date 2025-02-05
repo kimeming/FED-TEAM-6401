@@ -4,6 +4,7 @@
 
 // 유효성검사 함수 불러오기
 import valid_member from "../valid_member.js";
+import validLogin from "../valid_login.js";
 // 메모리상 로딩한 본 함수는 DOM에 작동할 것이므로
 // 반드시 뷰 인스턴스 mounted 메서드에서 호출한다!
 console.log(valid_member);
@@ -11,34 +12,37 @@ console.log(valid_member);
 // Login 컴포넌트
 const LoginComp =  Vue.component("login-comp",{
   template: `
+  <main>
         <h3 class="contents-tit">로그인</h3>
         <div class="login_scont">
            <form action="process.php" method="post">
                <!-- 아이디박스 -->
                 <div class="box">
-               <div class="minput">
-                   <input type="text" name="mid" id="mid" maxlength="10" placeholder="아이디(이메일)" />
-                   <!-- name속성은 서버쪽 사용용도로 작성함(id명과 같은 이름 많이씀) -->
-               </div>
-               <div class="minput">
-                   <!-- 비번박스 -->
-                   <input type="password" name="mpw" id="mpw" maxlength="10" placeholder="비밀번호" />
-               </div>
-               <!-- 버튼박스 -->
-               <div class="btnbx">
-                   <input type="submit" id="sbtn" value="로그인" />
-               </div>
-               <!-- 기타링크 -->
-               <div class="addbx">
-                   <span>
-                       <a href="#">아이디가 없으신가요?</a>
-                   </span>
-                   <span>
-                       <a href="join.html">회원가입 하기</a>
-                   </span>
-               </div>
+                  <div class="minput">
+                      <input type="text" name="mid" id="mid" maxlength="10" placeholder="아이디(이메일)" />
+                      <!-- name속성은 서버쪽 사용용도로 작성함(id명과 같은 이름 많이씀) -->
+                  </div>
+                  <div class="minput">
+                      <!-- 비번박스 -->
+                      <input type="password" name="mpw" id="mpw" maxlength="10" placeholder="비밀번호" />
+                  </div>
+                  <!-- 버튼박스 -->
+                  <div class="btnbx">
+                      <input type="submit" id="sbtn" value="로그인" />
+                  </div>
+                  <!-- 기타링크 -->
+                  <div class="addbx">
+                      <span>
+                          <a href="#">아이디가 없으신가요?</a>
+                      </span>
+                      <span>
+                          <a href="join.html">회원가입 하기</a>
+                      </span>
+                  </div>
+                </div>
            </form>
         </div>
+    </main>
     `,
     // 2. 리턴함수 데이터
     data(){
