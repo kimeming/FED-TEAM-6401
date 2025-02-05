@@ -5,7 +5,7 @@ console.log(store)
 
 export const View = {
     template:`
-  <div class="sub-container" id="main">
+  <div class="sub-container view" id="main">
 
     <div class="contents">
           <!-- product-view s -->

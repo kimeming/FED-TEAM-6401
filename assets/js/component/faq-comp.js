@@ -211,7 +211,6 @@ export const FaqComp = {
                             (2) 무통장 입금 : 주문 시 기재하신 ‘환불등록계좌’로 영업일 기준 3-5일 소요됩니다. <br>
                             (3) 간편결제(네이버페이, 카카오페이): 즉시 취소 처리되나, 페이와 연동된 결제 수단이 신용카드일 경우, 카드사 승인 취소는 영업일 기준 3-5일 소요될 수 있습니다.</p>
                         </li>
-                        </li>
                         <li>
                           <em class="question">주문한 제품 중, 일부 상품만 취소/수량을 변경할 수 있나요?</em>
                           <p class="answer">일부 상품 또는 수량을 취소할 수 없습니다. ‘주문’ 또는 ‘입금’ 단계에서, 전체 주문 취소하신 후, 원하시는 상품/수량 설정하여 재 주문(결제)해주세요.</p>
@@ -324,5 +323,18 @@ export const FaqComp = {
   `,
   mounted() {
     $("head").append(`<script type="module" src="/assets/js/faq.js"></script>`);
+    // tab js
+    const tabList = $('.tab-list>li>a');
+    const tabView = $('.tab-view-list>li');
+    
+    $('.tab-list>li').click(function(){
+        $(this).addClass('on').siblings().removeClass('on');
+    });
+
+    tabList.on('click', function(){
+        let tabIdx = $(this).parent().index();
+        tabView.removeClass('on');
+        tabView.eq(tabIdx).addClass('on')
+    });
   },
 };
