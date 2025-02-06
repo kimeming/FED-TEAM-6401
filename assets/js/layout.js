@@ -8,7 +8,6 @@ $(() => {
         $dimm = $('.dimm'),
         $header = $('.header'),
         $menuBtn = $(".menu-btn"),
-        $cartBtn = $(".cart-btn"),
         $gnbWrap = $('.gnb-wrap'),
         $gnbA = $('.gnb-list .dep1'),
         $dep2 = $('.gnb-list .dep2'),
@@ -24,11 +23,11 @@ $(() => {
     } else {
       gnbClose();
     }
+  });
 
+  $(".cart-btn, .account-btn").click(() => {
     if($gnbWrap.hasClass('open')){
-      $(".account-btn, .cart-btn").hide();
-    } else {
-      $(".account-btn, .cart-btn").show();
+      gnbClose();
     }
   });
 
