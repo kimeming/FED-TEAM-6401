@@ -146,7 +146,7 @@ export const Footer = {
                       <p class="bold">COMMUNITY</p>
                       <ul class="footer-link">
                         <li><a href="./assets/error.html">공지사항</a></li>
-                        <li><a href="/community/service">고객서비스</a></li>
+                        <li><a href="#/community/service">고객서비스</a></li>
                       </ul>
                     </div>
                     <div class="right">
