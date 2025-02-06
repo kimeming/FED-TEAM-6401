@@ -58,7 +58,7 @@ export const List = {
   },
   mounted(){
     $('head').append(`
-      <link rel="stylesheet" type="text/css" href="/assets/css/product-list.css" />
+      <link rel="stylesheet" type="text/css" href="/FED-TEAM-6401/assets/css/product-list.css" />
     `);
   },
   created(){

@@ -1,13 +1,13 @@
 // 데이터
-import linkSetData from "/assets/data/gnb-data.js";
-import store from "/assets/js/vuex_store_store.js";
+import linkSetData from "/FED-TEAM-6401/assets/data/gnb-data.js";
+import store from "/FED-TEAM-6401/assets/js/vuex_store_store.js";
 
 // 컴포넌트 import
-import { Main } from "/assets/js/component/main-comp.js";
-import { SubLayout, Community } from "/assets/js/component/sub-comp.js";
-import { List } from "/assets/js/component/list-comp.js";
-import { View } from "/assets/js/component/view-comp.js";
-import { StoreComp } from "/assets/js/component/store-comp.js";
+import { Main } from "/FED-TEAM-6401/assets/js/component/main-comp.js";
+import { SubLayout, Community } from "/FED-TEAM-6401/assets/js/component/sub-comp.js";
+import { List } from "/FED-TEAM-6401/assets/js/component/list-comp.js";
+import { View } from "/FED-TEAM-6401/assets/js/component/view-comp.js";
+import { StoreComp } from "/FED-TEAM-6401/assets/js/component/store-comp.js";
 import { LoginComp, JoinComp } from "./component/login-comp.js";
 import { FaqComp } from "./component/faq-comp.js";
 import { ServiceComp } from "./component/service-comp.js";
@@ -171,8 +171,8 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   store.commit("setPath", to);
   const isMainPage = to.path === "/";
-  switchStyles(isMainPage ? "/assets/css/main.css" : "/assets/css/sub.css");
-  switchScripts(isMainPage ? "/assets/js/main.js" : "/assets/js/sub.js");
+  switchStyles(isMainPage ? "/FED-TEAM-6401/assets/css/main.css" : "/FED-TEAM-6401/assets/css/sub.css");
+  switchScripts(isMainPage ? "/FED-TEAM-6401/assets/js/main.js" : "/FED-TEAM-6401/assets/js/sub.js");
   store.commit("setShowSubTop", to.matched.some(record => record.meta.showSubTop));
   next();
 });

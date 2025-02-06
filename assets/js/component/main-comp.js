@@ -1,6 +1,6 @@
 // main component
-import productList from '/assets/data/product-list.js';
-import {newProduct} from '/assets/data/main-data.js';
+import productList from '/FED-TEAM-6401/assets/data/product-list.js';
+import {newProduct} from '/FED-TEAM-6401/assets/data/main-data.js';
 
 const bestProducts = [...productList].sort((a, b) => b.pSelling - a.pSelling).slice(0, 5);
 
@@ -53,8 +53,8 @@ export const Main = {
             <section class="section visual">
                 <h2 class="blind">메인 비주얼 영역</h2>
                 <div class="video-wrap">
-                    <video muted="muted" playsinline="" preload="auto" src="/assets/img/main/video-main.mp4" poster="/assets/img/main/img-main-video-cover.png" class="web"></video>
-                    <video muted="muted" playsinline="" preload="auto" autoplay="true"  src="/assets/img/main/video-main-visual-mob.mp4" poster="/assets/img/main/img-main-video-cover.png" class="mob"></video>
+                    <video muted="muted" playsinline="" preload="auto" src="/FED-TEAM-6401/assets/img/main/video-main.mp4" poster="/FED-TEAM-6401/assets/img/main/img-main-video-cover.png" class="web"></video>
+                    <video muted="muted" playsinline="" preload="auto" autoplay="true"  src="/FED-TEAM-6401/assets/img/main/video-main-visual-mob.mp4" poster="/FED-TEAM-6401/assets/img/main/img-main-video-cover.png" class="mob"></video>
                 </div>
             </section>
             <!-- section visual e -->
@@ -112,19 +112,19 @@ export const Main = {
                             <div class="store-slide swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_hannam_01.jpg" alt="플래그십 스토어 한남">
+                                        <img src="/FED-TEAM-6401/assets/img/store/img_store_hannam_01.jpg" alt="플래그십 스토어 한남">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_seongsu_01.jpg" alt="플래그십 스토어 성수">
+                                        <img src="/FED-TEAM-6401/assets/img/store/img_store_seongsu_01.jpg" alt="플래그십 스토어 성수">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_samcheong_01.jpg" alt="플래그십 스토어 삼청">
+                                        <img src="/FED-TEAM-6401/assets/img/store/img_store_samcheong_01.jpg" alt="플래그십 스토어 삼청">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_dosan_02.jpg" alt="하우스 도산">
+                                        <img src="/FED-TEAM-6401/assets/img/store/img_store_dosan_02.jpg" alt="하우스 도산">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_sinsa_01.jpg" alt="플래그십 스토어 신사">
+                                        <img src="/FED-TEAM-6401/assets/img/store/img_store_sinsa_01.jpg" alt="플래그십 스토어 신사">
                                     </div>
                                 </div>
                                 <div class="swiper-scrollbar"></div>
