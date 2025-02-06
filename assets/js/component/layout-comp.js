@@ -109,8 +109,8 @@ export const Header = {
         </h1>
         <gnb-comp></gnb-comp>
         <div class="util">
-          <button type="button" class="account-btn"><span class="blind">로그인 버튼</span></button>
-          <button type="button" class="cart-btn"><span class="blind">장바구니 버튼</span></button>
+          <button type="button" class="account-btn" @click="goToPage('/login')"><span class="blind">로그인 버튼</span></button>
+          <button type="button" class="cart-btn" @click="goToPage('/cart')"><span class="blind">장바구니 버튼</span></button>
           <button type="button" class="menu-btn">
             <span class="blind">메뉴 버튼</span>
             <span class="line"></span>
@@ -124,6 +124,11 @@ export const Header = {
     "search-comp": SearchWrap,
     "gnb-comp": GNB,
   },
+  methods: {
+    goToPage(path) {
+      this.$router.push(path);  // Vue Router로 페이지 이동
+    }
+  }
 };
 
 // Footer 컴포넌트

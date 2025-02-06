@@ -23,6 +23,8 @@ export default new Vuex.Store({
     // 현재 path 데이터
     currentCategory: "",
     currentSubCategory: "",
+    // sub-top 노출 여부
+    showSubTop: false,
   },
 
   // (2) 데이터 변경 구역 : mutations
@@ -48,7 +50,10 @@ export default new Vuex.Store({
       const paths = route.path.split("/").filter(Boolean); // 빈 값 제거
       s.currentCategory = paths[0] || ""; // 첫 번째가 카테고리
       s.currentSubCategory = paths[1] || ""; // 두 번째가 서브 카테고리
-    }
+    },
+    setShowSubTop(state, value) {
+      state.showSubTop = value;
+    },
   },
 
   // (3) 비동기처리 메서드구역 : actions
