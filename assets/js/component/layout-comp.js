@@ -105,7 +105,7 @@ export const Header = {
           <button type="button" class="search-open-btn"><span class="blind">검색 버튼</span></button>
         </div>
         <h1 class="logo">
-          <a href="/"><img src="./assets/img/main/logo_red.svg" alt="TAMBURINS"></a>
+          <a href="#/"><img src="./assets/img/main/logo_red.svg" alt="TAMBURINS"></a>
         </h1>
         <gnb-comp></gnb-comp>
         <div class="util">
