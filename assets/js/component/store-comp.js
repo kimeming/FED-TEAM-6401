@@ -1,6 +1,6 @@
 // store component
 // 카테고리별 제이슨 데이터 불러오기
-import storeData from '/assets/data/store-banner.json' with { type: "json" };
+import storeData from '../../data/store-banner.json' with { type: "json" };
 
 export const StoreComp = {
   template: `
