@@ -116,7 +116,7 @@ export default function valid_member() {
           // 2. 만약 DB조회하여 같은 아이디가 없다면
           // '멋진 아이디네요~!'와 같은 메시지출력
           // 여기서 우선은 DB조회 못하므로 통과시 메시지로 출력
-          else{
+          else {
             // 메시지 띄우기
             $(this).siblings(".msg").text("멋진 아이디네요~!").addClass("on");
             // -> 비동기 통신 Ajax로 서버쪽에 아이디 중복검사필요!
@@ -355,7 +355,6 @@ export default function valid_member() {
     ->>> trigger(이벤트명)
 
   *********************************************/
-
   // 검사용 변수
   let pass = true;
 
