@@ -167,7 +167,7 @@ router.beforeEach((to, from, next) => {
   store.commit("setPath", to);
   const isMainPage = to.path === "/";
   switchStyles(isMainPage ? "/assets/css/main.css" : "/assets/css/sub.css");
-  switchScripts(isMainPage ? "/assets/js/main.js" : "/assets/js/sub.js");
+  // switchScripts(isMainPage ? "/assets/js/main.js" : "/assets/js/sub.js");
   store.commit("setShowSubTop", to.matched.some(record => record.meta.showSubTop));
   next();
 });
@@ -184,17 +184,17 @@ function switchStyles(newHref) {
   document.head.appendChild(newLink);
 }
 
-// 스크립트 변경 함수
-function switchScripts(newSrc) {
-  let existingScript = document.querySelector(
-    "script[src*='main.js'], script[src*='sub.js']"
-  );
-  if (existingScript) existingScript.remove();
-  let newScript = document.createElement("script");
-  newScript.src = newSrc;
-  newScript.type = "module";
-  newScript.defer = true;
-  document.body.appendChild(newScript);
-}
+// // 스크립트 변경 함수
+// function switchScripts(newSrc) {
+//   let existingScript = document.querySelector(
+//     "script[src*='main.js'], script[src*='sub.js']"
+//   );
+//   if (existingScript) existingScript.remove();
+//   let newScript = document.createElement("script");
+//   newScript.src = newSrc;
+//   newScript.type = "module";
+//   newScript.defer = true;
+//   document.body.appendChild(newScript);
+// }
 
 export default router;

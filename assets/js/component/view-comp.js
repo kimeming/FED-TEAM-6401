@@ -6,7 +6,6 @@ console.log(store)
 export const View = {
     template:`
   <div class="sub-container view" id="main">
-
     <div class="contents">
           <!-- product-view s -->
           <div class="product-view-area">
@@ -249,12 +248,7 @@ export const View = {
 
     },
     mounted(){
-      $('head').append(`
-        <link rel="stylesheet" type="text/css" href="/assets/css/product-view.css" />
-       `);
-      $('head').append(`
-        <script type="module" src="/assets/js/product_view.js"></script>
-       `);
+      $('#set-js').attr('src','/assets/js/view.js');
     },
     computed: {
       currentCategory() {
