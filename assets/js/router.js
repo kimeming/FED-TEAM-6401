@@ -163,8 +163,10 @@ routes.push({
 });
 
 const router = new VueRouter({
-  // mode: "history",
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    return { x: 0, y: 0 }; // 항상 최상단으로 이동
+  }
 });
 
 // 경로 변경 시 Vuex에 path 정보 저장
@@ -172,7 +174,6 @@ router.beforeEach((to, from, next) => {
   store.commit("setPath", to);
   const isMainPage = to.path === "/";
   switchStyles(isMainPage ? "./assets/css/main.css" : "./assets/css/sub.css");
-  // switchScripts(isMainPage ? "./assets/js/main.js" : "./assets/js/sub.js");
   store.commit("setShowSubTop", to.matched.some(record => record.meta.showSubTop));
   next();
 });
