@@ -250,10 +250,10 @@ export const View = {
     },
     mounted(){
       $('head').append(`
-        <link rel="stylesheet" type="text/css" href="./assets/css/product-view.css" />
+        <link rel="stylesheet" type="text/css" href="/assets/css/product-view.css" />
        `);
       $('head').append(`
-        <script type="module" src="./assets/js/product_view.js"></script>
+        <script type="module" src="/assets/js/product_view.js"></script>
        `);
     },
     computed: {
