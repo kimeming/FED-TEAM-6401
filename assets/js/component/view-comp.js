@@ -19,13 +19,13 @@ export const View = {
                       <img :src="$store.state.productView.pImage" alt="이브닝글로우" />
                     </div>
                     <div class="product-detail-img">
-                      <img src="/assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
+                      <img src="./assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="product-detail-img">
-                      <img src="/assets/img/view/item1/img_item_03.jpg" alt="이브닝글로우" />
+                      <img src="./assets/img/view/item1/img_item_03.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="product-detail-img">
-                      <img src="/assets/img/view/item1/img_item_04.jpg" alt="이브닝글로우" />
+                      <img src="./assets/img/view/item1/img_item_04.jpg" alt="이브닝글로우" />
                     </div>
                   </div>
                   <div class="bullet-sticky-area">
@@ -44,13 +44,13 @@ export const View = {
                       <img :src="$store.state.productView.pImage" alt="이브닝글로우" />
                     </div>
                     <div class="swiper-slide">
-                      <img src="/assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
+                      <img src="./assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="swiper-slide">
-                      <img src="/assets/img/view/item1/img_item_03.jpg" alt="이브닝글로우" />
+                      <img src="./assets/img/view/item1/img_item_03.jpg" alt="이브닝글로우" />
                     </div>
                     <div class="swiper-slide">
-                      <img src="/assets/img/view/item1/img_item_04.jpg" alt="이브닝글로우" />
+                      <img src="./assets/img/view/item1/img_item_04.jpg" alt="이브닝글로우" />
                     </div>
                   </div>
                   <div class="swiper-pagination"></div>
@@ -189,7 +189,7 @@ export const View = {
                               </button>
                               <div class="shopping-box-wrap">
                                 <h2>유료 쇼핑백 서비스</h2>
-                                <img src="/assets/img/view/shoppingBag_v1.jpg" alt="쇼핑백">
+                                <img src="./assets/img/view/shoppingBag_v1.jpg" alt="쇼핑백">
                                 <strong>쇼핑백 S사이즈를 추천드립니다.</strong>
                                 <p>선물포장 패키지가 제공되는 품목 혹은 여러개의 제품을 함께 구매하실 경우 1:1 문의하기를 통해 적합한 사이즈를 추천 받으실 수 있습니다.</p>
                                 <section class="size-table">
@@ -248,7 +248,7 @@ export const View = {
 
     },
     mounted(){
-      $('#set-js').attr('src','/assets/js/view.js');
+      $('#set-js').attr('src','./assets/js/view.js');
     },
     computed: {
       currentCategory() {
