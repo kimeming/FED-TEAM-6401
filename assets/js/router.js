@@ -48,91 +48,101 @@ const routes = [
   {
     path: "/evening-glow",
     component: SubLayout,
+    meta: { showSubTop: true },
     children: [
       {
         path: "evening-glow",
         component: List,
-        props: { category: "evening-glow", subCategory: "이브닝 글로우" },
-        // children: [
-        //   {
-        //     path: "/detail/:itemPath",
-        //     component: View,
-        //   }
-        // ]
+        props: { category: "evening-glow", subCategory: "이브닝 글로우" }, 
+        meta: { showSubTop: true },
       }
     ]
   },
   {
     path: "/perfume",
     component: SubLayout,
+    meta: { showSubTop: true },
     children: [
       {
         path: "perfume",
         component: List,
         props: { category: "PERFUME", subCategory: "퍼퓸" },
+        meta: { showSubTop: true },
       },
       {
         path: "perfume-balm",
         component: List,
         props: { category: "PERFUME", subCategory: "퍼퓸 밤" },
+        meta: { showSubTop: true },
       },
     ],
   },
   {
     path: "/hand-lip",
     component: SubLayout,
+    meta: { showSubTop: true },
     children: [
       {
         path: "shell-perfume-hand",
         component: List,
         props: { category: "HAND&LIP", subCategory: "쉘 퍼퓸 핸드" },
+        meta: { showSubTop: true },
       },
       {
         path: "egg-lip-balm",
         component: List,
         props: { category: "HAND&LIP", subCategory: "에그 립밤" },
+        meta: { showSubTop: true },
       },
       {
         path: "chain-hand",
         component: List,
         props: { category: "HAND&LIP", subCategory: "체인 핸드" },
+        meta: { showSubTop: true },
       },
     ],
   },
   {
     path: "/body",
     component: SubLayout,
+    meta: { showSubTop: true },
     children: [
       {
         path: "showery-body",
         component: List,
         props: { category: "BODY", subCategory: "샤워리 바디" },
+        meta: { showSubTop: true },
       },
       {
         path: "perfumed-hand-body",
         component: List,
         props: { category: "BODY", subCategory: "퍼퓸드 핸드앤바디" },
+        meta: { showSubTop: true },
       },
     ],
   },
   {
     path: "/home-fragrance",
     component: SubLayout,
+    meta: { showSubTop: true },
     children: [
       {
         path: "car-diffuser",
         component: List,
         props: { category: "HOME FRAGRANCE", subCategory: "카 디퓨저" },
+        meta: { showSubTop: true },
       },
       {
         path: "room-fragrance",
         component: List,
         props: { category: "HOME FRAGRANCE", subCategory: "룸 프래그런스" },
+        meta: { showSubTop: true },
       },
       {
         path: "perfume-candle",
         component: List,
         props: { category: "HOME FRAGRANCE", subCategory: "퍼퓸 캔들" },
+        meta: { showSubTop: true },
       },
     ],
   },
@@ -158,6 +168,7 @@ router.beforeEach((to, from, next) => {
   const isMainPage = to.path === "/";
   switchStyles(isMainPage ? "/assets/css/main.css" : "/assets/css/sub.css");
   switchScripts(isMainPage ? "/assets/js/main.js" : "/assets/js/sub.js");
+  store.commit("setShowSubTop", to.matched.some(record => record.meta.showSubTop));
   next();
 });
 

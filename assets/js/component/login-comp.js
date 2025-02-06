@@ -11,7 +11,8 @@ console.log(valid_member);
 // Login 컴포넌트
 const LoginComp =  Vue.component("login-comp",{
   template: `
-        <h3 class="contents-tit">로그인</h3>
+        <div class="inner-cont login">
+          <h3 class="contents-tit">로그인</h3>
         <div class="login_scont">
            <form action="process.php" method="post">
                <!-- 아이디박스 -->
@@ -38,6 +39,7 @@ const LoginComp =  Vue.component("login-comp",{
                    </span>
                </div>
            </form>
+        </div>
         </div>
     `,
     // 2. 리턴함수 데이터
