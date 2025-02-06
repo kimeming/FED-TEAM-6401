@@ -57,7 +57,7 @@ export const List = {
     }
   },
   mounted(){
-    $('#set-js').attr('src','/assets/js/sub.js');
+    $('#set-js').attr('src','./assets/js/sub.js');
   },
   created(){
     this.$store.commit('setPath', this.$route);

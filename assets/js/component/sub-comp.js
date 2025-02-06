@@ -1,5 +1,5 @@
 // sub page layout component
-import store from "/assets/js/vuex_store_store.js";
+import store from "./assets/js/vuex_store_store.js";
 export const subTop = {
   template: `
       <div class="sub-top">
