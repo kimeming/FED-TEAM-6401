@@ -1,6 +1,6 @@
 // main component
-import productList from '/assets/data/product-list.js';
-import {newProduct} from '/assets/data/main-data.js';
+import productList from '../../data/product-list.js';
+import {newProduct} from '../../data/main-data.js';
 
 const bestProducts = [...productList].sort((a, b) => b.pSelling - a.pSelling).slice(0, 5);
 
@@ -53,8 +53,8 @@ export const Main = {
             <section class="section visual">
                 <h2 class="blind">메인 비주얼 영역</h2>
                 <div class="video-wrap">
-                    <video muted="muted" playsinline="" preload="auto" src="/assets/img/main/video-main.mp4" poster="/assets/img/main/img-main-video-cover.png" class="web"></video>
-                    <video muted="muted" playsinline="" preload="auto" autoplay="true"  src="/assets/img/main/video-main-visual-mob.mp4" poster="/assets/img/main/img-main-video-cover.png" class="mob"></video>
+                    <video muted="muted" playsinline="" preload="auto" src="./assets/img/main/video-main.mp4" poster="./assets/img/main/img-main-video-cover.png" class="web"></video>
+                    <video muted="muted" playsinline="" preload="auto" autoplay="true"  src="./assets/img/main/video-main-visual-mob.mp4" poster="./assets/img/main/img-main-video-cover.png" class="mob"></video>
                 </div>
             </section>
             <!-- section visual e -->
@@ -112,19 +112,19 @@ export const Main = {
                             <div class="store-slide swiper">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_hannam_01.jpg" alt="플래그십 스토어 한남">
+                                        <img src="./assets/img/store/img_store_hannam_01.jpg" alt="플래그십 스토어 한남">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_seongsu_01.jpg" alt="플래그십 스토어 성수">
+                                        <img src="./assets/img/store/img_store_seongsu_01.jpg" alt="플래그십 스토어 성수">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_samcheong_01.jpg" alt="플래그십 스토어 삼청">
+                                        <img src="./assets/img/store/img_store_samcheong_01.jpg" alt="플래그십 스토어 삼청">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_dosan_02.jpg" alt="하우스 도산">
+                                        <img src="./assets/img/store/img_store_dosan_02.jpg" alt="하우스 도산">
                                     </div>
                                     <div class="swiper-slide">
-                                        <img src="/assets/img/store/img_store_sinsa_01.jpg" alt="플래그십 스토어 신사">
+                                        <img src="./assets/img/store/img_store_sinsa_01.jpg" alt="플래그십 스토어 신사">
                                     </div>
                                 </div>
                                 <div class="swiper-scrollbar"></div>
@@ -136,7 +136,7 @@ export const Main = {
                         <div class="store-info">
                             <h3 class="section-tit">스토어 로케이터</h3>
                             <p>지금 바로 가까운 매장에서 탬버린즈의 다양한 제품들을 체험해 보세요.</p>
-                            <a href="#" class="link-btn">Find Store <span class="icon arrow"></span></a>
+                            <a href="#/store" class="link-btn">Find Store <span class="icon arrow"></span></a>
                         </div>
                     </div>
                 </div>
