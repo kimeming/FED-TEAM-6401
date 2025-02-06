@@ -109,7 +109,7 @@ export default function valid_member() {
             else {
               // 아이디 입력가능!!!
               // 메시지 띄우기
-              $(this).siblings(".msg").text("멋진 아이디네요~!").addClass("on");
+              $(this).siblings(".msg").css({color:'green'}).text("멋진 아이디네요~!").addClass("on");
             } /// else ///
           } /////////// if ///////////
 
@@ -299,7 +299,7 @@ export default function valid_member() {
 
     // 이메일 정규식 검사에 따른 메시지 보이기
     if (vReg(comp, "eml")) {
-      eml1.siblings(".msg").text("적합한 이메일 형식입니다!").addClass("on");
+      eml1.siblings(".msg").css({color:'green'}).text("적합한 이메일 형식입니다!").addClass("on");
     } //////// if : 통과시 //////////
     else {
       eml1
