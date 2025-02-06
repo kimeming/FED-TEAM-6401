@@ -8,6 +8,7 @@ $(() => {
         $dimm = $('.dimm'),
         $header = $('.header'),
         $menuBtn = $(".menu-btn"),
+        $cartBtn = $(".cart-btn"),
         $gnbWrap = $('.gnb-wrap'),
         $gnbA = $('.gnb-list .dep1'),
         $dep2 = $('.gnb-list .dep2'),
@@ -22,6 +23,12 @@ $(() => {
       gnbOpen();
     } else {
       gnbClose();
+    }
+
+    if($gnbWrap.hasClass('open')){
+      $(".account-btn, .cart-btn").hide();
+    } else {
+      $(".account-btn, .cart-btn").show();
     }
   });
 
@@ -52,6 +59,7 @@ $(() => {
         $(this).removeClass('on');
     }
   });
+
 
   function gnbClose(){
     $gnbWrap.removeClass('open');
