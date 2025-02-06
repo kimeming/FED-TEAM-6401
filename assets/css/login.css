@@ -14,10 +14,6 @@ h3.contents-tit {
 .login_scont {
     width: 100%;
 }
-.minput,
-.btnbx {
-    /* width: 345px; */
-}
 .login_scont .box {
     width: 100%;
 }
@@ -47,7 +43,6 @@ input {
 
 /*  */
 .loginin {
-    /* display: block; */
     max-width: 345px;
     width: 100%;
     display: block;
@@ -155,41 +150,3 @@ input {
 .msg {
     display: block;
 }
-
-/* 
-@media (max-width: 375px) {
-    .inner-cont {
-        margin-top: 0
-        ;
-        margin-left: -00px;
-    }
-    .ctop {
-        margin-left: 0px;
-    }
-    .ctop h2 {
-        border-bottom: 1px solid #000;
-        font-size: 1.5rem;
-        width: 345px;
-        margin-left:0px;
-    }
-    .logF ul {
-        text-align: center;
-        width: 345px;
-        text-align: left;
-        margin-left: 10px;
-    }
-    .logF ul li input {
-        width: 320px;
-    }
-    .logF ul li:nth-of-type(6) {
-        width: 320px;
-        display: flex;
-        justify-content: space-between;
-    }
-}
-
-
-
-
-
- */
