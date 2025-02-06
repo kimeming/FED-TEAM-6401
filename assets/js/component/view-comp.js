@@ -6,7 +6,6 @@ console.log(store)
 export const View = {
     template:`
   <div class="sub-container view" id="main">
-
     <div class="contents">
           <!-- product-view s -->
           <div class="product-view-area">
@@ -17,7 +16,7 @@ export const View = {
                 <div class="product-slide">
                   <div class="product-slide-wrap">
                     <div class="product-detail-img">
-                      <img src="/assets/img/view/item1/img_item_01.jpg" alt="이브닝글로우" />
+                      <img :src="$store.state.productView.pImage" alt="이브닝글로우" />
                     </div>
                     <div class="product-detail-img">
                       <img src="/assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
@@ -42,7 +41,7 @@ export const View = {
                 <div class="dragSwiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <img src="/assets/img/view/item1/img_item_01.jpg" alt="이브닝글로우" />
+                      <img :src="$store.state.productView.pImage" alt="이브닝글로우" />
                     </div>
                     <div class="swiper-slide">
                       <img src="/assets/img/view/item1/img_item_02.jpg" alt="이브닝글로우" />
@@ -249,12 +248,7 @@ export const View = {
 
     },
     mounted(){
-      $('head').append(`
-        <link rel="stylesheet" type="text/css" href="/assets/css/product-view.css" />
-       `);
-      $('head').append(`
-        <script type="module" src="/assets/js/product_view.js"></script>
-       `);
+      $('#set-js').attr('src','/assets/js/view.js');
     },
     computed: {
       currentCategory() {
