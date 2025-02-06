@@ -30,7 +30,9 @@ export default function validLogin() {
       else {
         // 1. 로컬스 배열 정보 담을 변수
         let temp = [];
-  
+  let aaa = '5';
+  Number(aaa)
+  console.log(aaa);
         // 2. 회원정보 로컬스 읽어오기
         if (localStorage.getItem("mem-data"))
           temp = JSON.parse(localStorage.getItem("mem-data"));
