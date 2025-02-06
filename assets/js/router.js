@@ -20,10 +20,6 @@ const routes = [
     component: Main,
   },
   {
-    path: "/error",
-    redirect: "/error.html",
-  },
-  {
     path: "/login",
     component: LoginComp,
   },

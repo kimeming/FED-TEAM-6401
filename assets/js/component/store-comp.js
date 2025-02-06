@@ -173,4 +173,7 @@ export const StoreComp = {
         <!-- contents e -->
       </div>
   `,
+  mounted(){
+    $("head").append(`<script type="module" src="/assets/js/store.js"></script>`);
+  }
 };

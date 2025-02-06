@@ -41,7 +41,7 @@ function setListFn(countryNum) {
           .map(
             (val, seq) => `
           <li>
-            <img src="./img/store/img_store_${v["img-key"]}_${seq < 9 ? "0" + (seq + 1) : seq + 1}.jpg" alt="${
+            <img src="/assets/img/store/img_store_${v["img-key"]}_${seq < 9 ? "0" + (seq + 1) : seq + 1}.jpg" alt="${
               v.name
             } ${seq < 9 ? "" + (seq + 1) : seq + 1}번째 이미지" />
           </li>
