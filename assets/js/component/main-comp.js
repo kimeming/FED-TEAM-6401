@@ -136,7 +136,7 @@ export const Main = {
                         <div class="store-info">
                             <h3 class="section-tit">스토어 로케이터</h3>
                             <p>지금 바로 가까운 매장에서 탬버린즈의 다양한 제품들을 체험해 보세요.</p>
-                            <a href="#" class="link-btn">Find Store <span class="icon arrow"></span></a>
+                            <a href="#/store" class="link-btn">Find Store <span class="icon arrow"></span></a>
                         </div>
                     </div>
                 </div>

@@ -66,7 +66,7 @@
 }
 
 /* 신상품 섹션 배경 이미지 */
-.new-product-list .item1 {background-image: url('../img/main/mb_main_banner1.png');}
+.new-product-list .item1 {background-image: url('../img/main/mb_main_banner1.PNG');}
 .new-product-list .item1 .icon.star {background-image: url('../img/main/icon_star.svg');}
 .new-product-list .item1 .link-btn:hover {background-color: rgba(255,255,255,0.4); color: #fff;}
 .new-product-list .item2 {background-image: url('../img/main/mb_main_banner2.png');}
