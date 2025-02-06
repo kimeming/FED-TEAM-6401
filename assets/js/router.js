@@ -11,6 +11,7 @@ import { StoreComp } from "/assets/js/component/store-comp.js";
 import { LoginComp, JoinComp } from "./component/login-comp.js";
 import { FaqComp } from "./component/faq-comp.js";
 import { ServiceComp } from "./component/service-comp.js";
+import { CartComp } from "./component/cart-comp.js";
 
 const itemPath = store.state.productView.idx;
 
@@ -26,6 +27,10 @@ const routes = [
   {
     path: "/join",
     component: JoinComp,
+  },
+  {
+    path: "/cart",
+    component: CartComp,
   },
   {
     path: "/community",
