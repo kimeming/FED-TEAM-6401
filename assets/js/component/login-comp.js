@@ -13,7 +13,7 @@ console.log(valid_member);
 const LoginComp =  Vue.component("login-comp",{
   template: `
   <main class="willbec">
-                 <div class="inner-cont login">
+                 <div class="inner-cont loginin">
         <h3 class="contents-tit">로그인</h3>
         <div class="login_scont">
            <form action="process.php" method="post">
