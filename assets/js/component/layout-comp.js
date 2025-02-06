@@ -1,5 +1,5 @@
 // layout.js
-import linkSetData from "./assets/data/gnb-data.js";
+import linkSetData from "../../data/gnb-data.js";
 import store from "../vuex_store_store.js";
 // SearchWrap 컴포넌트
 export const SearchWrap = {

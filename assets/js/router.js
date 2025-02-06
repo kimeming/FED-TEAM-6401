@@ -8,10 +8,10 @@ import { SubLayout, Community } from "../js/component/sub-comp.js";
 import { List } from "../js/component/list-comp.js";
 import { View } from "../js/component/view-comp.js";
 import { StoreComp } from "../js/component/store-comp.js";
-import { LoginComp, JoinComp } from "..js/component/login-comp.js";
-import { FaqComp } from "..js/component/faq-comp.js";
-import { ServiceComp } from "..js/component/service-comp.js";
-import { CartComp } from "js/component/cart-comp.js";
+import { LoginComp, JoinComp } from "../js/component/login-comp.js";
+import { FaqComp } from "../js/component/faq-comp.js";
+import { ServiceComp } from "../js/component/service-comp.js";
+import { CartComp } from "../js/component/cart-comp.js";
 
 const itemPath = store.state.productView.idx;
 
