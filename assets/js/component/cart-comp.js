@@ -43,7 +43,7 @@ export const CartComp = {
                                             </div>
                                             <div class="item-thumbnail">
                                                 <a href="#">
-                                                    <img src="/FED-TEAM-6401/assets/img/img-test01.jpg" alt="test">
+                                                    <img src="/assets/img/img-test01.jpg" alt="test">
                                                 </a>
                                             </div>
                                         </li>
@@ -69,7 +69,7 @@ export const CartComp = {
                                             </div>
                                             <div class="item-thumbnail">
                                                 <a href="#">
-                                                    <img src="/FED-TEAM-6401/assets/img/img-test01.jpg" alt="test">
+                                                    <img src="/assets/img/img-test01.jpg" alt="test">
                                                 </a>
                                             </div>
                                         </li>

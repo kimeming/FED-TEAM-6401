@@ -7,7 +7,7 @@
         => 초기화 함수가 필요...? initSearch
 */
 // 데이터 불러오기
-import productList from "/FED-TEAM-6401/assets/data/product-list.js";
+import productList from "/assets/data/product-list.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 

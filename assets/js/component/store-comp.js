@@ -174,6 +174,6 @@ export const StoreComp = {
       </div>
   `,
   mounted(){
-    $("head").append(`<script type="module" src="/FED-TEAM-6401/assets/js/store.js"></script>`);
+    $("head").append(`<script type="module" src="/assets/js/store.js"></script>`);
   }
 };
