@@ -175,6 +175,13 @@ router.beforeEach((to, from, next) => {
   const isMainPage = to.path === "/";
   switchStyles(isMainPage ? "./assets/css/main.css" : "./assets/css/sub.css");
   store.commit("setShowSubTop", to.matched.some(record => record.meta.showSubTop));
+   // 메인 페이지로 돌아올 때 새로고침
+   if (to.path === '/' || to.path === '/#/') {
+    // 강제로 새로고침
+    if (from.path !== '/') {  // 메인 페이지에서 다른 페이지로 갔다가 돌아올 때만 새로고침
+      window.location.reload();
+    }
+  }
   next();
 });
 
