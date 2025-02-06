@@ -1,6 +1,6 @@
 // main component
-import productList from '/assets/data/product-list.js';
-import {newProduct} from '/assets/data/main-data.js';
+import productList from './assets/data/product-list.js';
+import {newProduct} from './assets/data/main-data.js';
 
 const bestProducts = [...productList].sort((a, b) => b.pSelling - a.pSelling).slice(0, 5);
 
