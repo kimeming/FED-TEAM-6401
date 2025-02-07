@@ -24,7 +24,7 @@ h3.contents-tit {
 .login_scont .box {
     width: 100%;
 }
-input {
+.login_scont input {
     width: 100%;
     margin: 5px 0;
     border-radius: 5px;
@@ -129,6 +129,9 @@ input {
 
 #seleml {
     width: 31%;
+    border-radius: 5px;
+    margin: 5px;
+    height: 40px;
 }
 
 .logF ul li:nth-of-type(6) input,

@@ -141,9 +141,9 @@ const JoinComp = Vue.component("join-comp", {
                   <!-- 성별 -->
                   <li>
                     <span class="itit">성별</span>
-                    <label htmlFor="gen1">남성</label>
+                    <label For="gen1">남성</label>
                     <input type="radio" name="gen" id="gen1" />
-                    <label htmlFor="gen2">여성</label>
+                    <label For="gen2">여성</label>
                     <input type="radio" name="gen" id="gen2" checked />
                     <!-- 라디오버튼의 name 속성을 
                                           같은 이름으로 쓰면 그룹핑되어
