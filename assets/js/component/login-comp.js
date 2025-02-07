@@ -37,7 +37,7 @@ const LoginComp =  Vue.component("login-comp",{
                           <a href="#">아이디가 없으신가요?</a>
                       </span>
                       <span>
-                          <a href="join.html">회원가입 하기</a>
+                          <a href="#" @click="goPage">회원가입 하기</a>
                       </span>
                   </div>
                 </div>
@@ -51,7 +51,15 @@ const LoginComp =  Vue.component("login-comp",{
         return{};
     },
     // 3. 메서드
-    methods: {},
+    methods: {
+      goPage(){
+        console.log('회원가입으로가~!!!');
+        // 라우터로 페이지 이동하기
+        // -> this.$router 전역 라우터객체변수를 호출함!
+        // 라우터 이동 메서드인 push(라우터주소) 를 이용함!
+        this.$router.push("/join");
+      },
+    },
     // 4. 데이터셋업파트
     created(){},
     // 5. DOM 셋업파트
@@ -66,7 +74,7 @@ const JoinComp = Vue.component("join-comp", {
   // 1-1. 템플릿코드설정 /////
 
   template: `
-          <div class="inner-cont login">
+    <div class="inner-cont login">
       <!--**************** 여기부터 컨텐츠 시작 *****************************-->
       <!-- 2. 회원가입 영역 -->
       <div id="join-app">
@@ -186,6 +194,7 @@ const JoinComp = Vue.component("join-comp", {
           </main>
         </div>
       </div>
+    </div>
     `,
   // 1-2. 데이터 셋업 리턴 메서드 /////
   data() {
