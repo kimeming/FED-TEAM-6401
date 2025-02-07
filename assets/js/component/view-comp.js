@@ -250,7 +250,7 @@ export const View = {
 
     // 제품디테일페이지 - product_view.js
 
-    $("a").click(function (e) {
+    $("a.item").click(function (e) {
       return false;
     });
 
