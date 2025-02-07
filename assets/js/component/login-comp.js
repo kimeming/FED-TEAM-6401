@@ -34,7 +34,7 @@ const LoginComp =  Vue.component("login-comp",{
                   <!-- 기타링크 -->
                   <div class="addbx">
                       <span>
-                          <a href="#">아이디가 없으신가요?</a>
+                          아이디가 없으신가요?
                       </span>
                       <span>
                           <a href="join.html">회원가입 하기</a>

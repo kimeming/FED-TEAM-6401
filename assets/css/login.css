@@ -6,6 +6,13 @@ h3.contents-tit {
     max-width: 345px;
     width: 100%;
 }
+.login_scont {
+    margin-top: 15px;
+}
+.addbx {
+    margin-top: 15px;
+    font-size: 16px;
+}
 
 .willbec {
     display: flex;
@@ -37,11 +44,12 @@ input {
 }
 
 .addbx span:nth-of-type(2) a {
-    font-size: 13px;
+    font-size: 16px;
     padding: 0 5px;
 }
 
 /*  */
+
 .loginin {
     max-width: 345px;
     width: 100%;
@@ -86,6 +94,7 @@ input {
 .ctop h2 {
     border-bottom: 1px solid #000;
     font-size: 1.5rem;
+    margin-bottom:15px;
 }
 
 .logF ul {
@@ -99,7 +108,6 @@ input {
     justify-content: center;
     width: 100%;
     height: 40px;
-    font-size: 13px;
 }
 
 .logF ul li input[type=radio] {
@@ -126,6 +134,10 @@ input {
 .logF ul li:nth-of-type(6) input,
 .logF ul li:nth-of-type(7) input {
     width: 100px;
+}
+.logF ul li:nth-of-type(8), 
+.logF ul li input {
+    font-size: 16px;
 }
 
 .msg {
