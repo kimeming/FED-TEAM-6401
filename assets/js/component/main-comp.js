@@ -49,82 +49,95 @@ export const Main = {
       },
     });
 
-    // header intro animation - 첫 진입 시에만
-    let animationPlayed = false;
-    let isResizing = false;
+    // header logo animation
+    let prevWidth = window.innerWidth;
+    let resizeTimer;
 
-    function headerAni() {
-      if (animationPlayed || isResizing) return;
-      animationPlayed = true;
-
+    function headerAni(playVideo = false) {
       if (window.innerWidth >= 1024) {
+        // 1024 이상: 전체 애니메이션 실행
         const $logo = $(".header .logo");
         const pcVideo = $(".video-wrap .web");
+
         $(".header .util, .header-left").hide();
         pcVideo[0].pause();
         $("body").addClass("on");
 
-        // 스크롤 위치 확인
-        if ($(window).scrollTop() > 0) {
-          $logo.addClass("active");
-        }
-
         setTimeout(function () {
           $logo.addClass("active");
-          pcVideo[0].play();
+
+          if (playVideo) {
+            pcVideo[0].play();
+          }
+
           $(".header .util, .header-left").fadeIn();
           $("body").removeClass("on");
         }, 500);
+      } else if (window.innerWidth >= 768) {
+        // 768 이상 1024 미만: video만 play
+        $(".video-wrap .web")[0].play();
       }
     }
 
-    // store slide
-    const storeSlide = new Swiper(".store-slide", {
-        slidesPerView: 1,
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          hide: false,
-          draggable: true,
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        loop: true,
-        on: {
-          slideChange: function () {
-            const storeArr = [
-              "플래그십 스토어 한남",
-              "플래그십 스토어 성수",
-              "플래그십 스토어 삼청",
-              "하우스 도산",
-              "플래그십 스토어 신사",
-            ];
-            let realIdx = this.realIndex;
-            const storeName = document.querySelector(".store-name");
-  
-            // 클래스 초기화
-            storeName.classList.remove("show");
-  
-            // 텍스트 추가 후 클래스 재추가
-            setTimeout(() => {
-              storeName.innerText = storeArr[realIdx];
-              storeName.classList.add("show");
-            }, 500);
-          },
-        },
-      });
+    // 초기 실행
+    if (window.innerWidth >= 1024) {
+      headerAni(true);
+    } else if (window.innerWidth >= 768) {
+      $(".video-wrap .web")[0].play();
+    }
 
-    // 리사이즈 이벤트 처리
+    // 리사이즈 감지 (디바운스 적용)
     $(window).on("resize", function () {
-      isResizing = true;
-      setTimeout(function () {
-        isResizing = false;
-      }, 500);
+      clearTimeout(resizeTimer); // 이전 타이머 제거
+      resizeTimer = setTimeout(function () {
+        let currentWidth = window.innerWidth;
+
+        if (prevWidth < 1024 && currentWidth >= 1024) {
+          headerAni(true); // 1024 미만 → 1024 이상으로 바뀔 때 전체 실행
+        } else if (prevWidth < 768 && currentWidth >= 768) {
+          $(".video-wrap .web")[0].play(); // 768 미만 → 768 이상으로 바뀔 때 video 실행
+        }
+
+        prevWidth = currentWidth; // 현재 너비 저장
+      }, 300); // 300ms 후에 실행 (성능 최적화)
     });
 
-    // 초기 애니메이션 실행
-    headerAni();
+    // store slide
+    const storeSlide = new Swiper(".store-slide", {
+      slidesPerView: 1,
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+        draggable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      loop: true,
+      on: {
+        slideChange: function () {
+          const storeArr = [
+            "플래그십 스토어 한남",
+            "플래그십 스토어 성수",
+            "플래그십 스토어 삼청",
+            "하우스 도산",
+            "플래그십 스토어 신사",
+          ];
+          let realIdx = this.realIndex;
+          const storeName = document.querySelector(".store-name");
+
+          // 클래스 초기화
+          storeName.classList.remove("show");
+
+          // 텍스트 추가 후 클래스 재추가
+          setTimeout(() => {
+            storeName.innerText = storeArr[realIdx];
+            storeName.classList.add("show");
+          }, 500);
+        },
+      },
+    });
 
     // section header change
     const header = document.querySelector("header"); // header 요소 선택
