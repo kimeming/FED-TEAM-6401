@@ -4,7 +4,7 @@
 .header .search-open-btn {background-image: url('../img/main/icon_search_b.svg');}
 .header .menu-btn {--menu-btn-color: #000;}
 .header .util button.cart-btn {background-image: url('../img/main/icon_bag_b.svg');}
-.header .util button.account-btn {background-image: url('../img/main/icon_account_b.svg');}
+.header .util button.account-btn {background-image: url('../img/main/icon_account_b.svg'); z-index: 1;}
 
 .sub-top {position: fixed; top: var(--header-height);  width: 100%; background-color: #fff; z-index: 15;}
 .sub-top .inner {width: 100%; max-width: 1600px; display: flex; flex-direction: column; margin: 0 auto;}
