@@ -54,6 +54,7 @@ const routes = [
     path: "/evening-glow",
     component: SubLayout,
     meta: { showSubTop: true },
+    redirect: "/evening-glow/evening-glow",
     children: [
       {
         path: "evening-glow",
@@ -67,6 +68,7 @@ const routes = [
     path: "/perfume",
     component: SubLayout,
     meta: { showSubTop: true },
+    redirect: "/perfume/perfume",
     children: [
       {
         path: "perfume",
@@ -86,6 +88,7 @@ const routes = [
     path: "/hand-lip",
     component: SubLayout,
     meta: { showSubTop: true },
+    redirect: "/hand-lip/shell-perfume-hand",
     children: [
       {
         path: "shell-perfume-hand",
@@ -99,18 +102,13 @@ const routes = [
         props: { category: "HAND&LIP", subCategory: "에그 립밤" },
         meta: { showSubTop: true },
       },
-      {
-        path: "chain-hand",
-        component: List,
-        props: { category: "HAND&LIP", subCategory: "체인 핸드" },
-        meta: { showSubTop: true },
-      },
     ],
   },
   {
     path: "/body",
     component: SubLayout,
     meta: { showSubTop: true },
+    redirect: "/body/showery-body",
     children: [
       {
         path: "showery-body",
@@ -130,6 +128,7 @@ const routes = [
     path: "/home-fragrance",
     component: SubLayout,
     meta: { showSubTop: true },
+    redirect: "/home-fragrance/car-diffuser",
     children: [
       {
         path: "car-diffuser",
