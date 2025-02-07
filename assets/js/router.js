@@ -35,6 +35,7 @@ const routes = [
   {
     path: "/community",
     component: Community,
+    redirect: "/community/faq",
     children: [
       {
         path: "faq",

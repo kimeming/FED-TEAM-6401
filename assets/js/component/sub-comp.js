@@ -46,8 +46,11 @@ export const SubLayout = {
 
 export const Community = {
   template: `
-    <div class="content type2">
-      <router-view></router-view>
+    <div class="sub-container" id="main">
+      <div class="content type2">
+        <router-view></router-view>
+      </div>
     </div>
+   
   `,
 };
