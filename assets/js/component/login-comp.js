@@ -200,12 +200,20 @@ const JoinComp = Vue.component("join-comp", {
   data() {
     return {};
   },
+  // 1-3. 컴포넌트 메서드 //////
+  methods: {
+    goPage(){
+      console.log('이동해!!!');
+      // 라우터로 페이지 이동하기 ///
+      this.$router.push('/login');
+    },
+  },
   // 컴포넌트 라이프 사이클 메서드 구역 ///
   // mounted 메서드 : DOM로딩후 실행구역!
   // -> 일반 DOM코딩 JS는 여기서 호출한다!!!
   mounted() {
     // 유효성검사 함수호출!
-    valid_member();
+    valid_member(this.goPage);
   }, /// mounted ///////
 });
 

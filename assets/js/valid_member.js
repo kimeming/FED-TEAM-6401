@@ -1,6 +1,6 @@
 // 회원가입 유효성검사 및 회원가입처리 JS - valid_member.js
 
-export default function valid_member() {
+export default function valid_member(cbFn) { // cbFn - 뷰JS의 콜백함수 받기
   //   console.log("유효성검사! 나야나~!!!", $("#mid"));
 
   /********************************************** 
@@ -438,7 +438,14 @@ export default function valid_member() {
       // 민감한 입력 데이터 페이지가 다시 돌아와서
       // 보이면 안되기 때문에 히스토리를 지우는
       // replace()로 이동한다!
-      location.replace("login.html");
+      // location.replace("login.html");
+      // SPA구성의 뷰JS에서는 개별페이지로 보내면 안된다!
+      // 그래서 라우터로 이동해야함!
+      // 그러나 여기서는 라우터 이동 불가! 왜?
+      // 뷰JS의 기능을 사용할 수 없으니까!
+      // 그래서 뷰JS에서 함수를 보내주고 그것을 여기서 호출함!
+      cbFn();
+
     } //////// if : 통과시 ///////////
     else {
       ///// 불통과시 //////
